@@ -28,11 +28,23 @@ export default {
 	},
 
 	qrcodeurl (data) {
-		this.vm.imgsrc = data.qrcodeurl
+		
 	},
 	
-	login () {
-		this.vm.login = false
+	login (d) {
+		var d = {
+			username:'admin',
+			password:'1qaz3EDC'
+		}
+		$.ajax({
+			type : "POST",
+			url : "http://demo.3ddcim.com/user/login/",
+			data :d ,
+			success : function(){
+				alert("dfdf")	
+			},
+			dataType:'text' 
+		})
 	},
 	
 	phoneDisconnected () {
@@ -41,8 +53,6 @@ export default {
 	},
 
 	regBus (bus) {
-		bus.on("qrcode" , this.qrcodeurl.bind(this))
-		bus.on("login" , this.login.bind(this))
-		bus.on("phoneDisconnected" , this.phoneDisconnected.bind(this))
+		
 	}
 }
