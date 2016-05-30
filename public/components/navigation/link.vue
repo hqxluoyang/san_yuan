@@ -1,8 +1,5 @@
 /**
-	<a class="acolor" v-link="{ path: '/machineRoom' }">1</a>
-  	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">2</a>
-  	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">3</a>
-  	  <a class="acolor" v-link="{ path: '/verify' }">4</a>
+	
 **/
 
 
@@ -61,7 +58,10 @@
 
 <template>
   	<div class='topLink'>
-  	  
+  	  <a class="acolor" v-link="{ path: '/machineRoom' }">1</a>
+  	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">2</a>
+  	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">3</a>
+  	  <a class="acolor" v-link="{ path: '/verify' }">4</a>
       <p v-bind:style="{left:lineLeft + 'px'}"></p>
     </div>
 </template>

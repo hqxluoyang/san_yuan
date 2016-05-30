@@ -10761,7 +10761,7 @@
 	
 	    data: function data() {
 	        return {
-	            login: ture,
+	            login: true,
 	            username: 'ee',
 	            passW: '123'
 	        };
@@ -11543,7 +11543,7 @@
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='top'>\r\n  <img class=\"top_img\" src=\"xxxHTMLLINKxxx0.187601143959909680.42707319650799036xxx\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\r\n  </div>";
+	module.exports = "<div class='top'>\r\n  <img class=\"top_img\" src=\"http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\r\n  </div>";
 
 /***/ },
 /* 45 */
@@ -11602,7 +11602,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".all_search {\r\n\theight:30px;\r\n\tline-height:30px;\r\n\tposition:absolute;\r\n\ttext-align:center;\r\n\twidth:100%;\r\n\ttop:5px;\r\n\tleft:0;\r\n\r\n}\r\n\r\n.all_search .centerSearchBody{\r\n\twidth:100%;\r\n\r\n}\r\n\r\n.all_search .peopleImg {\r\n\tbackground:#888;\r\n\tdisplay:inline-block;\r\n\twidth:30px;\r\n\tposition:absolute;\r\n\tmargin-left:9px;\r\n\theight:30px;\r\n}\r\n\r\n.all_search .searchBody{\r\n\tbackground:#fff;\r\n\tmargin-left:40px;\r\n\tmargin-right:30px;\r\n\tdisplay:inline-block;\r\n\tline-height:30px;\r\n\tborder-radius:21px;\r\n}\r\n\r\n.all_search .searchBody .searchBnt{\r\n\tdisplay:inline-block;\r\n\twidth:30px;\r\n\theight:30px;\r\n\tmargin-left:13px;\r\n\tbackground:#456;\r\n}\r\n.all_search .searchBody .scan{\r\n\tdisplay:inline-block;\r\n\twidth:30px;\r\n\theight:30px;\r\n\tbackground:#456;\r\n}", ""]);
+	exports.push([module.id, ".all_search {\r\n\theight:30px;\r\n\tline-height:30px;\r\n\tposition:absolute;\r\n\ttext-align:center;\r\n\twidth:100%;\r\n\ttop:5px;\r\n\tleft:0;\r\n\r\n}\r\n\r\n.all_search .pImg{\r\n\r\n\theight:30px;\r\n\tmargin-left:30px;\r\n\tmargin-right:30px;\r\n}\r\n\r\n.all_search .pImg ul{\r\n\tbackground:#fff;\r\n\twidth:258px;\r\n\tleft:50%;\r\n\tposition:absolute;\r\n\tborder-radius:26px;\r\n\tmargin-left:-130px;\r\n}\r\n\r\n.all_search .pImg li{\r\n\tdisplay:inline-block;\r\n}\r\n\r\n.all_search .pImg .head{\r\n\twidth:30px;\r\n\theight:30px;\r\n\tmargin-left:-16px;\r\n\tmargin-top:4px;\r\n\tposition:absolute;\r\n}\r\n\r\n.all_search .pImg input{\r\n\twidth:202px;\r\n\tmargin-left:8px;\r\n\tborder:0;\r\n}\r\n\r\n.all_search .centerSearchBody{\r\n\twidth:100%;\r\n\r\n}\r\n\r\n.all_search .peopleImg {\r\n\tbackground:#888;\r\n\tdisplay:inline-block;\r\n\twidth:30px;\r\n\tposition:absolute;\r\n\tmargin-left:9px;\r\n\theight:30px;\r\n}", ""]);
 	
 	// exports
 
@@ -11625,7 +11625,7 @@
 /* 49 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"all_search\" v-show=false>\r\n\t\t\r\n\t\t\t<span  class=\"peopleImg\">\r\n            </span>\r\n            <div class='searchBody'>\r\n            \t<span class=\"searchBnt\"></span>\r\n            \t<input class='' type=\"search\" placeholder=\"测试搜索\" autosave=\"aoa.org.cn\" result=\"8\">\r\n            \t<span class='scan'>df</span>\r\n            </div>\r\n            \r\n\t\r\n\t\t\r\n\t</div>";
+	module.exports = "<div class=\"all_search\">\r\n\t\t<div class=\"pImg\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li class=\"head\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t<path fill=\"#ccc\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\" />\r\n\t\t\t\t</svg></li>\r\n\t\t\t\t<li><input type=\"search\" placeholder=\"搜索\" /></li>\r\n\t\t\t\t<li>3</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
 /* 50 */
@@ -12036,7 +12036,7 @@
 /* 65 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='topLink'>\r\n  \t  \r\n      <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\r\n    </div>";
+	module.exports = "<div class='topLink'>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/machineRoom' }\">1</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/equipmentCabinet' }\">2</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/InstabusEIB' }\">3</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/verify' }\">4</a>\r\n      <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\r\n    </div>";
 
 /***/ },
 /* 66 */

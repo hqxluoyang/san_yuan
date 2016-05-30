@@ -124,7 +124,7 @@ export default {
    
   data () {
   	return {
-  		login:ture,
+  		login:true,
       username:'ee',
       passW:'123'
   	}
