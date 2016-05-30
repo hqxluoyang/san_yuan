@@ -1,3 +1,8 @@
+/**
+http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png"
+**/
+
+
 <style>
 .top{
 	position:relative;
@@ -23,7 +28,7 @@
 
 <template>
   <div class='top'>
-  <img class="top_img" src="http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png" width="175" height="47" alt="DIVCSS5的LOGO" />
+  <img class="top_img" src="" width="175" height="47" alt="DIVCSS5的LOGO" />
   </div>
 </template>
 

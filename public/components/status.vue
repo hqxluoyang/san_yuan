@@ -20,7 +20,7 @@ export default {
 
 	data () {
 		return {
-			statusText:"机房列表"
+			statusText:""
 		}
 	},
 

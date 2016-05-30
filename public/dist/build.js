@@ -109,8 +109,8 @@
 	__webpack_require__(138).polyfill();
 	_vue2['default'].use(_src2['default']);
 	var router = new _src2['default']({
-				history: false,
-				saveScrollPosition: true
+		history: false,
+		saveScrollPosition: true
 	});
 	
 	_routeConfig.configRouter(router);
@@ -10309,8 +10309,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-rewriter.js?id=_v-1920f8b0&file=app.vue!./node_modules/vue-loader/lib/selector.js?type=style&index=0!./app.vue", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-rewriter.js?id=_v-1920f8b0&file=app.vue!./node_modules/vue-loader/lib/selector.js?type=style&index=0!./app.vue");
+			module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-rewriter.js?id=_v-2d34936a&file=app.vue!./node_modules/vue-loader/lib/selector.js?type=style&index=0!./app.vue", function() {
+				var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/vue-loader/lib/style-rewriter.js?id=_v-2d34936a&file=app.vue!./node_modules/vue-loader/lib/selector.js?type=style&index=0!./app.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10328,7 +10328,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".view {\n\t  -webkit-transition: all .5s ease;\n\t  transition: all .5s ease;\n\t}\n\t.test-enter, .test-leave {\n\t  opacity: 0;\n\t  -webkit-transform: translate3d(10px, 0, 0);\n\t          transform: translate3d(10px, 0, 0);\n\t}\n\t.v-link-active {\n\t  color: red;\n\t}\n\t[v-cloak] {\n\t  display: none;\n\t}", ""]);
+	exports.push([module.id, ".view {\r\n\t  -webkit-transition: all .5s ease;\r\n\t  transition: all .5s ease;\r\n\t}\r\n\t.test-enter, .test-leave {\r\n\t  opacity: 0;\r\n\t  -webkit-transform: translate3d(10px, 0, 0);\r\n\t          transform: translate3d(10px, 0, 0);\r\n\t}\r\n\t.v-link-active {\r\n\t  color: red;\r\n\t}\r\n\t[v-cloak] {\r\n\t  display: none;\r\n\t}", ""]);
 	
 	// exports
 
@@ -10718,8 +10718,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2fbd092c&file=login.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2fbd092c&file=login.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3209b6ac&file=login.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3209b6ac&file=login.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./login.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -10737,7 +10737,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".login{\n\tbackground:#fff;\n\tposition:absolute;\n\tleft:0;\n\twidth:100%;\n\theight:100%;\n  z-index : 1000;\n\ttext-align:center;\n\tz-index:200;\n\ttop:0;\n\n}\n\n.login .loginPanel {\n\n  height:250px;\n  margin: 0 auto;\n  position:relaitve;\n  margin-left:60px;\n  margin-right:60px;\n}\n\n.login .titleText {\n  height:80px;\n  line-height:80px;\n  margin-top:150px;\n  font-size:22px;\n  position : relative;\n}\n\n.login .loginPanel .loginCon{\n  background:green;\n  height:200px;\n  width:100%;\n  position:relative;\n \n\n}\n\n.login .loginPanel .loginCon .lline {\n  height:50px;\n  line-height:50px;\n  \n  margin-top:5px;\n  border-bottom: 1px solid #ccc;\n  position:relative;\n}\n\n.lline.llineBnt {\n  height:50px;\n  line-height:50px;\n  margin-top:5px;\n  border-bottom: 0px solid #ccc;\n  position:relative;\n}\n\n\n.login .loginPanel .loginCon .llineBnt .loginBnt{\n  height:40px;\n  background:yellow;\n  width:100%;\n  line-height:40px;\n  display:inline-block;\n  background:#21D6F3;\n  border-radius:5px;\n}\n\n.login .loginPanel .loginCon input {\n  border:0;\n  height:35px;\n}", ""]);
+	exports.push([module.id, ".login{\r\n\tbackground:#fff;\r\n\tposition:absolute;\r\n\tleft:0;\r\n\twidth:100%;\r\n\theight:100%;\r\n  z-index : 1000;\r\n\ttext-align:center;\r\n\tz-index:200;\r\n\ttop:0;\r\n\r\n}\r\n\r\n.login .loginPanel {\r\n\r\n  height:250px;\r\n  margin: 0 auto;\r\n  position:relaitve;\r\n  margin-left:60px;\r\n  margin-right:60px;\r\n}\r\n\r\n.login .titleText {\r\n  height:80px;\r\n  line-height:80px;\r\n  margin-top:150px;\r\n  font-size:22px;\r\n  position : relative;\r\n}\r\n\r\n.login .loginPanel .loginCon{\r\n  background:green;\r\n  height:200px;\r\n  width:100%;\r\n  position:relative;\r\n \r\n\r\n}\r\n\r\n.login .loginPanel .loginCon .lline {\r\n  height:50px;\r\n  line-height:50px;\r\n  \r\n  margin-top:5px;\r\n  border-bottom: 1px solid #ccc;\r\n  position:relative;\r\n}\r\n\r\n.lline.llineBnt {\r\n  height:50px;\r\n  line-height:50px;\r\n  margin-top:5px;\r\n  border-bottom: 0px solid #ccc;\r\n  position:relative;\r\n}\r\n\r\n\r\n.login .loginPanel .loginCon .llineBnt .loginBnt{\r\n  height:40px;\r\n  background:yellow;\r\n  width:100%;\r\n  line-height:40px;\r\n  display:inline-block;\r\n  background:#21D6F3;\r\n  border-radius:5px;\r\n}\r\n\r\n.login .loginPanel .loginCon input {\r\n  border:0;\r\n  height:35px;\r\n}", ""]);
 	
 	// exports
 
@@ -11349,7 +11349,7 @@
 /* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-show=\"!login\" class='login'>\n     <p class=\"titleText\">三维数据中心综合管理系统</p>\n     <div class=\"loginPanel\">\n        <div class=\"loginCon\">\n          <p class=\"lline\"><input /></p>\n          <p class=\"lline\"><input /></p>\n          <p class=\"lline\">fff</p>\n          <p class=\"lline llineBnt\">\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\n          </p>\n        </div>\n     </div>\n  </div>";
+	module.exports = "<div v-show=\"!login\" class='login'>\r\n     <p class=\"titleText\">三维数据中心综合管理系统</p>\r\n     <div class=\"loginPanel\">\r\n        <div class=\"loginCon\">\r\n          <p class=\"lline\"><input /></p>\r\n          <p class=\"lline\"><input /></p>\r\n          <p class=\"lline\">fff</p>\r\n          <p class=\"lline llineBnt\">\r\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\r\n          </p>\r\n        </div>\r\n     </div>\r\n  </div>";
 
 /***/ },
 /* 33 */
@@ -11389,8 +11389,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3848f3d8&file=top.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./top.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3848f3d8&file=top.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./top.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-42985254&file=top.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./top.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-42985254&file=top.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./top.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11408,7 +11408,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".top{\n\tposition:relative;\n\twidth:100%;\n  margin:0 auto;\n\theight:120px;\n\ttop:0;\n  background:rebeccapurple;\n  box-shadow: 0px 1px 5px #888888;\n}\n\n.top .titleName{\n  text-align:center;\n  margin-top:16px;\n  margin-left:-100px;\n}\n\n.top .top_img {\n  height:100%;\n  width:100%;\n}", ""]);
+	exports.push([module.id, ".top{\r\n\tposition:relative;\r\n\twidth:100%;\r\n  margin:0 auto;\r\n\theight:120px;\r\n\ttop:0;\r\n  background:rebeccapurple;\r\n  box-shadow: 0px 1px 5px #888888;\r\n}\r\n\r\n.top .titleName{\r\n  text-align:center;\r\n  margin-top:16px;\r\n  margin-left:-100px;\r\n}\r\n\r\n.top .top_img {\r\n  height:100%;\r\n  width:100%;\r\n}", ""]);
 	
 	// exports
 
@@ -11473,8 +11473,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-16ea2c9b&file=title.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./title.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-16ea2c9b&file=title.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./title.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-63af6fce&file=title.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./title.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-63af6fce&file=title.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./title.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11492,7 +11492,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".titleDiv .titlelImg {\n\t\twidth:30px;\n\t\theight:30px;\n\t\tbackground:url(" + __webpack_require__(40) + ") no-repeat;\n\t\tbackground-size:26px;\n\t\tdisplay:inline-block;\n\t\tmargin-left:15px;\n\t\tmargin-top:3px;\n\t}\n\n\t.titleDiv {\n\t\twidth:100%;\n\t\theight:30px;\n\t\tmargin-top:10px;\n\t\tcolor:#ECE7E7;\n\t}\n\n\t.tword {\n\t\tmargin-left:15px;\n        font-size:17px;\n        height:30px;\n        line-height:30px;\n        position:absolute;\n\t}", ""]);
+	exports.push([module.id, ".titleDiv .titlelImg {\r\n\t\twidth:30px;\r\n\t\theight:30px;\r\n\t\tbackground:url(" + __webpack_require__(40) + ") no-repeat;\r\n\t\tbackground-size:26px;\r\n\t\tdisplay:inline-block;\r\n\t\tmargin-left:15px;\r\n\t\tmargin-top:3px;\r\n\t}\r\n\r\n\t.titleDiv {\r\n\t\twidth:100%;\r\n\t\theight:30px;\r\n\t\tmargin-top:10px;\r\n\t\tcolor:#ECE7E7;\r\n\t}\r\n\r\n\t.tword {\r\n\t\tmargin-left:15px;\r\n        font-size:17px;\r\n        height:30px;\r\n        line-height:30px;\r\n        position:absolute;\r\n\t}", ""]);
 	
 	// exports
 
@@ -11530,13 +11530,13 @@
 /* 42 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"titleDiv\">\n   \t<span class=\"titlelImg\"></span>\n   \t<span class=\"tword\">连接手机</span>\n   \t \n  </div>";
+	module.exports = "<div class=\"titleDiv\">\r\n   \t<span class=\"titlelImg\"></span>\r\n   \t<span class=\"tword\">连接手机</span>\r\n   \t \r\n  </div>";
 
 /***/ },
 /* 43 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='top'>\n  <img class=\"top_img\" src=\"http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\n  </div>";
+	module.exports = "<div class='top'>\r\n  <img class=\"top_img\" src=\"xxxHTMLLINKxxx0.51090485742315650.7041368160862476xxx\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\r\n  </div>";
 
 /***/ },
 /* 44 */
@@ -11576,8 +11576,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-085635f5&file=search.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./search.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-085635f5&file=search.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./search.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-38db8a37&file=search.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./search.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-38db8a37&file=search.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./search.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11618,7 +11618,7 @@
 /* 48 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"all_search\">\r\n\t\t\r\n\t\t\t<span  class=\"peopleImg\">\r\n            </span>\r\n            <div class='searchBody'>\r\n            \t<span class=\"searchBnt\"></span>\r\n            \t<input class='' type=\"search\" placeholder=\"测试搜索\" autosave=\"aoa.org.cn\" result=\"8\">\r\n            \t<span class='scan'>df</span>\r\n            </div>\r\n            \r\n\t\r\n\t\t\r\n\t</div>";
+	module.exports = "<div class=\"all_search\" v-show=false>\r\n\t\t\r\n\t\t\t<span  class=\"peopleImg\">\r\n            </span>\r\n            <div class='searchBody'>\r\n            \t<span class=\"searchBnt\"></span>\r\n            \t<input class='' type=\"search\" placeholder=\"测试搜索\" autosave=\"aoa.org.cn\" result=\"8\">\r\n            \t<span class='scan'>df</span>\r\n            </div>\r\n            \r\n\t\r\n\t\t\r\n\t</div>";
 
 /***/ },
 /* 49 */
@@ -11658,8 +11658,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-41776b3f&file=status.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./status.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-41776b3f&file=status.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./status.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-71fcbf81&file=status.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./status.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-71fcbf81&file=status.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./status.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11693,7 +11693,7 @@
 	
 		data: function data() {
 			return {
-				statusText: "机房列表"
+				statusText: ""
 			};
 		},
 	
@@ -11749,8 +11749,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d8ac3d2&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-4d8ac3d2&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-551d07d9&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-551d07d9&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11833,8 +11833,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-476ab045&file=link.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./link.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-476ab045&file=link.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./link.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ed9f37a&file=link.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./link.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1ed9f37a&file=link.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./link.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -11852,7 +11852,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".topLink{\n\tposition:absolute;\n\tleft:0;\n\twidth:100%;\n\theight:50px;\n\tbackground:#F3F3F3;\n\tborder-top:1px solid #ccc ;\n\tbottom:0;\n}\n\n.acolor{\n\tcolor:#B7B7B7;\n\tfont-size:15px;\n\twidth:80px;\n\tbackground:green;\n\tdisplay:inline-block;\n\ttext-align:center;\n\tline-height:40px;\n\tmargin-left:0px;\n}\n\n.linkContai{\n\toverflow:hidden;\n}\n\n .acolor.v-link-active{\n \tcolor:#fff;\n }\n \n .bottomLine{\n \twidth:50px;\n \tbackground:yellow;\n \tposition:absolute;\n \tleft:0px;\n \ttop:30px;\n \theight:2px;\n \ttransition:left 0.5s;\n\t-moz-transition:left 0.5s; /* Firefox 4 */\n\t-webkit-transition:left 0.5s; /* Safari and Chrome */\n\t-o-transition:left 0.5s; /* Opera */\n }\n\n .Container{\n \tbackground:red;\n \tmargin-left:100px;\n \tposition:absolute;\n \ttop:0px;\n \twidth:100px;\n \theight:100px;\n }", ""]);
+	exports.push([module.id, ".topLink{\r\n\tposition:absolute;\r\n\tleft:0;\r\n\twidth:100%;\r\n\theight:50px;\r\n\tbackground:#F3F3F3;\r\n\tborder-top:1px solid #ccc ;\r\n\tbottom:0;\r\n}\r\n\r\n.acolor{\r\n\tcolor:#B7B7B7;\r\n\tfont-size:15px;\r\n\twidth:80px;\r\n\tbackground:green;\r\n\tdisplay:inline-block;\r\n\ttext-align:center;\r\n\tline-height:40px;\r\n\tmargin-left:0px;\r\n}\r\n\r\n.linkContai{\r\n\toverflow:hidden;\r\n}\r\n\r\n .acolor.v-link-active{\r\n \tcolor:#fff;\r\n }\r\n \r\n .bottomLine{\r\n \twidth:50px;\r\n \tbackground:yellow;\r\n \tposition:absolute;\r\n \tleft:0px;\r\n \ttop:30px;\r\n \theight:2px;\r\n \ttransition:left 0.5s;\r\n\t-moz-transition:left 0.5s; /* Firefox 4 */\r\n\t-webkit-transition:left 0.5s; /* Safari and Chrome */\r\n\t-o-transition:left 0.5s; /* Opera */\r\n }\r\n\r\n .Container{\r\n \tbackground:red;\r\n \tmargin-left:100px;\r\n \tposition:absolute;\r\n \ttop:0px;\r\n \twidth:100px;\r\n \theight:100px;\r\n }", ""]);
 	
 	// exports
 
@@ -12029,7 +12029,7 @@
 /* 64 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='topLink'>\n  \t  <a class=\"acolor\" v-link=\"{ path: '/machineRoom' }\">机房</a>\n  \t  <a class=\"acolor\" v-link=\"{ path: '/equipmentCabinet' }\">机柜</a>\n  \t  <a class=\"acolor\" v-link=\"{ path: '/InstabusEIB' }\">智能布线</a>\n  \t  <a class=\"acolor\" v-link=\"{ path: '/verify' }\">智能布线</a>\n      <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\n    </div>";
+	module.exports = "<div class='topLink'>\r\n  \t  \r\n      <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\r\n    </div>";
 
 /***/ },
 /* 65 */
@@ -12075,8 +12075,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-61044cc4&file=container.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./container.vue", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-61044cc4&file=container.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./container.vue");
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-66a70d7c&file=container.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./container.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-66a70d7c&file=container.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./container.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -12094,7 +12094,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".mainContainer{\n\t\tmargin:0 auto;\n\t\tposition:relative;\n\t\tbackground:#fff;\n\t}", ""]);
+	exports.push([module.id, ".mainContainer{\r\n\t\tmargin:0 auto;\r\n\t\tposition:relative;\r\n\t\tbackground:#fff;\r\n\t}", ""]);
 	
 	// exports
 
@@ -12153,13 +12153,13 @@
 /* 70 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"mainContainer\" v-on:touchStart=\"touchStart($event)\" v-on:touchMove=\"touchMove($event)\" v-on:touchEnd=\"touchEnd($event)\" v-bind:style=\"{height : mHeight + 'px'}\">\n\t\t<router-view :is=\"currentView\" class=\"view\" transition=\"test\" transition-mode=\"out-in\" keep-alive></router-view>\n\t</div>";
+	module.exports = "<div class=\"mainContainer\" v-on:touchStart=\"touchStart($event)\" v-on:touchMove=\"touchMove($event)\" v-on:touchEnd=\"touchEnd($event)\" v-bind:style=\"{height : mHeight + 'px'}\">\r\n\t\t<router-view :is=\"currentView\" class=\"view\" transition=\"test\" transition-mode=\"out-in\" keep-alive></router-view>\r\n\t</div>";
 
 /***/ },
 /* 71 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>\n  \t<top></top>\n  \t<search></search>\n  \t<status></status>\n    <container></container>\n    <login></login>\n    <navigation></navigation>\n  </div>";
+	module.exports = "<div>\r\n  \t<top></top>\r\n  \t<search></search>\r\n  \t<status></status>\r\n    <container></container>\r\n    <login></login>\r\n    <navigation></navigation>\r\n  </div>";
 
 /***/ },
 /* 72 */
@@ -13093,11 +13093,11 @@
 	    var charSpec = this.charSpec,
 	        debug = "[",
 	        chars = charSpec.validChars || charSpec.invalidChars;
-	     if (charSpec.invalidChars) { debug += "^"; }
+	      if (charSpec.invalidChars) { debug += "^"; }
 	    debug += chars;
 	    debug += "]";
-	     if (charSpec.repeat) { debug += "+"; }
-	     return debug;
+	      if (charSpec.repeat) { debug += "+"; }
+	      return debug;
 	  }
 	  END IF **/
 	};
@@ -15296,8 +15296,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b78d7fb&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1b78d7fb&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1be3a679&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-1be3a679&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15520,8 +15520,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f4e8dcdc&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f4e8dcdc&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f4133fe0&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-f4133fe0&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15602,8 +15602,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7b4024bc&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-7b4024bc&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ba5c8104&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-ba5c8104&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15728,8 +15728,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f28adad&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-2f28adad&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3e513def&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3e513def&file=index.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./index.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15829,8 +15829,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-33665ee0&file=cabinetDiagram.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cabinetDiagram.vue", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-33665ee0&file=cabinetDiagram.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cabinetDiagram.vue");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a2952ae4&file=cabinetDiagram.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cabinetDiagram.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-a2952ae4&file=cabinetDiagram.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./cabinetDiagram.vue");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -15848,7 +15848,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".cabinet {\r\n\twidth : 100%;\r\n\theight:100%;\r\n\tposition:absolute;\r\n\tleft:0;\r\n\ttop:0;\r\n\tbackground:red;\r\n\tz-index:1000;\r\n}\r\n\r\n.cabinet .cabinetKa {\r\n\theight : 100%;\r\n\tpadding : 10px;\r\n\r\n}", ""]);
+	exports.push([module.id, ".cabinet {\r\n\twidth : 100%;\r\n\theight:100%;\r\n\tposition:absolute;\r\n\tleft:0;\r\n\ttop:0;\r\n\tbackground:#fff;\r\n\tz-index:1000;\r\n}\r\n\r\n.cabinet .cabinetKa {\r\n\theight : 100%;\r\n\tposition:relative;\r\n\tmargin-left:10px;\r\n\tmargin-right:10px;\r\n\tbackground:yellow;\r\n\toverflow-y : scroll;\r\n}\r\n\r\n.cabinet .cabinetKa .picLine{\r\n\theight:100px;\r\n\tline-height:100px;\r\n\tborder-bottom:1px solid green;\r\n}\r\n\r\n.cabinet .cabinetKa .picLine .liList{\r\n\theight:100px;\r\n}\r\n\r\n\r\n.cabinet .cabinetKa .picLine .liList .containerImg{\r\n\tmargin-left:20px;\r\n\tmargin-right:20px;\r\n\theight:100%;\r\n\tbackground:green;\r\n}\r\n\r\n.cabinet .cabinetKa .picLine .liList .left{\r\n\tdisplay:inline-block;\r\n\twidth:20px;\r\n\ttext-align:center;\r\n\tfloat:left;\r\n\tborder-right:1px solid #ccc;\r\n\r\n}\r\n\r\n.cabinet .cabinetKa .picLine .liList .right{\r\n\tdisplay:inline-block;\r\n\twidth:20px;\r\n\ttext-align:center;\r\n\tposition:relative;\r\n\tfloat:right;\r\n\tborder-left:1px solid #ccc;\r\n}\r\n\r\n.cabinet .cabinetKa .picLine .liList .center{\r\n\tdisplay:inline-block;\r\n\ttext-align:center;\r\n\tposition:absolute;\r\n\tleft:0;\r\n\tbackground:red;\r\n\ttop:0;\r\n\twidth:auto;\r\n\tmargin: 0 20px;\r\n}\r\n\r\n.cabinet .cabinetKa .imagePosition{\r\n\tbackground:green;\r\n\twidth:100%;\r\n\theight:10px;\r\n\tposition:absolute;\r\n\tmargin:0 auto;\r\n\ttop:0;\r\n\r\n}", ""]);
 	
 	// exports
 
@@ -15857,13 +15857,46 @@
 /* 129 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 	
 	exports.__esModule = true;
-	exports["default"] = {
+	exports['default'] = {
 		data: function data() {
 			return {
-				cabinet: false
+				cabinet: true,
+				picList: [{
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}, {
+					name: '空'
+				}]
 			};
 		},
 	
@@ -15873,13 +15906,13 @@
 	
 		components: {}
 	};
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ },
 /* 130 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-show=\"cabinet\" class=\"cabinet\">\r\n\t\t<div class=\"cabinetKa\">\r\n\r\n\t\t</div>\r\n\t</div>";
+	module.exports = "<div v-show=\"cabinet\" class=\"cabinet\">\r\n\t\t<div class=\"cabinetKa\">\r\n            <ul class=\"picLine\" v-for=\"pic in picList\">\r\n            \t<li class=\"liList\">\r\n            \t\t<div class=\"left\">{{$index+1}}</div>\r\n            \t\t<div class=\"center\">ddddddddddddddd</div>\r\n            \t\t<div class=\"right\">{{$index+1}}</div>\r\n            \t\t空\r\n            \t</li>\r\n            </ul>\r\n            <div class=\"imagePosition\">\r\n        \r\n            </div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
 /* 131 */
@@ -15909,6 +15942,10 @@
 	
 	var _chRouterSuccJs2 = _interopRequireDefault(_chRouterSuccJs);
 	
+	var _allCompJs = __webpack_require__(143);
+	
+	var _allCompJs2 = _interopRequireDefault(_allCompJs);
+	
 	var _configJs = __webpack_require__(31);
 	
 	var _configJs2 = _interopRequireDefault(_configJs);
@@ -15921,6 +15958,7 @@
 	
 	    start: function start(data) {
 	        _configJs2['default'].Runtime.eventBus = new _eventBus2['default']();
+	        _allCompJs2['default'].startInit();
 	        _chRouterSuccJs2['default'].init();
 	    }
 	
@@ -25848,7 +25886,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body {\n\t\n}\n\n@font-face{\n    font-family:\"Microsoft YaHei\",微软雅黑,\"MicrosoftJhengHei\",华文细黑,STHeiti,MingLiu ,Roboto\n}\n\na {\n\ttext-decoration: none;\n\tmargin-left:25px;\n}\n\np{\n\tmargin:0;\n\tpadding:0;\n}\n\nul {\n\tmargin:0;\n\tpadding:0;\n}\n\n\n.fadeInd {\n     position:absolute;\n     opacity:0.5;\n    -webkit-transition: opacity 0.5s ease-in-out;\n    -moz-transition: opacity 0.5s ease-in-out;\n    -o-transition: opacity 0.5s ease-in-out;\n    transition: opacity 0.5s ease-in-out;\n}\n\n.fadeOutd {\n     position:absolute;\n    -webkit-transition: opacity 0.5s ease-in-out;\n    -moz-transition: opacity 0.5s ease-in-out;\n    -o-transition: opacity 0.5s ease-in-out;\n    transition: opacity 0.5s ease-in-out;\n}\n\nhtml {\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\n    overflow:hidden;\n}", ""]);
+	exports.push([module.id, "body {\r\n\t\r\n}\r\n\r\n@font-face{\r\n    font-family:\"Microsoft YaHei\",微软雅黑,\"MicrosoftJhengHei\",华文细黑,STHeiti,MingLiu ,Roboto\r\n}\r\n\r\na {\r\n\ttext-decoration: none;\r\n\tmargin-left:25px;\r\n}\r\n\r\np{\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\nul {\r\n\tmargin:0;\r\n\tpadding:0;\r\n}\r\n\r\n\r\n.fadeInd {\r\n     position:absolute;\r\n     opacity:0.5;\r\n    -webkit-transition: opacity 0.5s ease-in-out;\r\n    -moz-transition: opacity 0.5s ease-in-out;\r\n    -o-transition: opacity 0.5s ease-in-out;\r\n    transition: opacity 0.5s ease-in-out;\r\n}\r\n\r\n.fadeOutd {\r\n     position:absolute;\r\n    -webkit-transition: opacity 0.5s ease-in-out;\r\n    -moz-transition: opacity 0.5s ease-in-out;\r\n    -o-transition: opacity 0.5s ease-in-out;\r\n    transition: opacity 0.5s ease-in-out;\r\n}\r\n\r\nhtml {\r\n    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);\r\n    overflow:hidden;\r\n}", ""]);
 	
 	// exports
 
@@ -26847,6 +26885,85 @@
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
+
+/***/ },
+/* 142 */,
+/* 143 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	//import channelControl from './channelControl'
+	//import allComp from './allComp'
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(16)['default'];
+	
+	exports.__esModule = true;
+	
+	var _componentsIndexVue = __webpack_require__(144);
+	
+	var _componentsIndexVue2 = _interopRequireDefault(_componentsIndexVue);
+	
+	var _vue = __webpack_require__(17);
+	
+	var _vue2 = _interopRequireDefault(_vue);
+	
+	var _config = __webpack_require__(31);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	exports['default'] = {
+	   startInit: function startInit() {
+	      var allComp = _componentsIndexVue2['default'].getComp();
+	      //	const allComp = comp;
+	      console.log("allComp : ", allComp);
+	      var bus = _config2['default'].Runtime.eventBus;
+	
+	      for (var obj in allComp) {
+	         try {
+	            allComp[obj].initBus(bus);
+	         } catch (e) {
+	            console.log("err:", e);
+	         }
+	      }
+	   }
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 144 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(145)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../node_modules/vue-loader/lib/selector.js?type=script&index=0!./index.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../node_modules/vue-loader/lib/selector.js?type=script&index=0!./index.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../node_modules/vue-loader/lib/selector.js?type=script&index=0!./index.vue")
+	var newTemplate = null
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 145 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = {
+		getComp: function getComp() {
+	
+			return {};
+		}
+	};
+	module.exports = exports["default"];
 
 /***/ }
 /******/ ]);

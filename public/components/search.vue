@@ -55,7 +55,7 @@
 </style>
 
 <template>
-	<div class="all_search">
+	<div class="all_search" v-show=false>
 		
 			<span  class="peopleImg">
             </span>

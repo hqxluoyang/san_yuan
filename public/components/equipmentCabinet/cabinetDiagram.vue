@@ -12,22 +12,94 @@
 	position:absolute;
 	left:0;
 	top:0;
-	background:red;
+	background:#fff;
 	z-index:1000;
 }
 
 .cabinet .cabinetKa {
 	height : 100%;
-	padding : 10px;
+	position:relative;
+	margin-left:10px;
+	margin-right:10px;
+	background:yellow;
+	overflow-y : scroll;
+}
+
+.cabinet .cabinetKa .picLine{
+	height:100px;
+	line-height:100px;
+	border-bottom:1px solid green;
+}
+
+.cabinet .cabinetKa .picLine .liList{
+	height:100px;
+}
+
+
+.cabinet .cabinetKa .picLine .liList .containerImg{
+	margin-left:20px;
+	margin-right:20px;
+	height:100%;
+	background:green;
+}
+
+.cabinet .cabinetKa .picLine .liList .left{
+	display:inline-block;
+	width:20px;
+	text-align:center;
+	float:left;
+	border-right:1px solid #ccc;
 
 }
+
+.cabinet .cabinetKa .picLine .liList .right{
+	display:inline-block;
+	width:20px;
+	text-align:center;
+	position:relative;
+	float:right;
+	border-left:1px solid #ccc;
+}
+
+.cabinet .cabinetKa .picLine .liList .center{
+	display:inline-block;
+	text-align:center;
+	position:absolute;
+	left:0;
+	background:red;
+	top:0;
+	width:auto;
+	margin: 0 20px;
+}
+
+.cabinet .cabinetKa .imagePosition{
+	background:green;
+	width:100%;
+	height:10px;
+	position:absolute;
+	margin:0 auto;
+	top:0;
+
+}
+
+
 
 </style>
 
 <template>
 	<div v-show="cabinet" class="cabinet">
 		<div class="cabinetKa">
-
+            <ul class="picLine" v-for="pic in picList">
+            	<li class="liList">
+            		<div class="left">{{$index+1}}</div>
+            		<div class="center">ddddddddddddddd</div>
+            		<div class="right">{{$index+1}}</div>
+            		空
+            	</li>
+            </ul>
+            <div class="imagePosition">
+        
+            </div>
 		</div>
 	</div>
 </template>
@@ -37,7 +109,40 @@
 export default {
 	data () {
 		return {
-			cabinet : false
+			cabinet : true ,
+			picList :[{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			},{
+				name : '空'
+			}]
 		}
 	},
 
