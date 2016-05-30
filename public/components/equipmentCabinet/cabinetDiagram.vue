@@ -104,12 +104,12 @@
 	</div>
 </template>
 
-<script>
+ <script>
 
 export default {
 	data () {
 		return {
-			cabinet : true ,
+			cabinet : false ,
 			picList :[{
 				name : '空'
 			},{

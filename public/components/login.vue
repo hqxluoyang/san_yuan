@@ -30,7 +30,7 @@
 }
 
 .login .loginPanel .loginCon{
-  background:green;
+ 
   height:200px;
   width:100%;
   position:relative;
@@ -47,7 +47,7 @@
   position:relative;
 }
 
-.lline.llineBnt {
+.login .loginPanel .loginCon .lline.llineBnt {
   height:50px;
   line-height:50px;
   margin-top:5px;
@@ -67,21 +67,24 @@
 }
 
 .login .loginPanel .loginCon input {
-  border:0;
-  height:35px;
+  border-top:0;
+  border-right:0;
+  border-bottom:0;
+  border-left:1px solid #ccc;
+  height:25px;
 }
 
 </style>
 
 <template>
   <div v-show="!login" class='login'>
-     <p class="titleText">三维数据中心综合管理系统</p>
+     <p class="titleText">闪传注册</p>
      <div class="loginPanel">
         <div class="loginCon">
           <p class="lline"><input /></p>
           <p class="lline"><input /></p>
-          <p class="lline">fff</p>
-          <p class="lline llineBnt">
+         
+          <p class="llineBnt lline">
             <span class="loginBnt" v-on:click="lgogin($event)">登陆</span>
           </p>
         </div>
@@ -97,7 +100,7 @@ export default {
    
   data () {
   	return {
-  		login:true,
+  		login:false,
       username:'',
       password:''
   	}
@@ -106,7 +109,7 @@ export default {
   methods: {
       lgogin () {
        //loginSer.login();
-       this.login = true;
+      // this.login = true;
       },
         
   },
