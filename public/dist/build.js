@@ -15233,7 +15233,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".machineRome{\r\n\twidth:100%;\r\n\theight:100%;\r\n\t\r\n}\r\n\r\n.machineRome .romContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.machineRome .romContainer .romLine {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.machineRome .romContainer .romLine .rightImage{\r\n\tright:10px;\r\n\tmargin-top:-32px;\r\n\tposition:relative;\r\n\tfloat:right;\r\n}\r\n\r\n.machineRome .romContainer .romLine li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
+	exports.push([module.id, ".machineRome{\r\n\twidth:100%;\r\n\theight:100%;\r\n\t\r\n}\r\n\r\n.machineRome .romContainer {\r\n\tpadding-left:10px;\r\n\tpadding-right:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.machineRome .romContainer .romLine {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.machineRome .romContainer .romLine .rightImage{\r\n\tright:10px;\r\n\tmargin-top:-32px;\r\n\tposition:relative;\r\n\tfloat:right;\r\n}\r\n\r\n.machineRome .romContainer .romLine li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
@@ -15396,7 +15396,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".InstabusEIB {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tposition:relative;\r\n\toverflow-y: scroll;\r\n\tbackground:#000;\r\n}", ""]);
+	exports.push([module.id, ".InstabusEIB {\r\n\twidth: 100%;\r\n\theight: 100%;\r\n\tposition:relative;\r\n\toverflow-y: scroll;\r\n\tcolor:#fff;\r\n\tbackground:#000;\r\n}\r\n\r\n.InstabusEIB .elbcontainer{\r\n\tpadding-left:10px;\r\n\tpadding-right:10px;\r\n\theight:100%;\r\n\toverflow-y:scroll;\r\n}\r\n\r\n\r\n\r\n.InstabusEIB .elbcontainer .ulList{\r\n\theight:150px;\r\n\tmargin-top:10px;\r\n\tborder-bottom:1px solid #00a4b2 ;\r\n}\r\n\r\n.InstabusEIB .elbcontainer .ulList .leftLi{\r\n\twidth:150px;\r\n\tdisplay:inline-block;\r\n\theight:100%;\r\n\tposition:relative;\r\n}\r\n\r\n.InstabusEIB .elbcontainer .ulList .rightLi{\r\n\tdisplay:inline-block;\r\n\theight:100%;\r\n\tposition:relative;\r\n}", ""]);
 	
 	// exports
 
@@ -15409,6 +15409,13 @@
 	
 	exports.__esModule = true;
 	exports["default"] = {
+	
+		data: function data() {
+			return {
+				elbList: [{ name: 1 }, { name: 2 }, { name: 8 }, { name: 9 }]
+			};
+		},
+	
 		init: function init() {},
 	
 		ready: function ready() {}
@@ -15419,7 +15426,7 @@
 /* 110 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"InstabusEIB\">\r\n\t</div>";
+	module.exports = "<div class=\"InstabusEIB\">\r\n\t\t<div class=\"elbcontainer\">\r\n\t\t\t<ul class=\"ulList\" v-for=\"elb in elbList\">\r\n\t\t\t\t<li class=\"leftLi\">日期\r\n\t\t\t\t</li>\r\n\r\n\t\t\t\t<li class=\"rightLi\">\r\n                 启动\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
 /* 111 */
@@ -15478,7 +15485,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".machineVerify{\r\n\twidth:100%;\r\n\theight:100%;\r\n\t\r\n}\r\n\r\n.machineVerify .verifyContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
+	exports.push([module.id, ".machineVerify{\r\n\twidth:100%;\r\n\theight:100%;\r\n\t\r\n}\r\n\r\n.machineVerify .verifyContainer {\r\n\tpadding-left:10px;\r\n\tpadding-right:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineVerify .verifyContainer .verifyLine .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
@@ -15596,7 +15603,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".equipmentCabinet {\r\n\theight:100%;\r\n\twidth:100%;\r\n\tposition:relative;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .rightImage{\r\n\tright:10px;\r\n\tmargin-top:-32px;\r\n\tposition:relative;\r\n\tfloat:right;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
+	exports.push([module.id, ".equipmentCabinet {\r\n\theight:100%;\r\n\twidth:100%;\r\n\tposition:relative;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer {\r\n\tpadding-left:10px;\r\n\tpadding-right:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .rightImage{\r\n\tright:10px;\r\n\tmargin-top:-32px;\r\n\tposition:relative;\r\n\tfloat:right;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
@@ -25822,7 +25829,7 @@
 /* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license

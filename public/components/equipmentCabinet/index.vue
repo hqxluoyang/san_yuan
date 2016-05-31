@@ -7,7 +7,8 @@
 }
 
 .equipmentCabinet .equContainer {
-	padding:10px;
+	padding-left:10px;
+	padding-right:10px;
 	height:100%;
 	overflow-y: scroll;
 }
