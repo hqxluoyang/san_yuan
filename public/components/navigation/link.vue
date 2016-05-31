@@ -65,6 +65,7 @@
   	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">机柜</a>
   	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">智能布线</a>
   	  <a class="acolor" v-link="{ path: '/verify' }">待确认设备</a>
+  	  <a class="acolor" v-link="{ path: '/set' }">设置</a>
       <p v-bind:style="{left:lineLeft + 'px'}"></p>
     </div>
 </template>

@@ -34,14 +34,12 @@ http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png"
 
 
 <script>
-
-import titlecom from './title.vue'
 export default {
 
    ready () {
    	
    },
   
-  components:{titlecom}
+  components:{}
 }
 </script>
