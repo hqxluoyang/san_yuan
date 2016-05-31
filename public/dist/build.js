@@ -10833,17 +10833,33 @@
 	
 		qrcodeurl: function qrcodeurl(data) {},
 	
+		getSessionId: function getSessionId() {
+			var c_name = 'JSESSIONID';
+			if (document.cookie.length > 0) {
+				c_start = document.cookie.indexOf(c_name + "=");
+				if (c_start != -1) {
+					c_start = c_start + c_name.length + 1;
+					c_end = document.cookie.indexOf(";", c_start);
+					if (c_end == -1) c_end = document.cookie.length;
+					return unescape(document.cookie.substring(c_start, c_end));
+				}
+			}
+		},
+	
 		login: function login(d) {
 			var d = {
 				username: 'admin',
 				password: '1qaz3EDC'
 			};
+			var that = this;
 			$.ajax({
 				type: "POST",
 				url: "http://demo.3ddcim.com/user/login/",
 				data: d,
-				success: function success() {
-					alert("dfdf");
+				success: function success(response) {
+					var session = that.getSessionId();
+					console.log("session : ", session);
+					that.vm.login = true;
 				},
 				dataType: 'text'
 			});
@@ -11356,7 +11372,7 @@
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-show=\"!login\" class='login'>\r\n     <p class=\"titleText\">闪传注册</p>\r\n     <div class=\"loginPanel\">\r\n        <div class=\"loginCon\">\r\n          <p class=\"lline\"><span class=\"namePanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    <path fill=\"#ccc\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\" />\r\n</svg></span><input v-model=\"username\" /></p>\r\n          <p class=\"lline\"><span class=\"passwordPanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    <path fill=\"#ccc\" d=\"M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z\" />\r\n</svg></span><input tpye=\"password\" v-model=\"passW\"/></p>\r\n         \r\n          <p class=\"llineBnt lline\">\r\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\r\n          </p>\r\n        </div>\r\n     </div>\r\n  </div>";
+	module.exports = "<div v-show=\"!login\" class='login'>\r\n     <p class=\"titleText\">闪传注册</p>\r\n     <div class=\"loginPanel\">\r\n        <div class=\"loginCon\">\r\n          <p class=\"lline\"><span class=\"namePanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\" />\r\n          </svg></span><input v-model=\"username\" /></p>\r\n          <p class=\"lline\"><span class=\"passwordPanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z\" />\r\n          </svg></span><input tpye=\"password\" v-model=\"passW\"/></p>\r\n         \r\n          <p class=\"llineBnt lline\">\r\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\r\n          </p>\r\n        </div>\r\n     </div>\r\n  </div>";
 
 /***/ },
 /* 34 */
@@ -12036,7 +12052,7 @@
 /* 65 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='topLink'>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/machineRoom' }\">1</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/equipmentCabinet' }\">2</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/InstabusEIB' }\">3</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/verify' }\">4</a>\r\n      <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\r\n    </div>";
+	module.exports = "<div class='topLink'>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/machineRoom' }\">机房</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/equipmentCabinet' }\">机柜</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/InstabusEIB' }\">智能布线</a>\r\n  \t  <a class=\"acolor\" v-link=\"{ path: '/verify' }\">待确认设备</a>\r\n      <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\r\n    </div>";
 
 /***/ },
 /* 66 */
@@ -15322,7 +15338,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".machineRome{\r\n\twidth:100%;\r\n\theight:100%;\r\n\t\r\n}\r\n\r\n.machineRome .romContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.machineRome .romContainer .romLine {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.machineRome .romContainer .romLine li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
+	exports.push([module.id, ".machineRome{\r\n\twidth:100%;\r\n\theight:100%;\r\n\t\r\n}\r\n\r\n.machineRome .romContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.machineRome .romContainer .romLine {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.machineRome .romContainer .romLine .rightImage{\r\n\tright:10px;\r\n\tmargin-top:-32px;\r\n\tposition:relative;\r\n\tfloat:right;\r\n}\r\n\r\n.machineRome .romContainer .romLine li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.machineRome .romContainer .romLine .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
@@ -15344,47 +15360,18 @@
 	exports["default"] = {
 		data: function data() {
 			return {
-				romList: [{
-					name: "机房一楼",
-					message: "信息机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}]
+				romList: []
 			};
 		},
 	
 		init: function init() {},
+	
+		methods: {
+			selectRoom: function selectRoom(room) {
+				console.log("roome:", room);
+				_servicesMachineRoomMachineRoom2["default"].selectRoom(room);
+			}
+		},
 	
 		ready: function ready() {
 			_servicesMachineRoomMachineRoom2["default"].setThis.call(_servicesMachineRoomMachineRoom2["default"], this);
@@ -15412,74 +15399,42 @@
 		setThis: function setThis(self) {
 			this.vm = self;
 		},
-	
+		/*
+	 	getRoomList () {
+	 		$.ajax({
+	 			url : 'http://demo.3ddcim.com/room/list_as_json/?_dc=1464700799175&page=1&start=0&limit=50',
+	 			dataType :"json",
+	 			type:"GET",
+	 			success: function(response){
+	 				//self.romList = response.items;
+	 				console.log("response:" , response)
+	 			},
+	 
+	 			error: function(){
+	 				console.log("error")
+	 			}
+	 		})
+	 	},
+	 
+	 */
 		getRoomList: function getRoomList() {
-			/*$.ajax({
-	  	 type: "GET",
-	  	 url: "http://demo.3ddcim.com/room/list_as_json/?_dc=1464530837811&page=1&start=0&limit=50", 
-	  	 dataType: "jsonp",
-	  	 jsonp: "success_jsonpCallback",   
-	  	 success: function (result) {    
-	  	 alert(result.Success);    
-	  	 alert(result.Content);                                
-	  	 },
-	  	 error: function (result, status) {
-	  	    //处理错误
-	  	    alert("ddddd")
-	  	 }
-	  });
-	  */
-			$.ajax({
-				url: 'http://demo.3ddcim.com/room/list_as_json/?_dc=1464530837811&page=1&start=0&limit=50',
-				data: { rel: 13 },
-				dataType: "jsonp",
-				jsonp: "callback",
-				jsonpCallback: "success_jsonp",
-				timeout: 3000,
-				dataFilter: function dataFilter(json) {
-					console.log("jsonp.filter:" + json);
-					return json;
-				},
-				success: function success(json, textStatus) {
-					console.log("jsonp.success:" + json.name);
-				},
-				error: function error(XMLHttpRequest, textStatus, errorThrown) {
-					console.log("jsonp.error:" + textStatus);
-				}
-			});
 	
-			/*
-	   $.get("http://demo.3ddcim.com/room/list_as_json/?page=1&start=0&limit=50",function(data,status){
-	    			//alert("Data: " + data + "\nStatus: " + status);
-	    			console.log("data : " , data , status)
-	  			});
-	  
-	  $.ajax({
-	             url:'http://demo.3ddcim.com/room/list_as_json/?_dc=1464530837811&page=1&start=0&limit=50',
-	             dataType:"jsonp",
-	             jsonp:"jsonpcallback",
-	             success:function(data){
-	                 console.log("data :" , data)
-	             }
-	        });
-	  		$.ajax({
-	             type : "get",
-	             async:false,
-	             url : "http://demo.3ddcim.com/room/list_as_json/?page=1&start=0&limit=50",
-	             dataType : "jsonp",
-	             jsonp: "callbackparam",//传递给请求处理程序或页面的，用以获得jsonp回调函数名的参数名(默认为:callback)
-	             jsonpCallback:"success_jsonpCallback",//自定义的jsonp回调函数名称，默认为jQuery自动生成的随机函数名
-	             success : function(json){
-	                 alert(json);
-	                 alert(json[0].name);
-	             },
-	             error:function(data){
-	             	 console.log("data error:" , data)
-	                 alert('fail');
-	             }
-	         });
-	  		*/
-		}
+			this.vm.romList;
+			var self = this.vm;
+			$.ajax({
+				url: 'rome.json',
+				dataType: "json",
+				type: "GET",
+				success: function success(response) {
+					self.romList = response.items;
+					//console.log("response:" , response)
+				},
+	
+				error: function error() {}
+			});
+		},
+	
+		selectRoom: function selectRoom(room) {}
 	};
 	module.exports = exports["default"];
 
@@ -15487,7 +15442,7 @@
 /* 112 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"machineRome\">\r\n\t\t<div class=\"romContainer\">\r\n\t\t\t<div class=\"romLine\" v-for = \"rom in romList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
+	module.exports = "<div class=\"machineRome\">\r\n\t\t<div class=\"romContainer\">\r\n\t\t\t<div class=\"romLine\" v-for = \"rom in romList\" v-on:click=\"selectRoom(rom)\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.name}} . {{rom.serial}}</li>\r\n\t\t\t\t</ul>\r\n\r\n\t\t\t\t<span class=\"rightImage\">\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#8e8e8e\" d=\"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
 /* 113 */
@@ -15641,53 +15596,45 @@
 	
 	exports.__esModule = true;
 	exports["default"] = {
-		data: function data() {
-			return {
-				romList: [{
-					name: "机房3楼",
-					message: "信息机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}, {
-					name: "调度机房",
-					message: "通信机房"
-				}]
-			};
-		},
+	  data: function data() {
+	    return {
+	      romList: [{
+	        "status": "上架",
+	        "product": "SYSTIMAX PATCHMAX GS3",
+	        "room_serial": "信息机房",
+	        "product_type": 5,
+	        "room": "信息机房",
+	        "level": 1,
+	        "pos": 0,
+	        "cabinet": "A06",
+	        "cabinet_id": 100088,
+	        "height": 2,
+	        "id": 101615,
+	        "serial": "A06-S10",
+	        "name": "A06-S10"
+	      }, {
+	        "status": "上架",
+	        "product": "SYSTIMAX 1000 G2",
+	        "room_serial": "信息机房",
+	        "product_type": 5,
+	        "room": "信息机房",
+	        "level": 1,
+	        "pos": 25,
+	        "cabinet": "A06",
+	        "cabinet_id": 100088,
+	        "height": 4,
+	        "id": 101640,
+	        "serial": "A06-ODF1",
+	        "name": "A06-ODF1"
+	      }]
+	    };
+	  },
 	
-		init: function init() {},
+	  init: function init() {},
 	
-		ready: function ready() {},
+	  ready: function ready() {},
 	
-		components: {}
+	  components: {}
 	};
 	module.exports = exports["default"];
 
@@ -15695,7 +15642,7 @@
 /* 122 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"machineVerify\">\r\n\t\t<div class=\"verifyContainer\">\r\n\t\t\t<div class=\"verifyLine\" v-for = \"rom in romList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
+	module.exports = "<div class=\"machineVerify\">\r\n\t\t<div class=\"verifyContainer\">\r\n\t\t\t<div class=\"verifyLine\" v-for = \"rom in romList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.room}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.room_serial}} . {{rom.cabinet}} . {{rom.serial}} . {{rom.serial}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
 /* 123 */
@@ -15754,7 +15701,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".equipmentCabinet {\r\n\theight:100%;\r\n\twidth:100%;\r\n\tposition:relative;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
+	exports.push([module.id, ".equipmentCabinet {\r\n\theight:100%;\r\n\twidth:100%;\r\n\tposition:relative;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer {\r\n\tpadding:10px;\r\n\theight:100%;\r\n\toverflow-y: scroll;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment {\r\n\theight:60px;\r\n\t\r\n\tborder-bottom:1px solid #ccc ;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment li{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .rightImage{\r\n\tright:10px;\r\n\tmargin-top:-32px;\r\n\tposition:relative;\r\n\tfloat:right;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liname{\r\n\twidth:100%;\r\n\theight:30px;\r\n\tline-height:30px;\r\n}\r\n\r\n.equipmentCabinet .equContainer .equipment .liMessage{\r\n\twidth:100%;\r\n\theight:20px;\r\n\tline-height:20px;\r\n\tcolor:#ccc;\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
@@ -15925,7 +15872,7 @@
 /* 132 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"equipmentCabinet\">\r\n\r\n\t\t<div class=\"equContainer\">\r\n\t\t\t<div class=\"equipment\" v-for = \"equipment in equipmentList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{equipment.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{equipment.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t</div>\r\n\r\n\t<cabinet></cabinet>";
+	module.exports = "<div class=\"equipmentCabinet\">\r\n\r\n\t\t<div class=\"equContainer\">\r\n\t\t\t<div class=\"equipment\" v-for = \"equipment in equipmentList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{equipment.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{equipment.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<span class=\"rightImage\">\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#8e8e8e\" d=\"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t</div>\r\n\r\n\t<cabinet></cabinet>";
 
 /***/ },
 /* 133 */
@@ -25980,7 +25927,7 @@
 /* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license

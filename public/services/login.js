@@ -30,18 +30,34 @@ export default {
 	qrcodeurl (data) {
 		
 	},
+
+	getSessionId () {
+		var c_name = 'JSESSIONID';
+			if(document.cookie.length>0){
+			   c_start=document.cookie.indexOf(c_name + "=")
+			   if(c_start!=-1){ 
+			     c_start=c_start + c_name.length+1 
+			     c_end=document.cookie.indexOf(";",c_start)
+			     if(c_end==-1) c_end=document.cookie.length
+			     return unescape(document.cookie.substring(c_start,c_end));
+			   }
+			}
+		},
 	
 	login (d) {
 		var d = {
 			username:'admin',
 			password:'1qaz3EDC'
 		}
+		var that = this ;
 		$.ajax({
 			type : "POST",
 			url : "http://demo.3ddcim.com/user/login/",
 			data :d ,
-			success : function(){
-				alert("dfdf")	
+			success : function(response){
+				var session = that.getSessionId();
+				console.log("session : " , session)
+				that.vm.login = true ;
 			},
 			dataType:'text' 
 		})

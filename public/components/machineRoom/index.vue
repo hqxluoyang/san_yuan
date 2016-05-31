@@ -23,6 +23,13 @@
 	border-bottom:1px solid #ccc ;
 }
 
+.machineRome .romContainer .romLine .rightImage{
+	right:10px;
+	margin-top:-32px;
+	position:relative;
+	float:right;
+}
+
 .machineRome .romContainer .romLine li{
 	width:100%;
 	height:30px;
@@ -48,11 +55,17 @@
 <template>
 	<div class="machineRome">
 		<div class="romContainer">
-			<div class="romLine" v-for = "rom in romList">
+			<div class="romLine" v-for = "rom in romList" v-on:click="selectRoom(rom)">
 				<ul>
 					<li class="liname">{{rom.name}}</li>
-					<li class="liMessage">{{rom.message}}</li>
+					<li class="liMessage">{{rom.name}} . {{rom.serial}}</li>
 				</ul>
+
+				<span class="rightImage">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    					<path fill="#8e8e8e" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+					</svg>
+				</span>
 			</div>
 		</div>
 	</div>
@@ -65,48 +78,19 @@ import machineRoom from '../../services/machineRoom/machineRoom'
 export default {
 	data () {
 		return {
-			romList:[{
-				name:"机房一楼",
-				message : "信息机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			}]
+			romList:[]
 		}
 	},
 
 	init () {
 
+	},
+
+	methods : {
+		selectRoom (room) {
+			console.log("roome:" , room)
+			machineRoom.selectRoom(room)
+		}
 	},
 
 	ready () {

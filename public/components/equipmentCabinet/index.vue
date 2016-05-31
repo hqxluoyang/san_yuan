@@ -24,6 +24,13 @@
 	line-height:30px;
 }
 
+.equipmentCabinet .equContainer .equipment .rightImage{
+	right:10px;
+	margin-top:-32px;
+	position:relative;
+	float:right;
+}
+
 .equipmentCabinet .equContainer .equipment .liname{
 	width:100%;
 	height:30px;
@@ -48,6 +55,11 @@
 					<li class="liname">{{equipment.name}}</li>
 					<li class="liMessage">{{equipment.message}}</li>
 				</ul>
+				<span class="rightImage">
+					<svg style="width:24px;height:24px" viewBox="0 0 24 24">
+    					<path fill="#8e8e8e" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+					</svg>
+				</span>
 			</div>
 		</div>
 

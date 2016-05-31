@@ -1,5 +1,8 @@
 /**
-	
+	<a class="acolor" v-link="{ path: '/machineRoom' }">机房</a>
+  	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">d</a>
+  	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">3</a>
+  	  <a class="acolor" v-link="{ path: '/verify' }">4</a>
 **/
 
 
@@ -58,10 +61,10 @@
 
 <template>
   	<div class='topLink'>
-  	  <a class="acolor" v-link="{ path: '/machineRoom' }">1</a>
-  	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">2</a>
-  	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">3</a>
-  	  <a class="acolor" v-link="{ path: '/verify' }">4</a>
+  	  <a class="acolor" v-link="{ path: '/machineRoom' }">机房</a>
+  	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">机柜</a>
+  	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">智能布线</a>
+  	  <a class="acolor" v-link="{ path: '/verify' }">待确认设备</a>
       <p v-bind:style="{left:lineLeft + 'px'}"></p>
     </div>
 </template>

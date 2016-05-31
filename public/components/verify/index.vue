@@ -1,7 +1,8 @@
 /**
 	date :2016-5-28
 	author : sailing
-	fun : 机房管理住模块
+	fun : 待确认模块
+	http://demo.3ddcim.com/unconfirmed/list_as_json/?_dc=1464701557848&page=1&start=0&limit=50
 **/
 
 <style>
@@ -50,8 +51,8 @@
 		<div class="verifyContainer">
 			<div class="verifyLine" v-for = "rom in romList">
 				<ul>
-					<li class="liname">{{rom.name}}</li>
-					<li class="liMessage">{{rom.message}}</li>
+					<li class="liname">{{rom.room}}</li>
+					<li class="liMessage">{{rom.room_serial}} . {{rom.cabinet}} . {{rom.serial}} . {{rom.serial}}</li>
 				</ul>
 			</div>
 		</div>
@@ -63,42 +64,35 @@ export default {
 	data () {
 		return {
 			romList:[{
-				name:"机房3楼",
-				message : "信息机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			},{
-				name:"调度机房",
-				message : "通信机房"
-			}]
+            "status": "上架", 
+            "product": "SYSTIMAX PATCHMAX GS3", 
+            "room_serial": "信息机房", 
+            "product_type": 5, 
+            "room": "信息机房", 
+            "level": 1, 
+            "pos": 0, 
+            "cabinet": "A06", 
+            "cabinet_id": 100088, 
+            "height": 2, 
+            "id": 101615, 
+            "serial": "A06-S10", 
+            "name": "A06-S10"
+        }, 
+        {
+            "status": "上架", 
+            "product": "SYSTIMAX 1000 G2", 
+            "room_serial": "信息机房", 
+            "product_type": 5, 
+            "room": "信息机房", 
+            "level": 1, 
+            "pos": 25, 
+            "cabinet": "A06", 
+            "cabinet_id": 100088, 
+            "height": 4, 
+            "id": 101640, 
+            "serial": "A06-ODF1", 
+            "name": "A06-ODF1"
+        }]
 		}
 	},
 
