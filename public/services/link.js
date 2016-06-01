@@ -1,8 +1,19 @@
+import ts from "./ts"
+
 export default {
 	
 	setThis (self) {
 		this.vm = self;
 	},
+
+	setWidth () {
+		const self = this.vm ;
+		const len = self.list.length ;
+		var width = ts.getPageWidth();
+		self.w = width/len ;
+		//console.log("width:" , width)
+	},
+	
 	
 	onRouter (r) {
 		const self = this.vm;
@@ -16,6 +27,6 @@ export default {
 	},
 	
 	regBus (bus) {
-		bus.on("router" , this.onRouter.bind(this))
+		//bus.on("router" , this.onRouter.bind(this))
 	}
 }

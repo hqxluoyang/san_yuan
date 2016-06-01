@@ -21,7 +21,7 @@
 	color:#B7B7B7;
 	font-size:15px;
 	width:80px;
-	background:green;
+	background:#1DB995;
 	display:inline-block;
 	text-align:center;
 	line-height:40px;
@@ -57,16 +57,37 @@
  	width:100px;
  	height:100px;
  }
+
+.topLink .ulStyle {
+	height:50px;
+	text-align:center;
+	
+}
+
+.topLink .ulStyle .liStyle{
+	display:inline-block;
+	width:80px;
+	
+	position:relative;
+	height:50px;
+	position:relative;
+	
+}
+
 </style>
 
 <template>
   	<div class='topLink'>
-  	  <a class="acolor" v-link="{ path: '/machineRoom' }">机房</a>
-  	  <a class="acolor" v-link="{ path: '/equipmentCabinet' }">机柜</a>
-  	  <a class="acolor" v-link="{ path: '/InstabusEIB' }">智能布线</a>
-  	  <a class="acolor" v-link="{ path: '/verify' }">待确认设备</a>
-  	  <a class="acolor" v-link="{ path: '/set' }">设置</a>
-      <p v-bind:style="{left:lineLeft + 'px'}"></p>
+  	  	<ul class="ulStyle">
+  	  		<li class="liStyle" style="{width:w + 'px'}" v-for="listObj in list">
+  	  			<p></p>
+  	  			
+  	  			<a class="acolor" v-link="{ path: listObj.path }">{{listObj['name']}}</a>
+
+  	  			
+  	  		</li>
+  	  	</ul>
+        <p v-bind:style="{left:lineLeft + 'px'}"></p>
     </div>
 </template>
 
@@ -76,7 +97,24 @@ import link from '../../services/link.js'
 export default {
   	  data () {
   	  	return {
-  	  		lineLeft:0
+  	  		lineLeft:0,
+  	  		width : 50,
+  	  		list : [{
+  	  			path : "/machineRoom",
+  	  			name : "机房"
+  	  		},{
+  	  			path : "/equipmentCabinet",
+  	  			name : "机柜"
+  	  		},{
+  	  			path : "/InstabusEIB",
+  	  			name : "智能布线"
+  	  		},{
+  	  			path : "/verify",
+  	  			name : "待确认设备"
+  	  		},{
+  	  			path : "/setConfig",
+  	  			name : "设置"
+  	  		}]
   	  	}
   	  },
   	  
@@ -101,6 +139,7 @@ export default {
 	  
 	 ready () {
         link.setThis.call(link, this);
+        link.setWidth();
    	 }
 }
 </script>

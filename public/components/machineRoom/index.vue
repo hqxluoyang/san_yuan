@@ -79,7 +79,36 @@ import machineRoom from '../../services/machineRoom/machineRoom'
 export default {
 	data () {
 		return {
-			romList:[]
+			romList:[{
+            "remark": "呵呵", 
+            "name": "信息机房", 
+            "level": 1, 
+            "height": 0, 
+            "width": 0, 
+            "position": " 一楼", 
+            "serial": "信息机房", 
+            "id": 1
+        }, 
+        {
+            "remark": null, 
+            "name": "调度机房", 
+            "level": 1, 
+            "height": 0, 
+            "width": 0, 
+            "position": "", 
+            "serial": "调度机房", 
+            "id": 198496
+        }, 
+        {
+            "remark": "hehehe", 
+            "name": "通信机房", 
+            "level": 1, 
+            "height": 0, 
+            "width": 0, 
+            "position": "", 
+            "serial": "通信机房", 
+            "id": 198581
+        }]
 		}
 	},
 
@@ -89,14 +118,15 @@ export default {
 
 	methods : {
 		selectRoom (room) {
-			console.log("roome:" , room)
+			//console.log("roome:" , router)
+			router.go("/equipmentCabinet");
 			machineRoom.selectRoom(room)
 		}
 	},
 
 	ready () {
 		machineRoom.setThis.call(machineRoom, this);
-		machineRoom.getRoomList();
+		//machineRoom.getRoomList();
 	},
 
 	components : {}

@@ -106,31 +106,13 @@
 
  <script>
 
+ import diagram from "../../services/equipmentCabinet/cabinetDiagram"
+
 export default {
 	data () {
 		return {
-			cabinet : false ,
+			cabinet : false,
 			picList :[{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
-				name : '空'
-			},{
 				name : '空'
 			},{
 				name : '空'
@@ -151,8 +133,13 @@ export default {
 	},
 
 	ready () {
-
+		diagram.setThis.call(diagram, this);
+		//diagram.getRoomList();
 	},
+
+	initBus (bus) {
+	    diagram.regBus(bus);
+	 },
 
 	components : {}
 }

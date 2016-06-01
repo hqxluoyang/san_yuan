@@ -13,8 +13,9 @@
 </template>
 
 <script>
-import tools from '../services/tools'
+//import tools from '../services/tools.js'
 import Container from '../services/Container.js'
+import ts from '../services/ts.js'
 export default {
 	data () {
 		return {
@@ -42,7 +43,8 @@ export default {
 	 },
 
 	ready () {
-		this.mHeight = tools.getPageHeight() - 210 ;
+
+		this.mHeight = ts.getPageHeight() - 210 ;
 	}
 }
 </script>

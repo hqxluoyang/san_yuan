@@ -10,7 +10,7 @@ export default {
     //	const allComp = comp;
     	console.log("allComp : " , allComp)
  		const bus = Config.Runtime.eventBus;
- 		
+ 		console.log("allComp:" , allComp)
  		for(var obj in allComp){
  			try{
  				allComp[obj].initBus(bus)

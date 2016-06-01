@@ -16,6 +16,9 @@
 </template>
 
 <script>
+
+import status from '../services/status'
+
 export default {
 
 	data () {
@@ -29,8 +32,12 @@ export default {
 	},
 
 	ready () {
-
+		status.setThis.call(status, this);
 	},
+
+	initBus (bus) {
+	    status.regBus(bus);
+	 },
 
 	components : {}
 }

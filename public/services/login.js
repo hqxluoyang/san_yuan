@@ -1,4 +1,4 @@
-import tools from './tools.js'
+
 import Config from './config.js'
 
 export default {

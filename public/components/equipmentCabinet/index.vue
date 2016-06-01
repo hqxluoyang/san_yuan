@@ -51,7 +51,7 @@
 	<div class="equipmentCabinet">
 
 		<div class="equContainer">
-			<div class="equipment" v-for = "equipment in equipmentList">
+			<div class="equipment" v-for = "equipment in equipmentList" v-on:click="gotoCabinet(equipment)">
 				<ul>
 					<li class="liname">{{equipment.name}}</li>
 					<li class="liMessage">{{equipment.message}}</li>
@@ -71,7 +71,8 @@
 
 <script>
 
-import cabinet from './cabinetDiagram.vue'
+import cabinet from './cDiagram.vue'
+import cabinetMrg from '../../services/equipmentCabinet/cabinet'
 
 export default {
 	
@@ -94,8 +95,15 @@ export default {
 		
 	},
 
-	ready () {
+	methods :{
+		gotoCabinet (el) {
+			cabinetMrg.gotoCabinet(el);
+		}
+	},
 
+	ready () {
+		cabinetMrg.setThis.call(cabinetMrg, this);
+		
 	},
 
 	components : {cabinet}
