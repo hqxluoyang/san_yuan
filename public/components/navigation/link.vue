@@ -112,7 +112,7 @@ export default {
   	  			path : "/verify",
   	  			name : "待确认设备"
   	  		},{
-  	  			path : "/setConfig",
+  	  			path : "/setting",
   	  			name : "设置"
   	  		}]
   	  	}

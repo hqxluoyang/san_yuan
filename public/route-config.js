@@ -17,6 +17,11 @@ export function configRouter (router) {
       component: require('./components/verify/index.vue')
     },
 
+    '/setting': {
+      component: require('./components/setting/index.vue')
+    },
+
+
     '*': {
       component: require('./components/equipmentCabinet/index.vue')
     },
