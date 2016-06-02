@@ -14,6 +14,7 @@
 	top:0;
 	background:#fff;
 	z-index:1000;
+
 }
 
 .cabinet .cabinetKa {
@@ -21,7 +22,6 @@
 	position:relative;
 	margin-left:10px;
 	margin-right:10px;
-	background:yellow;
 	overflow-y : scroll;
 }
 
@@ -29,6 +29,7 @@
 	height:100px;
 	line-height:100px;
 	border-bottom:1px solid green;
+	list-style-type:none;
 }
 
 .cabinet .cabinetKa .picLine .liList{
@@ -40,12 +41,13 @@
 	margin-left:20px;
 	margin-right:20px;
 	height:100%;
-	background:green;
+	
 }
 
 .cabinet .cabinetKa .picLine .liList .left{
 	display:inline-block;
 	width:20px;
+	background:#ccc;
 	text-align:center;
 	float:left;
 	border-right:1px solid #ccc;
@@ -56,6 +58,7 @@
 	display:inline-block;
 	width:20px;
 	text-align:center;
+	background:#ccc;
 	position:relative;
 	float:right;
 	border-left:1px solid #ccc;
@@ -66,14 +69,14 @@
 	text-align:center;
 	position:absolute;
 	left:0;
-	background:red;
+	
 	top:0;
 	width:auto;
 	margin: 0 20px;
 }
 
 .cabinet .cabinetKa .imagePosition{
-	background:green;
+	
 	width:100%;
 	height:10px;
 	position:absolute;
@@ -92,7 +95,7 @@
             <ul class="picLine" v-for="pic in picList">
             	<li class="liList">
             		<div class="left">{{$index+1}}</div>
-            		<div class="center">ddddddddddddddd</div>
+            		<div class="center" v-on:click="gotoInterface()">image</div>
             		<div class="right">{{$index+1}}</div>
             		空
             	</li>
@@ -130,6 +133,12 @@ export default {
 
 	init () {
 
+	},
+
+	methods : {
+		gotoInterface () {
+			diagram.gotoInterface();
+		}
 	},
 
 	ready () {

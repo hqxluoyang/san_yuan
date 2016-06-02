@@ -1,10 +1,8 @@
 /***
-	date : 2016-6-1
+	date : 2016-6-2
 	author : sailing
-	fun : 显示具体机柜
+	fun : 接口
 ***/
-
-import Config from '../config'
 
 export default {
 
@@ -20,8 +18,11 @@ export default {
 		}
 	},
 
-	gotoInterface (el) {
-		Config.Runtime.eventBus.emit("portfigure" , {el:el})
+	onShow () {
+		var self = this.vm ;
+		if(self){
+			self.flag = true;
+		}
 	},
 
 	onRouter (r) {
@@ -31,6 +32,6 @@ export default {
 	regBus (bus) {
 
 		bus.on("router" , this.onRouter.bind(this))
-		bus.on("showCabinet" , this.showCabinet.bind(this))
+		bus.on("portfigure" , this.onShow.bind(this))
 	}
 }

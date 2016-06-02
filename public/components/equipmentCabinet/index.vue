@@ -67,12 +67,14 @@
 	</div>
 
 	<cabinet></cabinet>
+	<portfigure></portfigure>
 </template>
 
 <script>
 
 import cabinet from './cDiagram.vue'
 import cabinetMrg from '../../services/equipmentCabinet/cabinet'
+import portfigure from "./portfigure.vue"
 
 export default {
 	
@@ -110,6 +112,6 @@ export default {
 	    status.regBus(bus);
 	},
 
-	components : {cabinet}
+	components : {cabinet , portfigure}
 }
 </script>
