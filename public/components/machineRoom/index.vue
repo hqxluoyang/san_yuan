@@ -129,6 +129,10 @@ export default {
 		//machineRoom.getRoomList();
 	},
 
+	initBus (bus) {
+	    status.regBus(bus);
+	},
+
 	components : {}
 }
 </script>

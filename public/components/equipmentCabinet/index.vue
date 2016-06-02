@@ -106,6 +106,10 @@ export default {
 		
 	},
 
+	initBus (bus) {
+	    status.regBus(bus);
+	},
+
 	components : {cabinet}
 }
 </script>

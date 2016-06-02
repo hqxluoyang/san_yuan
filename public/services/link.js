@@ -18,7 +18,7 @@ export default {
 	onRouter (r) {
 		const self = this.vm;
 		if(!self) return;
-		const router = ["/xender" , "/app" , "/image" , "/music" , "/video" , "/record"]
+	//	const router = ["/xender" , "/app" , "/image" , "/music" , "/video" , "/record"]
 		for(var i=0 ;i<router.length;i++){
 			if(r.path == router[i])break
 		}
@@ -27,6 +27,6 @@ export default {
 	},
 	
 	regBus (bus) {
-		//bus.on("router" , this.onRouter.bind(this))
+		bus.on("router" , this.onRouter.bind(this))
 	}
 }

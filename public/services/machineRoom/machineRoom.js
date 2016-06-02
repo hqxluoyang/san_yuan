@@ -7,6 +7,7 @@
 export default {
 	setThis (self) {
 		this.vm = self;
+		this.path = "/machineRoom"
 	},
 /*
 	getRoomList () {
@@ -48,5 +49,15 @@ export default {
 
 	selectRoom (room) {
 
+	},
+
+
+	onRouter (r) {
+
+	},
+
+	regBus (bus) {
+
+		bus.on("router" , this.onRouter.bind(this))
 	}
 }

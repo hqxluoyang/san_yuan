@@ -59,6 +59,9 @@
 </template>
 
 <script>
+
+import InstabusEIB from "../../services/InstabusEIB/InstabusEIB"
+
 export default {
 
 	data () {
@@ -69,6 +72,10 @@ export default {
 
 	init () {
 
+	},
+
+	initBus (bus) {
+	    InstabusEIB.regBus(bus);
 	},
 
 	ready () {

@@ -1,8 +1,8 @@
 import Config from './config.js'
 export default {
 	init () {
-		Config.Runtime.current =  document.location.href.substring(document.location.href.indexOf('#!') + 2) || "/xender"
-		console.log("Config.Runtime.current : " , Config.Runtime.current)
+		Config.Runtime.current =  document.location.href.substring(document.location.href.indexOf('#!') + 2) || "/machineRoom"
+		//console.log("Config.Runtime.current : " , Config.Runtime.current)
 		Config.Runtime.eventBus.emit("router" , {path:Config.Runtime.current})
 		router.afterEach(function (transition) {
 			console.log('成功浏览到: ' + transition.to.path)
