@@ -61,6 +61,8 @@
 </template>
 
 <script>
+
+import verify from "../../services/verify/verify.js"
 export default {
 	data () {
 		return {
@@ -103,6 +105,10 @@ export default {
 
 	ready () {
 
+	},
+
+	initBus (bus) {
+	    status.regBus(bus);
 	},
 
 	components : {}

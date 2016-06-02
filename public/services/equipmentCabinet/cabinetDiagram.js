@@ -8,6 +8,7 @@ export default {
 
 	setThis (self) {
 		this.vm = self;
+		this.path = "/equipmentCabinet"
 	},
 
 	showCabinet (el) {

@@ -139,7 +139,7 @@ export default {
 
 	initBus (bus) {
 	    diagram.regBus(bus);
-	 },
+	},
 
 	components : {}
 }
