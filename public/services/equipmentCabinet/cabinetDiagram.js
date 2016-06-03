@@ -14,14 +14,24 @@ export default {
 	},
 
 	showCabinet (el) {
-		const self = this.vm ;
-		if(self){
-			self.cabinet = true;
-		}
+		this.setState(true)
+	},
+
+	backUp () {
+		this.setState(false)
 	},
 
 	gotoInterface (el) {
 		Config.Runtime.eventBus.emit("portfigure" , {el:el})
+		Config.Runtime.eventBus.emit("changeState" , {el:"返回机柜列表"})  //修改状态头
+	},
+
+	setState (flag) {
+		var  self = this.vm ;
+		if(self){
+			console.log("setStatu:" , self , flag)
+			self.cabinet = flag ;
+		}
 	},
 
 	onRouter (r) {
@@ -32,5 +42,6 @@ export default {
 
 		bus.on("router" , this.onRouter.bind(this))
 		bus.on("showCabinet" , this.showCabinet.bind(this))
+		bus.on("backUp" , this.backUp.bind(this))
 	}
 }

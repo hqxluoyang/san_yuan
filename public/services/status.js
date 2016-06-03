@@ -3,6 +3,7 @@
 	author : sailing
 	fun : router切换的时候改变显示状态
 **/
+import Config from "./config"
 
 export default {
 	setThis (self) {
@@ -27,8 +28,21 @@ export default {
 		}
 	},
 
+	backUp () {
+		var self = this.vm ;
+		self.flag = false;
+		Config.Runtime.eventBus.emit("backUp")
+	},
+
+	changeState (obj) {
+		var self = this.vm ;
+		self.flag = true;
+		self.back = obj.el ;
+	},
+
 	regBus (bus) {
 
 		bus.on("router" , this.onRouter.bind(this))
+		bus.on("changeState" , this.changeState.bind(this))
 	}
 }

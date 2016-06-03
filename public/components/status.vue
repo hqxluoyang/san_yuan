@@ -7,11 +7,16 @@
 		width:100%;
 		background:#e6e6e6;
 	}
+	.statusText .back{
+		float:left;
+		margin-left:10px;
+	}
 </style>
 
 <template>
 <div class="statusText">
-	{{statusText}}
+	<p class="back" v-show="flag" v-on:click="backUp()">< {{back}}</p>
+	<p v-show="!flag">{{statusText}}</p>
 </div>
 </template>
 
@@ -23,7 +28,9 @@ export default {
 
 	data () {
 		return {
-			statusText:"机房"
+			statusText:"机房",
+			flag:false,
+			back:'后退'
 		}
 	},
 
@@ -33,6 +40,12 @@ export default {
 
 	ready () {
 		status.setThis.call(status, this);
+	},
+
+	methods : {
+		backUp () {
+			status.backUp();
+		}
 	},
 
 	initBus (bus) {
