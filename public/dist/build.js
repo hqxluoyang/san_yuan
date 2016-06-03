@@ -10762,7 +10762,7 @@
 	
 	    data: function data() {
 	        return {
-	            login: true,
+	            login: false,
 	            username: 'ee',
 	            passW: '123'
 	        };
@@ -11528,7 +11528,7 @@
 	        name: "智能布线"
 	      }, {
 	        path: "/verify",
-	        name: "待确认设备"
+	        name: "待确认"
 	      }, {
 	        path: "/setting",
 	        name: "设置"
