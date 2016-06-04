@@ -13,8 +13,8 @@ export default {
 	},
 
 	gotoCabinet (el) {
-		console.log("Config.Runtime.eventBus :" , Config.Runtime.eventBus )
 		Config.Runtime.eventBus.emit("showCabinet" , {el:el})
+		Config.Runtime.eventBus.emit("changeState" , {el:"返回机柜列表"})  //修改状态头
 	},
 
 	onRouter (r) {

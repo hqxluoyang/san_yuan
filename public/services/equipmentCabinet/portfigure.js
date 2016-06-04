@@ -12,16 +12,21 @@ export default {
 	},
 
 	showCabinet (el) {
-		const self = this.vm ;
-		if(self){
-			self.cabinet = true;
-		}
+		this.setState(true);
 	},
 
 	onShow () {
-		var self = this.vm ;
+		this.setState(true);
+	},
+
+	backUp () {
+		this.setState(false);
+	},
+
+	setState (flag) {
+		const self = this.vm ;
 		if(self){
-			self.flag = true;
+			self.flag = flag ;
 		}
 	},
 
@@ -33,5 +38,6 @@ export default {
 
 		bus.on("router" , this.onRouter.bind(this))
 		bus.on("portfigure" , this.onShow.bind(this))
+		bus.on("backUp" , this.backUp.bind(this))
 	}
 }

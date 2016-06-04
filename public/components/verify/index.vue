@@ -58,11 +58,13 @@
 			</div>
 		</div>
 	</div>
+	<operation></operation>
 </template>
 
 <script>
 
 import verify from "../../services/verify/verify.js"
+import operation from "./operation.vue"
 export default {
 	data () {
 		return {
@@ -111,6 +113,6 @@ export default {
 	    status.regBus(bus);
 	},
 
-	components : {}
+	components : {operation}
 }
 </script>

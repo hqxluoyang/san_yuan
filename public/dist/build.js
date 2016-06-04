@@ -10762,7 +10762,7 @@
 	
 	    data: function data() {
 	        return {
-	            login: true,
+	            login: false,
 	            username: 'ee',
 	            passW: '123'
 	        };
@@ -11231,7 +11231,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".statusText {\r\n\t\tposition:relative;\r\n\t\theight: 40px;\r\n\t\ttext-align:center;\r\n\t\tline-height:40px;\r\n\t\twidth:100%;\r\n\t\tbackground:#e6e6e6;\r\n\t}", ""]);
+	exports.push([module.id, ".statusText {\r\n\t\tposition:relative;\r\n\t\theight: 40px;\r\n\t\ttext-align:center;\r\n\t\tline-height:40px;\r\n\t\twidth:100%;\r\n\t\tbackground:#e6e6e6;\r\n\t}\r\n\t.statusText .back{\r\n\t\tfloat:left;\r\n\t\tmargin-left:10px;\r\n\t}", ""]);
 	
 	// exports
 
@@ -11240,9 +11240,9 @@
 /* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(21)["default"];
+	var _interopRequireDefault = __webpack_require__(21)['default'];
 	
 	exports.__esModule = true;
 	
@@ -11250,41 +11250,55 @@
 	
 	var _servicesStatus2 = _interopRequireDefault(_servicesStatus);
 	
-	exports["default"] = {
+	exports['default'] = {
 	
 		data: function data() {
 			return {
-				statusText: "机房"
+				statusText: "机房",
+				flag: false,
+				back: '后退'
 			};
 		},
 	
 		init: function init() {},
 	
 		ready: function ready() {
-			_servicesStatus2["default"].setThis.call(_servicesStatus2["default"], this);
+			_servicesStatus2['default'].setThis.call(_servicesStatus2['default'], this);
+		},
+	
+		methods: {
+			backUp: function backUp() {
+				_servicesStatus2['default'].backUp();
+			}
 		},
 	
 		initBus: function initBus(bus) {
-			_servicesStatus2["default"].regBus(bus);
+			_servicesStatus2['default'].regBus(bus);
 		},
 	
 		components: {}
 	};
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ },
 /* 51 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	/**
 		date : 2016-6-1
 		author : sailing
 		fun : router切换的时候改变显示状态
 	**/
-	
 	"use strict";
 	
+	var _interopRequireDefault = __webpack_require__(21)["default"];
+	
 	exports.__esModule = true;
+	
+	var _config = __webpack_require__(35);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
 	exports["default"] = {
 		setThis: function setThis(self) {
 			this.vm = self;
@@ -11308,9 +11322,22 @@
 			}
 		},
 	
+		backUp: function backUp() {
+			var self = this.vm;
+			self.flag = false;
+			_config2["default"].Runtime.eventBus.emit("backUp");
+		},
+	
+		changeState: function changeState(obj) {
+			var self = this.vm;
+			self.flag = true;
+			self.back = obj.el;
+		},
+	
 		regBus: function regBus(bus) {
 	
 			bus.on("router", this.onRouter.bind(this));
+			bus.on("changeState", this.changeState.bind(this));
 		}
 	};
 	module.exports = exports["default"];
@@ -11319,7 +11346,7 @@
 /* 52 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"statusText\">\r\n\t{{statusText}}\r\n</div>";
+	module.exports = "<div class=\"statusText\">\r\n\t<p class=\"back\" v-show=\"flag\" v-on:click=\"backUp()\">< {{back}}</p>\r\n\t<p v-show=\"!flag\">{{statusText}}</p>\r\n</div>";
 
 /***/ },
 /* 53 */
@@ -11501,7 +11528,7 @@
 	        name: "智能布线"
 	      }, {
 	        path: "/verify",
-	        name: "待确认设备"
+	        name: "待确认"
 	      }, {
 	        path: "/setting",
 	        name: "设置"
@@ -15336,6 +15363,10 @@
 	
 	var _servicesVerifyVerifyJs2 = _interopRequireDefault(_servicesVerifyVerifyJs);
 	
+	var _operationVue = __webpack_require__(176);
+	
+	var _operationVue2 = _interopRequireDefault(_operationVue);
+	
 	exports["default"] = {
 	  data: function data() {
 	    return {
@@ -15379,7 +15410,7 @@
 	    status.regBus(bus);
 	  },
 	
-	  components: {}
+	  components: { operation: _operationVue2["default"] }
 	};
 	module.exports = exports["default"];
 
@@ -15419,7 +15450,7 @@
 /* 123 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"machineVerify\">\r\n\t\t<div class=\"verifyContainer\">\r\n\t\t\t<div class=\"verifyLine\" v-for = \"rom in romList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.room}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.room_serial}} . {{rom.cabinet}} . {{rom.serial}} . {{rom.serial}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
+	module.exports = "<div class=\"machineVerify\">\r\n\t\t<div class=\"verifyContainer\">\r\n\t\t\t<div class=\"verifyLine\" v-for = \"rom in romList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.room}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.room_serial}} . {{rom.cabinet}} . {{rom.serial}} . {{rom.serial}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<operation></operation>";
 
 /***/ },
 /* 124 */
@@ -15765,14 +15796,24 @@
 		},
 	
 		showCabinet: function showCabinet(el) {
-			var self = this.vm;
-			if (self) {
-				self.cabinet = true;
-			}
+			this.setState(true);
+		},
+	
+		backUp: function backUp() {
+			this.setState(false);
 		},
 	
 		gotoInterface: function gotoInterface(el) {
 			_config2["default"].Runtime.eventBus.emit("portfigure", { el: el });
+			_config2["default"].Runtime.eventBus.emit("changeState", { el: "返回机柜列表" }); //修改状态头
+		},
+	
+		setState: function setState(flag) {
+			var self = this.vm;
+			if (self) {
+				console.log("setStatu:", self, flag);
+				self.cabinet = flag;
+			}
 		},
 	
 		onRouter: function onRouter(r) {},
@@ -15781,6 +15822,7 @@
 	
 			bus.on("router", this.onRouter.bind(this));
 			bus.on("showCabinet", this.showCabinet.bind(this));
+			bus.on("backUp", this.backUp.bind(this));
 		}
 	};
 	module.exports = exports["default"];
@@ -15818,8 +15860,8 @@
 		},
 	
 		gotoCabinet: function gotoCabinet(el) {
-			console.log("Config.Runtime.eventBus :", _config2["default"].Runtime.eventBus);
 			_config2["default"].Runtime.eventBus.emit("showCabinet", { el: el });
+			_config2["default"].Runtime.eventBus.emit("changeState", { el: "返回机柜列表" }); //修改状态头
 		},
 	
 		onRouter: function onRouter(r) {},
@@ -15965,16 +16007,21 @@
 		},
 	
 		showCabinet: function showCabinet(el) {
-			var self = this.vm;
-			if (self) {
-				self.cabinet = true;
-			}
+			this.setState(true);
 		},
 	
 		onShow: function onShow() {
+			this.setState(true);
+		},
+	
+		backUp: function backUp() {
+			this.setState(false);
+		},
+	
+		setState: function setState(flag) {
 			var self = this.vm;
 			if (self) {
-				self.flag = true;
+				self.flag = flag;
 			}
 		},
 	
@@ -15984,6 +16031,7 @@
 	
 			bus.on("router", this.onRouter.bind(this));
 			bus.on("portfigure", this.onShow.bind(this));
+			bus.on("backUp", this.backUp.bind(this));
 		}
 	};
 	module.exports = exports["default"];
@@ -27332,6 +27380,101 @@
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
+
+/***/ },
+/* 175 */,
+/* 176 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(177)
+	module.exports = __webpack_require__(179)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(180)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./operation.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./operation.vue","-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./operation.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./operation.vue")
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./operation.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 177 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(178);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(28)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3fdff45e&file=operation.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./operation.vue", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/vue-loader/lib/style-rewriter.js?id=_v-3fdff45e&file=operation.vue!./../../node_modules/vue-loader/lib/selector.js?type=style&index=0!./operation.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 178 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(27)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".operation{\r\n\theight:50px;\r\n\twidth:100%;\r\n\tposition:absolute;\r\n\tleft:0;\r\n\tbottom:0;\r\n\r\n}\r\n\r\n.operation .content {\r\n\tmargin:0 auto;\r\n\tmargin-left:100px;\r\n\tmargin-right:100px;\r\n\r\n\r\n}\r\n\r\n.operation .content .left{\r\n\tfloat:left;\r\n\ttext-align:center;\r\n\twidth:50px;\r\n\theight:50px;\r\n}\r\n\r\n.operation .content .right{\r\n\tfloat:right;\r\n\twidth:50px;\r\n\ttext-align:center;\r\n\theight:50px;\r\n\tmargin-left:5px;\r\n}\r\n\r\n.operation .content p{\r\n\tfont-size:12px;\r\n\tcolor:#b6b6b6;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 179 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = {
+		data: function data() {
+			return {};
+		},
+	
+		ready: function ready() {},
+	
+		methods: {
+			del: function del() {
+				alert("del");
+			},
+	
+			remark: function remark() {
+				alert("beizhu");
+			}
+		}
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 180 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"operation\">\r\n\t\t<div class=\"content\">\r\n\t\t\t<div class=\"left\" v-on:click=\"del()\">\r\n\t\t\t\t<p>\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t    <path fill=\"#929292\" d=\"M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>删除</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"right\" v-on:click=\"remark()\">\r\n\t\t\t\t<p>\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t    <path fill=\"#929292\" d=\"M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M16.7,9.35L15.7,10.35L13.65,8.3L14.65,7.3C14.86,7.08 15.21,7.08 15.42,7.3L16.7,8.58C16.92,8.79 16.92,9.14 16.7,9.35M7,14.94L13.06,8.88L15.12,10.94L9.06,17H7V14.94Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>备注</p>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ }
 /******/ ]);
