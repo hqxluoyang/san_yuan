@@ -98,7 +98,7 @@
 
 <template>
   <div v-show="!login" class='login'>
-     <p class="titleText">闪传注册</p>
+     <p class="titleText">三维数据中心综合管理系统</p>
      <div class="loginPanel">
         <div class="loginCon">
           <p class="lline"><span class="namePanel"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
@@ -124,7 +124,7 @@ export default {
    
   data () {
   	return {
-  		login:false,
+  		login:true,
       username:'ee',
       passW:'123'
   	}

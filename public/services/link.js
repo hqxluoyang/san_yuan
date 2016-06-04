@@ -1,4 +1,5 @@
 import ts from "./ts"
+import Config from './config'
 
 export default {
 	
@@ -10,23 +11,26 @@ export default {
 		const self = this.vm ;
 		const len = self.list.length ;
 		var width = ts.getPageWidth();
-		self.w = width/len ;
+		self.width = width/len ;
 		//console.log("width:" , width)
 	},
 	
 	
 	onRouter (r) {
 		const self = this.vm;
+		const navArray = Config.nav ;
 		if(!self) return;
-	//	const router = ["/xender" , "/app" , "/image" , "/music" , "/video" , "/record"]
-		for(var i=0 ;i<router.length;i++){
-			if(r.path == router[i])break
+
+		for(var i=0 ;i<navArray.length;i++){
+			if(r.path == navArray[i])break
 		}
-		
-		self.lineLeft = 55 * i;
+
+		self.lineLeft = self.width * i;
+
 	},
 	
 	regBus (bus) {
+
 		bus.on("router" , this.onRouter.bind(this))
 	}
 }

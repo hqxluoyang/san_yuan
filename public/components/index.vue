@@ -7,6 +7,7 @@ import diagram from './equipmentCabinet/cDiagram.vue'
 import equiIndex from './equipmentCabinet/index.vue'
 
 import InstabusEIB from './InstabusEIB/index.vue'
+import link from './navigation/link.vue'
 
 import machineRoom from './machineRoom/index.vue'
 import equipmentCabinet from './equipmentCabinet/cDiagram.vue'
@@ -21,7 +22,8 @@ export default {
 			InstabusEIB,
 			machineRoom,
 			equipmentCabinet,
-			portfigure
+			portfigure,
+			link
 
 		}
 	}

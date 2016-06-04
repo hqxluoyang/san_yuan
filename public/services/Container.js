@@ -1,3 +1,9 @@
+/**
+	date : 2016-6-2
+	author : sailing
+	fun : 主页面管理
+**/
+
 export default {
 	
 	getDirection () {
@@ -6,14 +12,6 @@ export default {
 		}else{
 			return 'l';
 		}
-	},
-	
-	getAllLink () {
-		return [
-		        	'machineRoom',
-		        	'equipmentCabinet',
-		        	'InstabusEIB'
-		        ]
 	},
 	
 	setLink (path , link) {
@@ -49,7 +47,7 @@ export default {
 		if(this.endPos.x <=30 && this.endPos.x >=-30) return
 		
 		const p = path.substring(1);
-		const link = this.getAllLink();
+		const link = Config.nav;
 		this.setLink(p , link);
 	},
 	

@@ -10658,19 +10658,19 @@
 	
 	var _componentsLoginVue2 = _interopRequireDefault(_componentsLoginVue);
 	
-	var _componentsTopVue = __webpack_require__(38);
+	var _componentsTopVue = __webpack_require__(39);
 	
 	var _componentsTopVue2 = _interopRequireDefault(_componentsTopVue);
 	
-	var _componentsSearchVue = __webpack_require__(43);
+	var _componentsSearchVue = __webpack_require__(44);
 	
 	var _componentsSearchVue2 = _interopRequireDefault(_componentsSearchVue);
 	
-	var _componentsStatusVue = __webpack_require__(48);
+	var _componentsStatusVue = __webpack_require__(49);
 	
 	var _componentsStatusVue2 = _interopRequireDefault(_componentsStatusVue);
 	
-	var _componentsNavigationIndexVue = __webpack_require__(54);
+	var _componentsNavigationIndexVue = __webpack_require__(55);
 	
 	var _componentsNavigationIndexVue2 = _interopRequireDefault(_componentsNavigationIndexVue);
 	
@@ -10689,7 +10689,7 @@
 
 	__webpack_require__(32)
 	module.exports = __webpack_require__(34)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(37)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10763,7 +10763,7 @@
 	
 	    data: function data() {
 	        return {
-	            login: false,
+	            login: true,
 	            username: 'ee',
 	            passW: '123'
 	        };
@@ -10794,9 +10794,9 @@
 /* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(22)['default'];
 	
 	exports.__esModule = true;
 	
@@ -10804,7 +10804,11 @@
 	
 	var _configJs2 = _interopRequireDefault(_configJs);
 	
-	exports["default"] = {
+	var _tsJs = __webpack_require__(37);
+	
+	var _tsJs2 = _interopRequireDefault(_tsJs);
+	
+	exports['default'] = {
 	
 		setThis: function setThis(self) {
 			this.vm = self;
@@ -10832,7 +10836,8 @@
 		qrcodeurl: function qrcodeurl(data) {},
 	
 		getSessionId: function getSessionId() {
-			var c_name = 'JSESSIONID';
+			//var c_name = 'JSESSIONID';
+			var c_name = 'session';
 			if (document.cookie.length > 0) {
 				c_start = document.cookie.indexOf(c_name + "=");
 				if (c_start != -1) {
@@ -10856,7 +10861,9 @@
 				data: d,
 				success: function success(response) {
 					var session = that.getSessionId();
-					console.log("session : ", session);
+					var cookie = _tsJs2['default'].getCookie('session');
+					console.log("cookie:", document.cookie, cookie);
+					console.log("sessionID : ", session);
 					that.vm.login = true;
 				},
 				dataType: 'text'
@@ -10865,12 +10872,12 @@
 	
 		phoneDisconnected: function phoneDisconnected() {
 			this.vm.login = true;
-			window.location.href = _configJs2["default"].Config.baseUrl + "webclient?action=logout&t=" + new Date().getTime();
+			window.location.href = _configJs2['default'].Config.baseUrl + "webclient?action=logout&t=" + new Date().getTime();
 		},
 	
 		regBus: function regBus(bus) {}
 	};
-	module.exports = exports["default"];
+	module.exports = exports['default'];
 
 /***/ },
 /* 36 */
@@ -10881,126 +10888,12 @@
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
 		/********全局配置参数**********/
 	
-		var Map = function Map() {
-			this.container = new Object();
-		};
-		Map.prototype.put = function (key, value) {
-			this.container[key] = value;
-		};
-		Map.prototype.get = function (key) {
-			var value = key.toLowerCase();
-			return this.container[value];
-		};
-		Map.prototype.keySet = function () {
-			var keyset = new Array();
-			var count = 0;
-			for (var key in this.container) {
-				if (key == 'extend') {
-					continue;
-				}
-				keyset[count] = key;
-				count++;
-			}
-			return keyset;
-		};
-		Map.prototype.size = function () {
-			var count = 0;
-			for (var key in this.container) {
-				if (key == 'extend') {
-					continue;
-				}
-				count++;
-			}
-			return count;
-		};
-		Map.prototype.remove = function (key) {
-			delete this.container[key];
-		};
-		Map.prototype.toString = function () {
-			var str = "";
-			for (var i = 0, keys = this.keySet(), len = keys.length; i < len; i++) {
-				str = str + keys[i] + "=" + this.container[keys[i]] + ";\n";
-			}
-			return str;
-		};
-	
-		var musicType = {
-			'.mp3': true,
-			'.wav': true,
-			'.x-ogg': true,
-			'.mid': true,
-			'.midi': true,
-			'.wma': true,
-			'.aac': true,
-			'.ra': true,
-			'.amr': true,
-			'.au': true,
-			'.aiff': true,
-			'.ogm': true,
-			'.m4a': true,
-			'.f4a': true,
-			'.flac': true,
-			'.ape': true
-		};
-	
-		var vMap = new Map();
-		vMap.put(".mpeg", "video/mpeg");
-		vMap.put(".rm", "video/rm");
-		vMap.put(".rmvb", "video/rmvb");
-		vMap.put(".avi", "video/avi");
-		vMap.put(".wmv", "video/wmv");
-		vMap.put(".mp4", "video/mp4");
-		vMap.put(".3gp", "video/3gp");
-		vMap.put(".m4v", "video/m4v");
-		vMap.put(".flv", "video/flv");
-		vMap.put(".fla", "video/fla");
-		vMap.put(".f4v", "video/f4v");
-		vMap.put(".mov", "video/mov");
-		vMap.put(".MOV", "video/MOV");
-		vMap.put(".mpg", "video/mpg");
-		vMap.put(".asf", "video/asf");
-		vMap.put(".rv", "video/rv");
-		vMap.put(".mkv", "video/x-matroska");
-		//console.log("vMap:" , vMap)
-	
 		var Config = {
-			Runtime: {
-				imei: "unknow",
-				isDirect: false, // 记录当前模块、当前操作(home/imgModule/musicModule/docModule)
-				isDirectChannel: false,
-				directChannelURL: undefined,
-				curOperation: 'show',
-				channelURL: '',
-				connect: false,
-				current: "",
-				channelstatus: "channel未连接",
-				fileType: 'home',
-				subModule: 'sms',
-				uploadType: "image",
-				channelV: "weline",
-				isWepai: false
-			},
-			Config: {
-				minWidth: '862',
-				minHeight: '650',
-				version: '1.0',
+			Runtime: {},
 	
-				directUpload: null
-			},
-			imgHeight: 150,
-			marginTop: 81,
-			Module: {},
-	
-			extMap: Map,
-			limitSize: 10 * 1024 * 1024,
-			downLoad: {},
-			lang: '',
-			loadBase64: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAMSURBVBhXY3jy5AkABVwCrcUBMd4AAAAASUVORK5CYII=",
-			music: musicType,
-			block: null,
-			vMap: vMap,
-			uploadpath: ""
+			nav: ['/machineRoom', '/equipmentCabinet', '/InstabusEIB', '/verify', '/setting']
 		};
+	
 		return Config;
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
@@ -11008,15 +10901,49 @@
 /* 37 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-show=\"!login\" class='login'>\r\n     <p class=\"titleText\">闪传注册</p>\r\n     <div class=\"loginPanel\">\r\n        <div class=\"loginCon\">\r\n          <p class=\"lline\"><span class=\"namePanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\" />\r\n          </svg></span><input v-model=\"username\" /></p>\r\n          <p class=\"lline\"><span class=\"passwordPanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z\" />\r\n          </svg></span><input tpye=\"password\" v-model=\"passW\"/></p>\r\n         \r\n          <p class=\"llineBnt lline\">\r\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\r\n          </p>\r\n        </div>\r\n     </div>\r\n  </div>";
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = {
+	
+		getPageHeight: function getPageHeight() {
+	
+			return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		},
+	
+		getPageWidth: function getPageWidth() {
+	
+			return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		},
+	
+		setCookie: function setCookie(name, value) {
+			var Days = 30;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+			document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+		},
+	
+		getCookie: function getCookie(name) {
+			var arr,
+			    reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+			if (arr = document.cookie.match(reg)) return unescape(arr[2]);else return null;
+		}
+	};
+	module.exports = exports["default"];
 
 /***/ },
 /* 38 */
+/***/ function(module, exports) {
+
+	module.exports = "<div v-show=\"!login\" class='login'>\r\n     <p class=\"titleText\">三维数据中心综合管理系统</p>\r\n     <div class=\"loginPanel\">\r\n        <div class=\"loginCon\">\r\n          <p class=\"lline\"><span class=\"namePanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\" />\r\n          </svg></span><input v-model=\"username\" /></p>\r\n          <p class=\"lline\"><span class=\"passwordPanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z\" />\r\n          </svg></span><input tpye=\"password\" v-model=\"passW\"/></p>\r\n         \r\n          <p class=\"llineBnt lline\">\r\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\r\n          </p>\r\n        </div>\r\n     </div>\r\n  </div>";
+
+/***/ },
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(39)
-	module.exports = __webpack_require__(41)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(42)
+	__webpack_require__(40)
+	module.exports = __webpack_require__(42)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(43)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11033,13 +10960,13 @@
 	}
 
 /***/ },
-/* 39 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(40);
+	var content = __webpack_require__(41);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(29)(content, {});
@@ -11059,7 +10986,7 @@
 	}
 
 /***/ },
-/* 40 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(28)();
@@ -11073,7 +11000,7 @@
 
 
 /***/ },
-/* 41 */
+/* 42 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11088,18 +11015,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 42 */
+/* 43 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class='top'>\r\n  <img class=\"top_img\" src=\"http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\r\n  </div>";
 
 /***/ },
-/* 43 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(44)
-	module.exports = __webpack_require__(46)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(47)
+	__webpack_require__(45)
+	module.exports = __webpack_require__(47)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(48)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11116,13 +11043,13 @@
 	}
 
 /***/ },
-/* 44 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(45);
+	var content = __webpack_require__(46);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(29)(content, {});
@@ -11142,7 +11069,7 @@
 	}
 
 /***/ },
-/* 45 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(28)();
@@ -11156,7 +11083,7 @@
 
 
 /***/ },
-/* 46 */
+/* 47 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -11170,18 +11097,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 47 */
+/* 48 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"all_search\">\r\n\t\t<div class=\"pImg\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li class=\"head\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t<path fill=\"#ccc\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\" />\r\n\t\t\t\t</svg></li>\r\n\t\t\t\t<li><input type=\"search\" placeholder=\"搜索\" /></li>\r\n\t\t\t\t<li>3</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
-/* 48 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(49)
-	module.exports = __webpack_require__(51)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(53)
+	__webpack_require__(50)
+	module.exports = __webpack_require__(52)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(54)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11198,13 +11125,13 @@
 	}
 
 /***/ },
-/* 49 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(50);
+	var content = __webpack_require__(51);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(29)(content, {});
@@ -11224,7 +11151,7 @@
 	}
 
 /***/ },
-/* 50 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(28)();
@@ -11238,7 +11165,7 @@
 
 
 /***/ },
-/* 51 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11247,7 +11174,7 @@
 	
 	exports.__esModule = true;
 	
-	var _servicesStatus = __webpack_require__(52);
+	var _servicesStatus = __webpack_require__(53);
 	
 	var _servicesStatus2 = _interopRequireDefault(_servicesStatus);
 	
@@ -11282,7 +11209,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 52 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11344,17 +11271,17 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 53 */
+/* 54 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"statusText\">\r\n\t<p class=\"back\" v-show=\"flag\" v-on:click=\"backUp()\">< {{back}}</p>\r\n\t<p v-show=\"!flag\">{{statusText}}</p>\r\n</div>";
 
 /***/ },
-/* 54 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(55)
-	module.exports = __webpack_require__(57)
+	__webpack_require__(56)
+	module.exports = __webpack_require__(58)
 	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(66)
 	if (false) {
 	(function () {
@@ -11372,13 +11299,13 @@
 	}
 
 /***/ },
-/* 55 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(56);
+	var content = __webpack_require__(57);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(29)(content, {});
@@ -11398,7 +11325,7 @@
 	}
 
 /***/ },
-/* 56 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(28)();
@@ -11412,7 +11339,7 @@
 
 
 /***/ },
-/* 57 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11421,7 +11348,7 @@
 	
 	exports.__esModule = true;
 	
-	var _linkVue = __webpack_require__(58);
+	var _linkVue = __webpack_require__(59);
 	
 	var _linkVue2 = _interopRequireDefault(_linkVue);
 	
@@ -11434,11 +11361,11 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 58 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(59)
-	module.exports = __webpack_require__(61)
+	__webpack_require__(60)
+	module.exports = __webpack_require__(62)
 	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(65)
 	if (false) {
 	(function () {
@@ -11456,13 +11383,13 @@
 	}
 
 /***/ },
-/* 59 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(60);
+	var content = __webpack_require__(61);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(29)(content, {});
@@ -11482,7 +11409,7 @@
 	}
 
 /***/ },
-/* 60 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(28)();
@@ -11490,13 +11417,13 @@
 	
 	
 	// module
-	exports.push([module.id, ".topLink{\r\n\tposition:absolute;\r\n\tleft:0;\r\n\twidth:100%;\r\n\theight:50px;\r\n\tbackground:#F3F3F3;\r\n\tborder-top:1px solid #ccc ;\r\n\tbottom:0;\r\n}\r\n\r\n.acolor{\r\n\tcolor:#B7B7B7;\r\n\tfont-size:15px;\r\n\twidth:80px;\r\n\tbackground:#1DB995;\r\n\tdisplay:inline-block;\r\n\ttext-align:center;\r\n\tline-height:40px;\r\n\tmargin-left:0px;\r\n}\r\n\r\n.linkContai{\r\n\toverflow:hidden;\r\n}\r\n\r\n .acolor.v-link-active{\r\n \tcolor:#fff;\r\n }\r\n \r\n .bottomLine{\r\n \twidth:50px;\r\n \tbackground:yellow;\r\n \tposition:absolute;\r\n \tleft:0px;\r\n \ttop:30px;\r\n \theight:2px;\r\n \ttransition:left 0.5s;\r\n\t-moz-transition:left 0.5s; /* Firefox 4 */\r\n\t-webkit-transition:left 0.5s; /* Safari and Chrome */\r\n\t-o-transition:left 0.5s; /* Opera */\r\n }\r\n\r\n .Container{\r\n \tbackground:red;\r\n \tmargin-left:100px;\r\n \tposition:absolute;\r\n \ttop:0px;\r\n \twidth:100px;\r\n \theight:100px;\r\n }\r\n\r\n.topLink .ulStyle {\r\n\theight:50px;\r\n\ttext-align:center;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle{\r\n\tdisplay:inline-block;\r\n\twidth:80px;\r\n\t\r\n\tposition:relative;\r\n\theight:50px;\r\n\tposition:relative;\r\n\t\r\n}", ""]);
+	exports.push([module.id, ".topLink{\r\n\tposition:absolute;\r\n\tleft:0;\r\n\twidth:100%;\r\n\theight:50px;\r\n\tbackground:#F3F3F3;\r\n\tborder-top:1px solid #ccc ;\r\n\tbottom:0;\r\n}\r\n\r\n.topLink .navState{\r\n\tposition:absolute;\r\n\tbackground:red;\r\n\theight:3px;\r\n\ttop:0;\r\n}\r\n\r\n.acolor{\r\n\tcolor:#B7B7B7;\r\n\tfont-size:15px;\r\n\twidth:80px;\r\n\tbackground:#1DB995;\r\n\tdisplay:inline-block;\r\n\ttext-align:center;\r\n\tline-height:50px;\r\n\tmargin-left:0px;\r\n}\r\n\r\n.linkContai{\r\n\toverflow:hidden;\r\n}\r\n\r\n .acolor.v-link-active{\r\n \tcolor:#fff;\r\n }\r\n \r\n .bottomLine{\r\n \twidth:50px;\r\n \tbackground:yellow;\r\n \tposition:absolute;\r\n \tleft:0px;\r\n \ttop:30px;\r\n \theight:2px;\r\n \ttransition:left 0.5s;\r\n\t-moz-transition:left 0.5s; /* Firefox 4 */\r\n\t-webkit-transition:left 0.5s; /* Safari and Chrome */\r\n\t-o-transition:left 0.5s; /* Opera */\r\n }\r\n\r\n .Container{\r\n \tbackground:red;\r\n \tmargin-left:100px;\r\n \tposition:absolute;\r\n \ttop:0px;\r\n \twidth:100px;\r\n \theight:100px;\r\n }\r\n\r\n.topLink .ulStyle {\r\n\theight:50px;\r\n\ttext-align:center;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle{\r\n\tdisplay:inline-block;\r\n\twidth:80px;\r\n\tborder-radius:39px;\r\n\tposition:relative;\r\n\theight:50px;\r\n\tposition:relative;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle .selectA{\r\n\twidth:100%;\r\n\theight:50px;\r\n\tposition:absolute;\r\n\tleft:0px;\r\n\topacity:0.3;\r\n\tmargin:0px;\r\n\ttop:0;\r\n\t\r\n}\r\n\r\n\r\n\r\n.topLink .ulStyle .liStyle .icons {\r\n\theight:30px;\r\n}\r\n\r\n.topLink .ulStyle .liStyle .iconsTxt {\r\n\t\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 61 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11505,18 +11432,18 @@
 	
 	exports.__esModule = true;
 	
-	var _servicesContainerJs = __webpack_require__(62);
+	var _servicesContainerJs = __webpack_require__(63);
 	
 	var _servicesContainerJs2 = _interopRequireDefault(_servicesContainerJs);
 	
-	var _servicesLinkJs = __webpack_require__(63);
+	var _servicesLinkJs = __webpack_require__(64);
 	
 	var _servicesLinkJs2 = _interopRequireDefault(_servicesLinkJs);
 	
 	exports['default'] = {
 	  data: function data() {
 	    return {
-	      lineLeft: 0,
+	      lineLeft: 100,
 	      width: 50,
 	      list: [{
 	        path: "/machineRoom",
@@ -11556,6 +11483,10 @@
 	    }
 	  },
 	
+	  initBus: function initBus(bus) {
+	    _servicesLinkJs2['default'].regBus(bus);
+	  },
+	
 	  ready: function ready() {
 	    _servicesLinkJs2['default'].setThis.call(_servicesLinkJs2['default'], this);
 	    _servicesLinkJs2['default'].setWidth();
@@ -11564,9 +11495,15 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 62 */
+/* 63 */
 /***/ function(module, exports) {
 
+	/**
+		date : 2016-6-2
+		author : sailing
+		fun : 主页面管理
+	**/
+	
 	'use strict';
 	
 	exports.__esModule = true;
@@ -11578,10 +11515,6 @@
 			} else {
 				return 'l';
 			}
-		},
-	
-		getAllLink: function getAllLink() {
-			return ['machineRoom', 'equipmentCabinet', 'InstabusEIB'];
 		},
 	
 		setLink: function setLink(path, link) {
@@ -11615,7 +11548,7 @@
 			if (this.endPos.x <= 30 && this.endPos.x >= -30) return;
 	
 			var p = path.substring(1);
-			var link = this.getAllLink();
+			var link = Config.nav;
 			this.setLink(p, link);
 		},
 	
@@ -11652,7 +11585,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 63 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -11661,9 +11594,13 @@
 	
 	exports.__esModule = true;
 	
-	var _ts = __webpack_require__(64);
+	var _ts = __webpack_require__(37);
 	
 	var _ts2 = _interopRequireDefault(_ts);
+	
+	var _config = __webpack_require__(36);
+	
+	var _config2 = _interopRequireDefault(_config);
 	
 	exports["default"] = {
 	
@@ -11675,44 +11612,25 @@
 			var self = this.vm;
 			var len = self.list.length;
 			var width = _ts2["default"].getPageWidth();
-			self.w = width / len;
+			self.width = width / len;
 			//console.log("width:" , width)
 		},
 	
 		onRouter: function onRouter(r) {
 			var self = this.vm;
+			var navArray = _config2["default"].nav;
 			if (!self) return;
-			//	const router = ["/xender" , "/app" , "/image" , "/music" , "/video" , "/record"]
-			for (var i = 0; i < router.length; i++) {
-				if (r.path == router[i]) break;
+	
+			for (var i = 0; i < navArray.length; i++) {
+				if (r.path == navArray[i]) break;
 			}
 	
-			self.lineLeft = 55 * i;
+			self.lineLeft = self.width * i;
 		},
 	
 		regBus: function regBus(bus) {
+	
 			bus.on("router", this.onRouter.bind(this));
-		}
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 64 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = {
-	
-		getPageHeight: function getPageHeight() {
-	
-			return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-		},
-	
-		getPageWidth: function getPageWidth() {
-	
-			return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 		}
 	};
 	module.exports = exports["default"];
@@ -11721,7 +11639,7 @@
 /* 65 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='topLink'>\r\n  \t  \t<ul class=\"ulStyle\">\r\n  \t  \t\t<li class=\"liStyle\" style=\"{width:w + 'px'}\" v-for=\"listObj in list\">\r\n  \t  \t\t\t<p></p>\r\n  \t  \t\t\t\r\n  \t  \t\t\t<a class=\"acolor\" v-link=\"{ path: listObj.path }\">{{listObj['name']}}</a>\r\n\r\n  \t  \t\t\t\r\n  \t  \t\t</li>\r\n  \t  \t</ul>\r\n        <p v-bind:style=\"{left:lineLeft + 'px'}\"></p>\r\n    </div>";
+	module.exports = "<div class='topLink'>\r\n  \t  \t<ul class=\"ulStyle\">\r\n  \t  \t\t<li class=\"liStyle\" v-bind:style=\"{width:width + 'px'}\" v-for=\"listObj in list\">\r\n  \t  \t\t\t<p class=\"icons\">\r\n  \t  \t\t\t\t<svg style=\"width:35px;height:35px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#929292\" d=\"M8,20H5V12H2L12,3L22,12H19V20H12V14H8V20M14,14V17H17V14H14Z\" />\r\n\t\t\t\t\t</svg>\r\n  \t  \t\t\t</p>\r\n  \t  \t\t\t<p class=\"iconsTxt\">\r\n  \t  \t\t\t\t{{listObj['name']}}\r\n  \t  \t\t\t</p>\r\n  \t  \t\t\t<a class=\"selectA\" v-link=\"{ path: listObj.path }\"></a>\r\n  \t  \t\t</li>\r\n  \t  \t</ul>\r\n        <p class=\"navState\" v-bind:style=\"{left:lineLeft + 'px' , width:width + 'px'}\"></p>\r\n    </div>";
 
 /***/ },
 /* 66 */
@@ -11802,11 +11720,11 @@
 	
 	exports.__esModule = true;
 	
-	var _servicesContainerJs = __webpack_require__(62);
+	var _servicesContainerJs = __webpack_require__(63);
 	
 	var _servicesContainerJs2 = _interopRequireDefault(_servicesContainerJs);
 	
-	var _servicesTsJs = __webpack_require__(64);
+	var _servicesTsJs = __webpack_require__(37);
 	
 	var _servicesTsJs2 = _interopRequireDefault(_servicesTsJs);
 	
@@ -16578,7 +16496,7 @@
 	
 	exports.__esModule = true;
 	
-	var _statusVue = __webpack_require__(48);
+	var _statusVue = __webpack_require__(49);
 	
 	var _statusVue2 = _interopRequireDefault(_statusVue);
 	
@@ -16593,6 +16511,10 @@
 	var _InstabusEIBIndexVue = __webpack_require__(113);
 	
 	var _InstabusEIBIndexVue2 = _interopRequireDefault(_InstabusEIBIndexVue);
+	
+	var _navigationLinkVue = __webpack_require__(59);
+	
+	var _navigationLinkVue2 = _interopRequireDefault(_navigationLinkVue);
 	
 	var _machineRoomIndexVue = __webpack_require__(107);
 	
@@ -16614,7 +16536,8 @@
 				InstabusEIB: _InstabusEIBIndexVue2['default'],
 				machineRoom: _machineRoomIndexVue2['default'],
 				equipmentCabinet: _equipmentCabinetCDiagramVue3['default'],
-				portfigure: _equipmentCabinetPortfigureVue2['default']
+				portfigure: _equipmentCabinetPortfigureVue2['default'],
+				link: _navigationLinkVue2['default']
 	
 			};
 		}

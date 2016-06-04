@@ -1,5 +1,6 @@
 
 import Config from './config.js'
+import ts from './ts.js'
 
 export default {
 
@@ -32,7 +33,8 @@ export default {
 	},
 
 	getSessionId () {
-		var c_name = 'JSESSIONID';
+		//var c_name = 'JSESSIONID';
+		var c_name = 'session'
 			if(document.cookie.length>0){
 			   c_start=document.cookie.indexOf(c_name + "=")
 			   if(c_start!=-1){ 
@@ -56,7 +58,9 @@ export default {
 			data :d ,
 			success : function(response){
 				var session = that.getSessionId();
-				console.log("session : " , session)
+				var cookie = ts.getCookie('session')
+				console.log("cookie:" , document.cookie , cookie)
+				console.log("sessionID : " , session)
 				that.vm.login = true ;
 			},
 			dataType:'text' 
