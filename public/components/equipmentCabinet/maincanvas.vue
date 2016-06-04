@@ -8,7 +8,7 @@
 .maincanvas{
 	width:100%;
 	margin-top:10px;
-	height:200px;
+	background:green;
 	position:relative;
 }
 
@@ -24,26 +24,39 @@
 .maincanvas .contain .mycanvas{
 	position:absolute;
 	width:100px;
+	background:yellow;
 	height:50px;
 	left:0px;
 	top:0px;
-	background:yellow
+	
 }
 </style>
 
 <template>
-	<div class="maincanvas">
+	<div class="maincanvas" v-bind:style="{height:height + 'px'}">
 		<div class="contain">
-			<div class="mycanvas"></div>
+			<div class="mycanvas" v-on:gesturechange="gesturechange()">hihid</div>
 		</div>
 	</div>
 </template>
 
 <script>
+import maincanvas from "../../services/equipmentCabinet/maincanvas"
 export default {
 	data () {
 		return {
+			height:400
+		}
+	},
 
+	ready () {
+		maincanvas.setThis.call(maincanvas, this);
+		maincanvas.setHeight();
+	},
+
+	methods : {
+		gesturechange () {
+			alert("ki")
 		}
 	}
 

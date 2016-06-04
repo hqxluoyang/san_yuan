@@ -93,22 +93,22 @@
 	
 	var _servicesConfig2 = _interopRequireDefault(_servicesConfig);
 	
-	var _servicesMain = __webpack_require__(168);
+	var _servicesMain = __webpack_require__(170);
 	
 	var _servicesMain2 = _interopRequireDefault(_servicesMain);
 	
-	var _jquery = __webpack_require__(174);
+	var _jquery = __webpack_require__(176);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _mainCss = __webpack_require__(175);
+	var _mainCss = __webpack_require__(177);
 	
 	var _mainCss2 = _interopRequireDefault(_mainCss);
 	
 	window.$ = _jquery2['default'];
 	window.jQuery = _jquery2['default'];
 	
-	__webpack_require__(177).polyfill();
+	__webpack_require__(179).polyfill();
 	_vue2['default'].use(_src2['default']);
 	var router = new _src2['default']({
 		history: false,
@@ -15549,7 +15549,7 @@
 
 	__webpack_require__(136)
 	module.exports = __webpack_require__(138)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(167)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(169)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15892,7 +15892,7 @@
 
 	__webpack_require__(147)
 	module.exports = __webpack_require__(149)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(166)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(168)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15977,7 +15977,7 @@
 	exports['default'] = {
 		data: function data() {
 			return {
-				flag: false,
+				flag: true,
 				pm: {
 					p: "3-4",
 					c: "A07"
@@ -16227,7 +16227,7 @@
 
 	__webpack_require__(162)
 	module.exports = __webpack_require__(164)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(165)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(167)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -16278,21 +16278,41 @@
 	
 	
 	// module
-	exports.push([module.id, ".maincanvas{\r\n\twidth:100%;\r\n\tmargin-top:10px;\r\n\theight:200px;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain{\r\n\tbackground:red;\r\n\tmargin:0 auto;\r\n\theight:100%;\r\n\tmargin-left:10px;\r\n\tmargin-right:10px;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain .mycanvas{\r\n\tposition:absolute;\r\n\twidth:100px;\r\n\theight:50px;\r\n\tleft:0px;\r\n\ttop:0px;\r\n\tbackground:yellow\r\n}", ""]);
+	exports.push([module.id, ".maincanvas{\r\n\twidth:100%;\r\n\tmargin-top:10px;\r\n\tbackground:green;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain{\r\n\tbackground:red;\r\n\tmargin:0 auto;\r\n\theight:100%;\r\n\tmargin-left:10px;\r\n\tmargin-right:10px;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain .mycanvas{\r\n\tposition:absolute;\r\n\twidth:100px;\r\n\tbackground:yellow;\r\n\theight:50px;\r\n\tleft:0px;\r\n\ttop:0px;\r\n\t\r\n}", ""]);
 	
 	// exports
 
 
 /***/ },
 /* 164 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
+	var _interopRequireDefault = __webpack_require__(22)["default"];
+	
 	exports.__esModule = true;
+	
+	var _servicesEquipmentCabinetMaincanvas = __webpack_require__(165);
+	
+	var _servicesEquipmentCabinetMaincanvas2 = _interopRequireDefault(_servicesEquipmentCabinetMaincanvas);
+	
 	exports["default"] = {
 		data: function data() {
-			return {};
+			return {
+				height: 400
+			};
+		},
+	
+		ready: function ready() {
+			_servicesEquipmentCabinetMaincanvas2["default"].setThis.call(_servicesEquipmentCabinetMaincanvas2["default"], this);
+			_servicesEquipmentCabinetMaincanvas2["default"].setHeight();
+		},
+	
+		methods: {
+			gesturechange: function gesturechange() {
+				alert("ki");
+			}
 		}
 	
 	};
@@ -16300,24 +16320,92 @@
 
 /***/ },
 /* 165 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	module.exports = "<div class=\"maincanvas\">\r\n\t\t<div class=\"contain\">\r\n\t\t\t<div class=\"mycanvas\"></div>\r\n\t\t</div>\r\n\t</div>";
+	/**
+		date : 2016-6-4
+		author : sailing
+		fun : 板卡放大缩小，移动管理
+	**/
+	
+	"use strict";
+	
+	var _interopRequireDefault = __webpack_require__(22)["default"];
+	
+	exports.__esModule = true;
+	
+	var _tools = __webpack_require__(166);
+	
+	var _tools2 = _interopRequireDefault(_tools);
+	
+	exports["default"] = {
+	
+		setThis: function setThis(self) {
+			this.vm = self;
+		},
+	
+		setHeight: function setHeight() {
+			var self = this.vm;
+			var h = _tools2["default"].getPageHeight();
+			self.height = h - 280 - 35;
+		}
+	};
+	module.exports = exports["default"];
 
 /***/ },
 /* 166 */
 /***/ function(module, exports) {
 
-	module.exports = "<div v-show=\"flag\" class=\"interface\">\r\n\t\t<navigate></navigate>\r\n\t\t<position :data=\"pm\"></position>\r\n\t\t<maincanvas></maincanvas>\r\n\t</div>";
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = {
+	
+		getPageHeight: function getPageHeight() {
+	
+			return window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		},
+	
+		getPageWidth: function getPageWidth() {
+	
+			return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		},
+	
+		setCookie: function setCookie(name, value) {
+			var Days = 30;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+			document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+		},
+	
+		getCookie: function getCookie(name) {
+			var arr,
+			    reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+			if (arr = document.cookie.match(reg)) return unescape(arr[2]);else return null;
+		}
+	};
+	module.exports = exports["default"];
 
 /***/ },
 /* 167 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"equipmentCabinet\">\r\n\r\n\t\t<div class=\"equContainer\">\r\n\t\t\t<div class=\"equipment\" v-for = \"equipment in equipmentList\" v-on:click=\"gotoCabinet(equipment)\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{equipment.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{equipment.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<span class=\"rightImage\">\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#8e8e8e\" d=\"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t</div>\r\n\r\n\t<cabinet></cabinet>\r\n\t<portfigure></portfigure>";
+	module.exports = "<div class=\"maincanvas\" v-bind:style=\"{height:height + 'px'}\">\r\n\t\t<div class=\"contain\">\r\n\t\t\t<div class=\"mycanvas\" v-on:gesturechange=\"gesturechange()\">hihid</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
 /* 168 */
+/***/ function(module, exports) {
+
+	module.exports = "<div v-show=\"flag\" class=\"interface\">\r\n\t\t<navigate></navigate>\r\n\t\t<position :data=\"pm\"></position>\r\n\t\t<maincanvas></maincanvas>\r\n\t</div>";
+
+/***/ },
+/* 169 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"equipmentCabinet\">\r\n\r\n\t\t<div class=\"equContainer\">\r\n\t\t\t<div class=\"equipment\" v-for = \"equipment in equipmentList\" v-on:click=\"gotoCabinet(equipment)\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{equipment.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{equipment.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<span class=\"rightImage\">\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#8e8e8e\" d=\"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t</div>\r\n\r\n\t<cabinet></cabinet>\r\n\t<portfigure></portfigure>";
+
+/***/ },
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -16330,15 +16418,15 @@
 	
 	exports.__esModule = true;
 	
-	var _eventBus = __webpack_require__(169);
+	var _eventBus = __webpack_require__(171);
 	
 	var _eventBus2 = _interopRequireDefault(_eventBus);
 	
-	var _chRouterSuccJs = __webpack_require__(170);
+	var _chRouterSuccJs = __webpack_require__(172);
 	
 	var _chRouterSuccJs2 = _interopRequireDefault(_chRouterSuccJs);
 	
-	var _allCompJs = __webpack_require__(171);
+	var _allCompJs = __webpack_require__(173);
 	
 	var _allCompJs2 = _interopRequireDefault(_allCompJs);
 	
@@ -16358,7 +16446,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 169 */
+/* 171 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -16396,7 +16484,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 170 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16424,7 +16512,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -16436,7 +16524,7 @@
 	
 	exports.__esModule = true;
 	
-	var _componentsIndexVue = __webpack_require__(172);
+	var _componentsIndexVue = __webpack_require__(174);
 	
 	var _componentsIndexVue2 = _interopRequireDefault(_componentsIndexVue);
 	
@@ -16467,10 +16555,10 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(173)
+	module.exports = __webpack_require__(175)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -16487,7 +16575,7 @@
 	}
 
 /***/ },
-/* 173 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16545,7 +16633,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -26365,13 +26453,13 @@
 
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(176);
+	var content = __webpack_require__(178);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(29)(content, {});
@@ -26391,7 +26479,7 @@
 	}
 
 /***/ },
-/* 176 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(28)();
@@ -26405,10 +26493,10 @@
 
 
 /***/ },
-/* 177 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -26538,7 +26626,7 @@
 	    function lib$es6$promise$asap$$attemptVertx() {
 	      try {
 	        var r = require;
-	        var vertx = __webpack_require__(179);
+	        var vertx = __webpack_require__(181);
 	        lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
 	        return lib$es6$promise$asap$$useVertxTimer();
 	      } catch(e) {
@@ -27356,7 +27444,7 @@
 	    };
 	
 	    /* global define:true module:true window: true */
-	    if ("function" === 'function' && __webpack_require__(180)['amd']) {
+	    if ("function" === 'function' && __webpack_require__(182)['amd']) {
 	      !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return lib$es6$promise$umd$$ES6Promise; }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof module !== 'undefined' && module['exports']) {
 	      module['exports'] = lib$es6$promise$umd$$ES6Promise;
@@ -27368,10 +27456,10 @@
 	}).call(this);
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), (function() { return this; }()), __webpack_require__(178)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), (function() { return this; }()), __webpack_require__(180)(module)))
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -27387,13 +27475,13 @@
 
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };

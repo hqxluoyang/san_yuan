@@ -36,7 +36,7 @@ import maincanvas from './maincanvas.vue'
 export default {
 	data () {
 		return {
-			flag : false	,
+			flag : true,
 			pm:{
 				p:"3-4",
 				c:"A07"
