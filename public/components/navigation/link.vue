@@ -20,7 +20,7 @@
 
 .topLink .navState{
 	position:absolute;
-	background:red;
+	background:#00b7f8;
 	height:3px;
 	top:0;
 }
@@ -40,8 +40,9 @@
 	overflow:hidden;
 }
 
- .acolor.v-link-active{
+ .v-link-active{
  	color:#fff;
+ 	background:#00fbd8;
  }
  
  .bottomLine{
@@ -111,9 +112,7 @@
   	  	<ul class="ulStyle">
   	  		<li class="liStyle" v-bind:style="{width:width + 'px'}" v-for="listObj in list">
   	  			<p class="icons">
-  	  				<svg style="width:35px;height:35px" viewBox="0 0 24 24">
-    					<path fill="#929292" d="M8,20H5V12H2L12,3L22,12H19V20H12V14H8V20M14,14V17H17V14H14Z" />
-					</svg>
+  	  				<icons :data="listObj.path" :color="listObj.color"></icons>
   	  			</p>
   	  			<p class="iconsTxt">
   	  				{{listObj['name']}}
@@ -128,6 +127,7 @@
 <script>
 import Container from '../../services/Container.js'
 import link from '../../services/link.js'
+import icons from './icons.vue'
 export default {
   	  data () {
   	  	return {
@@ -135,18 +135,23 @@ export default {
   	  		width : 50,
   	  		list : [{
   	  			path : "/machineRoom",
+  	  			color : "#929292",
   	  			name : "机房"
   	  		},{
   	  			path : "/equipmentCabinet",
+  	  			color : "#ccc",
   	  			name : "机柜"
   	  		},{
   	  			path : "/InstabusEIB",
+  	  			color : "#ccc",
   	  			name : "智能布线"
   	  		},{
   	  			path : "/verify",
+  	  			color : "#ccc",
   	  			name : "待确认"
   	  		},{
   	  			path : "/setting",
+  	  			color : "#ccc",
   	  			name : "设置"
   	  		}]
   	  	}
@@ -178,6 +183,8 @@ export default {
 	 ready () {
         link.setThis.call(link, this);
         link.setWidth();
-   	 }
+   	 },
+
+   	 components : {icons}
 }
 </script>

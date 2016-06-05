@@ -25,16 +25,16 @@ export default {
 
 	 methods:{
 	  	touchEnd (e) {
-	  		Container.touchEnd(this.$route.path , e);
+	  		//Container.touchEnd(this.$route.path , e);
 	  	},
 	  	
 	  	touchStart (e) {
 	  		//e.preventDefault();
-	  		Container.touchStart(e);
+	  	//	Container.touchStart(e);
 	  	},
 	  	
 	  	touchMove (e) {
-	  		Container.touchMove(e);
+	  	//	Container.touchMove(e);
 	  	},
 	  	
 	  	touchcancel (e) {

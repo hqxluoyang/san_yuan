@@ -11,7 +11,7 @@ import Config from './config.js'
 export default {
    
     start (data) {
-        Config.Runtime.eventBus = new eventBus();
+        Config.eventBus = Config.Runtime.eventBus = new eventBus();
         allComp.startInit();
         chRouterSucc.init();
     }

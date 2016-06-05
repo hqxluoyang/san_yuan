@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(21);
+	module.exports = __webpack_require__(23);
 
 
 /***/ },
@@ -68,48 +68,55 @@
 /* 18 */,
 /* 19 */,
 /* 20 */,
-/* 21 */
+/* 21 */,
+/* 22 */,
+/* 23 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
-	var _vue = __webpack_require__(23);
+	var _vue = __webpack_require__(25);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _appVue = __webpack_require__(25);
+	var _appVue = __webpack_require__(27);
 	
 	var _appVue2 = _interopRequireDefault(_appVue);
 	
-	var _src = __webpack_require__(73);
+	var _src = __webpack_require__(84);
 	
 	var _src2 = _interopRequireDefault(_src);
 	
-	var _routeConfig = __webpack_require__(106);
+	var _routeConfig = __webpack_require__(117);
 	
-	var _servicesConfig = __webpack_require__(36);
+	var _servicesConfig = __webpack_require__(38);
 	
 	var _servicesConfig2 = _interopRequireDefault(_servicesConfig);
 	
-	var _servicesMain = __webpack_require__(170);
+	var _servicesMain = __webpack_require__(181);
 	
 	var _servicesMain2 = _interopRequireDefault(_servicesMain);
 	
-	var _jquery = __webpack_require__(176);
+	var _jquery = __webpack_require__(187);
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _mainCss = __webpack_require__(177);
+	var _vueTouch = __webpack_require__(188);
+	
+	var _vueTouch2 = _interopRequireDefault(_vueTouch);
+	
+	var _mainCss = __webpack_require__(190);
 	
 	var _mainCss2 = _interopRequireDefault(_mainCss);
 	
 	window.$ = _jquery2['default'];
 	window.jQuery = _jquery2['default'];
 	
-	__webpack_require__(179).polyfill();
+	__webpack_require__(192).polyfill();
 	_vue2['default'].use(_src2['default']);
+	_vue2['default'].use(_vueTouch2['default']);
 	var router = new _src2['default']({
 		history: false,
 		saveScrollPosition: true
@@ -125,7 +132,7 @@
 	_servicesMain2['default'].start();
 
 /***/ },
-/* 22 */
+/* 24 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -139,7 +146,7 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 23 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/*!
@@ -10172,10 +10179,10 @@
 	}, 0);
 	
 	module.exports = Vue;
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(24)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(26)))
 
 /***/ },
-/* 24 */
+/* 26 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -10275,12 +10282,12 @@
 
 
 /***/ },
-/* 25 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(26)
-	module.exports = __webpack_require__(30)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(72)
+	__webpack_require__(28)
+	module.exports = __webpack_require__(32)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(83)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10297,16 +10304,16 @@
 	}
 
 /***/ },
-/* 26 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(27);
+	var content = __webpack_require__(29);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10323,10 +10330,10 @@
 	}
 
 /***/ },
-/* 27 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -10337,7 +10344,7 @@
 
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports) {
 
 	/*
@@ -10393,7 +10400,7 @@
 
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -10645,36 +10652,36 @@
 
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _componentsLoginVue = __webpack_require__(31);
+	var _componentsLoginVue = __webpack_require__(33);
 	
 	var _componentsLoginVue2 = _interopRequireDefault(_componentsLoginVue);
 	
-	var _componentsTopVue = __webpack_require__(39);
+	var _componentsTopVue = __webpack_require__(41);
 	
 	var _componentsTopVue2 = _interopRequireDefault(_componentsTopVue);
 	
-	var _componentsSearchVue = __webpack_require__(44);
+	var _componentsSearchVue = __webpack_require__(52);
 	
 	var _componentsSearchVue2 = _interopRequireDefault(_componentsSearchVue);
 	
-	var _componentsStatusVue = __webpack_require__(49);
+	var _componentsStatusVue = __webpack_require__(57);
 	
 	var _componentsStatusVue2 = _interopRequireDefault(_componentsStatusVue);
 	
-	var _componentsNavigationIndexVue = __webpack_require__(55);
+	var _componentsNavigationIndexVue = __webpack_require__(63);
 	
 	var _componentsNavigationIndexVue2 = _interopRequireDefault(_componentsNavigationIndexVue);
 	
-	var _componentsContainerVue = __webpack_require__(67);
+	var _componentsContainerVue = __webpack_require__(78);
 	
 	var _componentsContainerVue2 = _interopRequireDefault(_componentsContainerVue);
 	
@@ -10684,12 +10691,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(32)
-	module.exports = __webpack_require__(34)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(38)
+	__webpack_require__(34)
+	module.exports = __webpack_require__(36)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(40)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10706,16 +10713,16 @@
 	}
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(33);
+	var content = __webpack_require__(35);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10732,10 +10739,10 @@
 	}
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -10746,16 +10753,16 @@
 
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _servicesLoginJs = __webpack_require__(35);
+	var _servicesLoginJs = __webpack_require__(37);
 	
 	var _servicesLoginJs2 = _interopRequireDefault(_servicesLoginJs);
 	
@@ -10791,20 +10798,20 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _configJs = __webpack_require__(36);
+	var _configJs = __webpack_require__(38);
 	
 	var _configJs2 = _interopRequireDefault(_configJs);
 	
-	var _tsJs = __webpack_require__(37);
+	var _tsJs = __webpack_require__(39);
 	
 	var _tsJs2 = _interopRequireDefault(_tsJs);
 	
@@ -10880,7 +10887,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;'use strict';
@@ -10898,7 +10905,7 @@
 	}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -10932,18 +10939,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-show=\"!login\" class='login'>\r\n     <p class=\"titleText\">三维数据中心综合管理系统</p>\r\n     <div class=\"loginPanel\">\r\n        <div class=\"loginCon\">\r\n          <p class=\"lline\"><span class=\"namePanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z\" />\r\n          </svg></span><input v-model=\"username\" /></p>\r\n          <p class=\"lline\"><span class=\"passwordPanel\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n              <path fill=\"#ccc\" d=\"M12,17C10.89,17 10,16.1 10,15C10,13.89 10.89,13 12,13A2,2 0 0,1 14,15A2,2 0 0,1 12,17M18,20V10H6V20H18M18,8A2,2 0 0,1 20,10V20A2,2 0 0,1 18,22H6C4.89,22 4,21.1 4,20V10C4,8.89 4.89,8 6,8H7V6A5,5 0 0,1 12,1A5,5 0 0,1 17,6V8H18M12,3A3,3 0 0,0 9,6V8H15V6A3,3 0 0,0 12,3Z\" />\r\n          </svg></span><input tpye=\"password\" v-model=\"passW\"/></p>\r\n         \r\n          <p class=\"llineBnt lline\">\r\n            <span class=\"loginBnt\" v-on:click=\"lgogin($event)\">登陆</span>\r\n          </p>\r\n        </div>\r\n     </div>\r\n  </div>";
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(40)
-	module.exports = __webpack_require__(42)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(43)
+	__webpack_require__(42)
+	module.exports = __webpack_require__(44)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(51)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -10960,16 +10967,16 @@
 	}
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(41);
+	var content = __webpack_require__(43);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -10986,10 +10993,10 @@
 	}
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -11000,33 +11007,170 @@
 
 
 /***/ },
-/* 42 */
+/* 44 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _interopRequireDefault = __webpack_require__(24)["default"];
+	
+	exports.__esModule = true;
+	
+	var _firebugVue = __webpack_require__(45);
+	
+	var _firebugVue2 = _interopRequireDefault(_firebugVue);
+	
+	exports["default"] = {
+	
+	   ready: function ready() {},
+	
+	   components: { firebug: _firebugVue2["default"] }
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 45 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(46)
+	module.exports = __webpack_require__(48)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(50)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../node_modules/vue-loader/lib/selector.js?type=script&index=0!./firebug.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../node_modules/vue-loader/lib/selector.js?type=script&index=0!./firebug.vue","-!vue-html-loader!./../node_modules/vue-loader/lib/selector.js?type=template&index=0!./firebug.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../node_modules/vue-loader/lib/selector.js?type=script&index=0!./firebug.vue")
+	var newTemplate = require("-!vue-html-loader!./../node_modules/vue-loader/lib/selector.js?type=template&index=0!./firebug.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 46 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(47);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(31)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5beb6298&file=firebug.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./firebug.vue", function() {
+				var newContent = require("!!./../node_modules/css-loader/index.js!./../node_modules/vue-loader/lib/style-rewriter.js?id=_v-5beb6298&file=firebug.vue!./../node_modules/vue-loader/lib/selector.js?type=style&index=0!./firebug.vue");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(30)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".firebug {\r\n\tbackground:green;\r\n\twidth:100%;\r\n\theight:200px;\r\n\toverflow-y:scroll;\r\n\tleft:0;\r\n\ttop:0;\r\n\tcolor:#fff;\r\n\tz-index:2000;\r\n\tposition:absolute;\r\n}", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 48 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _interopRequireDefault = __webpack_require__(24)["default"];
+	
+	exports.__esModule = true;
+	
+	var _servicesFirebug = __webpack_require__(49);
+	
+	var _servicesFirebug2 = _interopRequireDefault(_servicesFirebug);
+	
+	exports["default"] = {
+		data: function data() {
+			return {
+				list: []
+			};
+		},
+	
+		methods: {
+			dbclick: function dbclick() {
+	
+				this.list = [];
+			}
+		},
+	
+		ready: function ready() {
+			_servicesFirebug2["default"].setThis.call(_servicesFirebug2["default"], this);
+		},
+	
+		initBus: function initBus(bus) {
+			_servicesFirebug2["default"].regBus(bus);
+		}
+	
+	};
+	module.exports = exports["default"];
+
+/***/ },
+/* 49 */
 /***/ function(module, exports) {
 
 	"use strict";
 	
 	exports.__esModule = true;
 	exports["default"] = {
+		setThis: function setThis(self) {
+			this.vm = self;
+		},
 	
-	   ready: function ready() {},
+		firebug: function firebug(el) {
+			var self = this.vm;
+			self.list.push(el);
+		},
 	
-	   components: {}
+		regBus: function regBus(bus) {
+			bus.on("firebug", this.firebug.bind(this));
+		}
 	};
 	module.exports = exports["default"];
 
 /***/ },
-/* 43 */
+/* 50 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='top'>\r\n  <img class=\"top_img\" src=\"http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\r\n  </div>";
+	module.exports = "<div class=\"firebug\" v-show='false' v-on:click=\"dbclick()\">\r\n\t\t<p v-for=\"el in list\">\r\n\t\t\t<span>{{el.type}}:</span>\r\n\t\t\t<span>{{el.data}}</span>\r\n\t\t</p>\r\n\t</div>";
 
 /***/ },
-/* 44 */
+/* 51 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class='top'>\r\n  <img class=\"top_img\" src=\"http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png\" width=\"175\" height=\"47\" alt=\"DIVCSS5的LOGO\" />\r\n  </div>\r\n  <firebug></firebug>";
+
+/***/ },
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(45)
-	module.exports = __webpack_require__(47)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(48)
+	__webpack_require__(53)
+	module.exports = __webpack_require__(55)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(56)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11043,16 +11187,16 @@
 	}
 
 /***/ },
-/* 45 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(46);
+	var content = __webpack_require__(54);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11069,10 +11213,10 @@
 	}
 
 /***/ },
-/* 46 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -11083,32 +11227,60 @@
 
 
 /***/ },
-/* 47 */
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	exports.__esModule = true;
-	exports["default"] = {
-		init: function init() {},
-	
-		ready: function ready() {}
-	};
-	module.exports = exports["default"];
-
-/***/ },
-/* 48 */
-/***/ function(module, exports) {
-
-	module.exports = "<div class=\"all_search\">\r\n\t\t<div class=\"pImg\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li class=\"head\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t<path fill=\"#ccc\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\" />\r\n\t\t\t\t</svg></li>\r\n\t\t\t\t<li><input type=\"search\" placeholder=\"搜索\" /></li>\r\n\t\t\t\t<li>3</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>";
-
-/***/ },
-/* 49 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(50)
-	module.exports = __webpack_require__(52)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(54)
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(24)['default'];
+	
+	exports.__esModule = true;
+	
+	var _servicesSearch = __webpack_require__(196);
+	
+	var _servicesSearch2 = _interopRequireDefault(_servicesSearch);
+	
+	exports['default'] = {
+	
+		data: function data() {
+			return {
+				showHide: false,
+				searchValue: ''
+			};
+		},
+	
+		init: function init() {},
+	
+		methods: {
+			searchStart: function searchStart() {
+				_servicesSearch2['default'].searchStart();
+			}
+		},
+	
+		ready: function ready() {
+			_servicesSearch2['default'].setThis.call(_servicesSearch2['default'], this);
+		},
+	
+		initBus: function initBus(bus) {
+			_servicesSearch2['default'].regBus(bus);
+		}
+	
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 56 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"all_search\" v-show=\"showHide\">\r\n\t\t<div class=\"pImg\">\r\n\t\t\t<ul>\r\n\t\t\t\t<li v-on:click=\"searchStart()\" class=\"head\"><svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t<path fill=\"#ccc\" d=\"M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z\" />\r\n\t\t\t\t</svg></li>\r\n\t\t\t\t<li><input v-model=\"searchValue\" type=\"search\" placeholder=\"搜索\" /></li>\r\n\t\t\t\t<li>3</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>";
+
+/***/ },
+/* 57 */
+/***/ function(module, exports, __webpack_require__) {
+
+	__webpack_require__(58)
+	module.exports = __webpack_require__(60)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(62)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11125,16 +11297,16 @@
 	}
 
 /***/ },
-/* 50 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(51);
+	var content = __webpack_require__(59);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11151,10 +11323,10 @@
 	}
 
 /***/ },
-/* 51 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -11165,16 +11337,16 @@
 
 
 /***/ },
-/* 52 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _servicesStatus = __webpack_require__(53);
+	var _servicesStatus = __webpack_require__(61);
 	
 	var _servicesStatus2 = _interopRequireDefault(_servicesStatus);
 	
@@ -11209,7 +11381,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 53 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -11219,11 +11391,11 @@
 	**/
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _config = __webpack_require__(36);
+	var _config = __webpack_require__(38);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -11271,18 +11443,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 54 */
+/* 62 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"statusText\">\r\n\t<p class=\"back\" v-show=\"flag\" v-on:click=\"backUp()\">< {{back}}</p>\r\n\t<p v-show=\"!flag\">{{statusText}}</p>\r\n</div>";
 
 /***/ },
-/* 55 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(56)
-	module.exports = __webpack_require__(58)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(66)
+	__webpack_require__(64)
+	module.exports = __webpack_require__(66)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(77)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11299,16 +11471,16 @@
 	}
 
 /***/ },
-/* 56 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(57);
+	var content = __webpack_require__(65);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11325,10 +11497,10 @@
 	}
 
 /***/ },
-/* 57 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -11339,16 +11511,16 @@
 
 
 /***/ },
-/* 58 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _linkVue = __webpack_require__(59);
+	var _linkVue = __webpack_require__(67);
 	
 	var _linkVue2 = _interopRequireDefault(_linkVue);
 	
@@ -11361,12 +11533,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 59 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(60)
-	module.exports = __webpack_require__(62)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(65)
+	__webpack_require__(68)
+	module.exports = __webpack_require__(70)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(76)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11383,16 +11555,16 @@
 	}
 
 /***/ },
-/* 60 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(61);
+	var content = __webpack_require__(69);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11409,104 +11581,121 @@
 	}
 
 /***/ },
-/* 61 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".topLink{\r\n\tposition:absolute;\r\n\tleft:0;\r\n\twidth:100%;\r\n\theight:50px;\r\n\tbackground:#F3F3F3;\r\n\tborder-top:1px solid #ccc ;\r\n\tbottom:0;\r\n}\r\n\r\n.topLink .navState{\r\n\tposition:absolute;\r\n\tbackground:red;\r\n\theight:3px;\r\n\ttop:0;\r\n}\r\n\r\n.acolor{\r\n\tcolor:#B7B7B7;\r\n\tfont-size:15px;\r\n\twidth:80px;\r\n\tbackground:#1DB995;\r\n\tdisplay:inline-block;\r\n\ttext-align:center;\r\n\tline-height:50px;\r\n\tmargin-left:0px;\r\n}\r\n\r\n.linkContai{\r\n\toverflow:hidden;\r\n}\r\n\r\n .acolor.v-link-active{\r\n \tcolor:#fff;\r\n }\r\n \r\n .bottomLine{\r\n \twidth:50px;\r\n \tbackground:yellow;\r\n \tposition:absolute;\r\n \tleft:0px;\r\n \ttop:30px;\r\n \theight:2px;\r\n \ttransition:left 0.5s;\r\n\t-moz-transition:left 0.5s; /* Firefox 4 */\r\n\t-webkit-transition:left 0.5s; /* Safari and Chrome */\r\n\t-o-transition:left 0.5s; /* Opera */\r\n }\r\n\r\n .Container{\r\n \tbackground:red;\r\n \tmargin-left:100px;\r\n \tposition:absolute;\r\n \ttop:0px;\r\n \twidth:100px;\r\n \theight:100px;\r\n }\r\n\r\n.topLink .ulStyle {\r\n\theight:50px;\r\n\ttext-align:center;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle{\r\n\tdisplay:inline-block;\r\n\twidth:80px;\r\n\tborder-radius:39px;\r\n\tposition:relative;\r\n\theight:50px;\r\n\tposition:relative;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle .selectA{\r\n\twidth:100%;\r\n\theight:50px;\r\n\tposition:absolute;\r\n\tleft:0px;\r\n\topacity:0.3;\r\n\tmargin:0px;\r\n\ttop:0;\r\n\t\r\n}\r\n\r\n\r\n\r\n.topLink .ulStyle .liStyle .icons {\r\n\theight:30px;\r\n}\r\n\r\n.topLink .ulStyle .liStyle .iconsTxt {\r\n\t\r\n\tfont-size:12px;\r\n}", ""]);
+	exports.push([module.id, ".topLink{\r\n\tposition:absolute;\r\n\tleft:0;\r\n\twidth:100%;\r\n\theight:50px;\r\n\tbackground:#F3F3F3;\r\n\tborder-top:1px solid #ccc ;\r\n\tbottom:0;\r\n}\r\n\r\n.topLink .navState{\r\n\tposition:absolute;\r\n\tbackground:#00b7f8;\r\n\theight:3px;\r\n\ttop:0;\r\n}\r\n\r\n.acolor{\r\n\tcolor:#B7B7B7;\r\n\tfont-size:15px;\r\n\twidth:80px;\r\n\tbackground:#1DB995;\r\n\tdisplay:inline-block;\r\n\ttext-align:center;\r\n\tline-height:50px;\r\n\tmargin-left:0px;\r\n}\r\n\r\n.linkContai{\r\n\toverflow:hidden;\r\n}\r\n\r\n .v-link-active{\r\n \tcolor:#fff;\r\n \tbackground:#00fbd8;\r\n }\r\n \r\n .bottomLine{\r\n \twidth:50px;\r\n \tbackground:yellow;\r\n \tposition:absolute;\r\n \tleft:0px;\r\n \ttop:30px;\r\n \theight:2px;\r\n \ttransition:left 0.5s;\r\n\t-moz-transition:left 0.5s; /* Firefox 4 */\r\n\t-webkit-transition:left 0.5s; /* Safari and Chrome */\r\n\t-o-transition:left 0.5s; /* Opera */\r\n }\r\n\r\n .Container{\r\n \tbackground:red;\r\n \tmargin-left:100px;\r\n \tposition:absolute;\r\n \ttop:0px;\r\n \twidth:100px;\r\n \theight:100px;\r\n }\r\n\r\n.topLink .ulStyle {\r\n\theight:50px;\r\n\ttext-align:center;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle{\r\n\tdisplay:inline-block;\r\n\twidth:80px;\r\n\tborder-radius:39px;\r\n\tposition:relative;\r\n\theight:50px;\r\n\tposition:relative;\r\n\t\r\n}\r\n\r\n.topLink .ulStyle .liStyle .selectA{\r\n\twidth:100%;\r\n\theight:50px;\r\n\tposition:absolute;\r\n\tleft:0px;\r\n\topacity:0.3;\r\n\tmargin:0px;\r\n\ttop:0;\r\n\t\r\n}\r\n\r\n\r\n\r\n.topLink .ulStyle .liStyle .icons {\r\n\theight:30px;\r\n}\r\n\r\n.topLink .ulStyle .liStyle .iconsTxt {\r\n\t\r\n\tfont-size:12px;\r\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 62 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _servicesContainerJs = __webpack_require__(63);
+	var _servicesContainerJs = __webpack_require__(71);
 	
 	var _servicesContainerJs2 = _interopRequireDefault(_servicesContainerJs);
 	
-	var _servicesLinkJs = __webpack_require__(64);
+	var _servicesLinkJs = __webpack_require__(72);
 	
 	var _servicesLinkJs2 = _interopRequireDefault(_servicesLinkJs);
 	
+	var _iconsVue = __webpack_require__(73);
+	
+	var _iconsVue2 = _interopRequireDefault(_iconsVue);
+	
 	exports['default'] = {
-	  data: function data() {
-	    return {
-	      lineLeft: 100,
-	      width: 50,
-	      list: [{
-	        path: "/machineRoom",
-	        name: "机房"
-	      }, {
-	        path: "/equipmentCabinet",
-	        name: "机柜"
-	      }, {
-	        path: "/InstabusEIB",
-	        name: "智能布线"
-	      }, {
-	        path: "/verify",
-	        name: "待确认"
-	      }, {
-	        path: "/setting",
-	        name: "设置"
-	      }]
-	    };
-	  },
+	   data: function data() {
+	      return {
+	         lineLeft: 100,
+	         width: 50,
+	         list: [{
+	            path: "/machineRoom",
+	            color: "#929292",
+	            name: "机房"
+	         }, {
+	            path: "/equipmentCabinet",
+	            color: "#ccc",
+	            name: "机柜"
+	         }, {
+	            path: "/InstabusEIB",
+	            color: "#ccc",
+	            name: "智能布线"
+	         }, {
+	            path: "/verify",
+	            color: "#ccc",
+	            name: "待确认"
+	         }, {
+	            path: "/setting",
+	            color: "#ccc",
+	            name: "设置"
+	         }]
+	      };
+	   },
 	
-	  methods: {
-	    touchEnd: function touchEnd(e) {
-	      _servicesContainerJs2['default'].touchEnd(this.$route.path, e);
-	    },
+	   methods: {
+	      touchEnd: function touchEnd(e) {
+	         _servicesContainerJs2['default'].touchEnd(this.$route.path, e);
+	      },
 	
-	    touchStart: function touchStart(e) {
-	      //e.preventDefault();
-	      _servicesContainerJs2['default'].touchStart(e);
-	    },
+	      touchStart: function touchStart(e) {
+	         //e.preventDefault();
+	         _servicesContainerJs2['default'].touchStart(e);
+	      },
 	
-	    touchMove: function touchMove(e) {
-	      _servicesContainerJs2['default'].touchMove(e);
-	    },
+	      touchMove: function touchMove(e) {
+	         _servicesContainerJs2['default'].touchMove(e);
+	      },
 	
-	    touchcancel: function touchcancel(e) {
-	      console.log("touch cancel");
-	    }
-	  },
+	      touchcancel: function touchcancel(e) {
+	         console.log("touch cancel");
+	      }
+	   },
 	
-	  initBus: function initBus(bus) {
-	    _servicesLinkJs2['default'].regBus(bus);
-	  },
+	   initBus: function initBus(bus) {
+	      _servicesLinkJs2['default'].regBus(bus);
+	   },
 	
-	  ready: function ready() {
-	    _servicesLinkJs2['default'].setThis.call(_servicesLinkJs2['default'], this);
-	    _servicesLinkJs2['default'].setWidth();
-	  }
+	   ready: function ready() {
+	      _servicesLinkJs2['default'].setThis.call(_servicesLinkJs2['default'], this);
+	      _servicesLinkJs2['default'].setWidth();
+	   },
+	
+	   components: { icons: _iconsVue2['default'] }
 	};
 	module.exports = exports['default'];
 
 /***/ },
-/* 63 */
-/***/ function(module, exports) {
+/* 71 */
+/***/ function(module, exports, __webpack_require__) {
 
 	/**
 		date : 2016-6-2
 		author : sailing
 		fun : 主页面管理
 	**/
-	
 	'use strict';
 	
+	var _interopRequireDefault = __webpack_require__(24)['default'];
+	
 	exports.__esModule = true;
+	
+	var _config = __webpack_require__(38);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
 	exports['default'] = {
 	
 		getDirection: function getDirection() {
@@ -11541,6 +11730,7 @@
 	
 		touchEnd: function touchEnd(path, e) {
 			//	e.preventDefault();
+			//return ;
 			var angle = this.getAngle(this.startPosX, this.startPosY, this.endX, this.endY);
 	
 			if (angle > 45 || !this.endPos) return;
@@ -11548,7 +11738,7 @@
 			if (this.endPos.x <= 30 && this.endPos.x >= -30) return;
 	
 			var p = path.substring(1);
-			var link = Config.nav;
+			var link = _config2['default'].nav;
 			this.setLink(p, link);
 		},
 	
@@ -11585,24 +11775,24 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 64 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _ts = __webpack_require__(37);
+	var _ts = __webpack_require__(39);
 	
 	var _ts2 = _interopRequireDefault(_ts);
 	
-	var _config = __webpack_require__(36);
+	var _config = __webpack_require__(38);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
-	exports["default"] = {
+	exports['default'] = {
 	
 		setThis: function setThis(self) {
 			this.vm = self;
@@ -11611,16 +11801,27 @@
 		setWidth: function setWidth() {
 			var self = this.vm;
 			var len = self.list.length;
-			var width = _ts2["default"].getPageWidth();
+			var width = _ts2['default'].getPageWidth();
 			self.width = width / len;
 			//console.log("width:" , width)
 		},
 	
+		setStyle: function setStyle(path) {
+			var self = this.vm;
+			for (var i = 0; i < self.list.length; i++) {
+				if (path == self.list[i]['path']) {
+					self.list[i]['color'] = '#000';
+				} else {
+					self.list[i]['color'] = '#868686';
+				}
+			}
+		},
+	
 		onRouter: function onRouter(r) {
 			var self = this.vm;
-			var navArray = _config2["default"].nav;
+			var navArray = _config2['default'].nav;
 			if (!self) return;
-	
+			this.setStyle(r.path);
 			for (var i = 0; i < navArray.length; i++) {
 				if (r.path == navArray[i]) break;
 			}
@@ -11633,27 +11834,69 @@
 			bus.on("router", this.onRouter.bind(this));
 		}
 	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 73 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__(74)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(75)
+	if (false) {
+	(function () {
+	var hotAPI = require("vue-hot-reload-api")
+	hotAPI.install(require("vue"))
+	if (!hotAPI.compatible) return
+	var id = "-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./icons.vue"
+	hotAPI.createRecord(id, module.exports)
+	module.hot.accept(["-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./icons.vue","-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./icons.vue"], function () {
+	var newOptions = require("-!babel-loader?optional[]=runtime&loose=all&nonStandard=false!./../../node_modules/vue-loader/lib/selector.js?type=script&index=0!./icons.vue")
+	var newTemplate = require("-!vue-html-loader!./../../node_modules/vue-loader/lib/selector.js?type=template&index=0!./icons.vue")
+	hotAPI.update(id, newOptions, newTemplate)
+	})
+	})()
+	}
+
+/***/ },
+/* 74 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	exports.__esModule = true;
+	exports["default"] = {
+		props: {
+			data: String,
+			color: String
+		}
+	};
 	module.exports = exports["default"];
 
 /***/ },
-/* 65 */
+/* 75 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class='topLink'>\r\n  \t  \t<ul class=\"ulStyle\">\r\n  \t  \t\t<li class=\"liStyle\" v-bind:style=\"{width:width + 'px'}\" v-for=\"listObj in list\">\r\n  \t  \t\t\t<p class=\"icons\">\r\n  \t  \t\t\t\t<svg style=\"width:35px;height:35px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#929292\" d=\"M8,20H5V12H2L12,3L22,12H19V20H12V14H8V20M14,14V17H17V14H14Z\" />\r\n\t\t\t\t\t</svg>\r\n  \t  \t\t\t</p>\r\n  \t  \t\t\t<p class=\"iconsTxt\">\r\n  \t  \t\t\t\t{{listObj['name']}}\r\n  \t  \t\t\t</p>\r\n  \t  \t\t\t<a class=\"selectA\" v-link=\"{ path: listObj.path }\"></a>\r\n  \t  \t\t</li>\r\n  \t  \t</ul>\r\n        <p class=\"navState\" v-bind:style=\"{left:lineLeft + 'px' , width:width + 'px'}\"></p>\r\n    </div>";
+	module.exports = "<template v-if=\"data == '/machineRoom'\">\r\n\t\r\n  \t\t<svg  style=\"width:32px;height:32px\" viewBox=\"0 0 24 24\"><path fill={{color}} \td=\"M8,20H5V12H2L12,3L22,12H19V20H12V14H8V20M14,14V17H17V14H14Z\" />\r\n\t\t</svg>\r\n\t\r\n\t</template>\r\n\r\n\t<template v-if=\"data == '/equipmentCabinet'\">\r\n\t\r\n  \t\t<svg style=\"width:32px;height:32px\" viewBox=\"0 0 24 24\">\r\n    \t<path fill={{color}}  d=\"M6,22H18L12,16M21,3H3A2,2 0 0,0 1,5V17A2,2 0 0,0 3,19H7V17H3V5H21V17H17V19H21A2,2 0 0,0 23,17V5A2,2 0 0,0 21,3Z\" />\r\n\t\t</svg>\r\n\t\r\n\t</template>\r\n\r\n\t<template v-if=\"data == '/InstabusEIB'\">\r\n\t\r\n  \t\t<svg style=\"width:32px;height:32px\" viewBox=\"0 0 24 24\">\r\n\t\t    <path fill={{color}}  d=\"M18,19H6V17.6C6,15.6 10,14.5 12,14.5C14,14.5 18,15.6 18,17.6M12,7A3,3 0 0,1 15,10A3,3 0 0,1 12,13A3,3 0 0,1 9,10A3,3 0 0,1 12,7M12,3A1,1 0 0,1 13,4A1,1 0 0,1 12,5A1,1 0 0,1 11,4A1,1 0 0,1 12,3M19,3H14.82C14.4,1.84 13.3,1 12,1C10.7,1 9.6,1.84 9.18,3H5A2,2 0 0,0 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5A2,2 0 0,0 19,3Z\" />\r\n\t\t</svg>\r\n\t\r\n\t</template>\r\n\r\n\t<template v-if=\"data == '/verify'\">\r\n\t\r\n  \t\t<svg style=\"width:32px;height:32px\" viewBox=\"0 0 24 24\">\r\n    \t<path fill={{color}} d=\"M6,22H18L12,16M21,3H3A2,2 0 0,0 1,5V17A2,2 0 0,0 3,19H7V17H3V5H21V17H17V19H21A2,2 0 0,0 23,17V5A2,2 0 0,0 21,3Z\" />\r\n\t\t</svg>\r\n\t\r\n\t</template>\r\n\r\n\t<template v-if=\"data == '/setting'\">\r\n\t\r\n  \t\t<svg style=\"width:32px;height:32px\" viewBox=\"0 0 24 24\">\r\n    \t<path fill={{color}}  d=\"M6,22H18L12,16M21,3H3A2,2 0 0,0 1,5V17A2,2 0 0,0 3,19H7V17H3V5H21V17H17V19H21A2,2 0 0,0 23,17V5A2,2 0 0,0 21,3Z\" />\r\n\t\t</svg>\r\n\t\r\n\t</template>";
 
 /***/ },
-/* 66 */
+/* 76 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class='topLink'>\r\n  \t  \t<ul class=\"ulStyle\">\r\n  \t  \t\t<li class=\"liStyle\" v-bind:style=\"{width:width + 'px'}\" v-for=\"listObj in list\">\r\n  \t  \t\t\t<p class=\"icons\">\r\n  \t  \t\t\t\t<icons :data=\"listObj.path\" :color=\"listObj.color\"></icons>\r\n  \t  \t\t\t</p>\r\n  \t  \t\t\t<p class=\"iconsTxt\">\r\n  \t  \t\t\t\t{{listObj['name']}}\r\n  \t  \t\t\t</p>\r\n  \t  \t\t\t<a class=\"selectA\" v-link=\"{ path: listObj.path }\"></a>\r\n  \t  \t\t</li>\r\n  \t  \t</ul>\r\n        <p class=\"navState\" v-bind:style=\"{left:lineLeft + 'px' , width:width + 'px'}\"></p>\r\n    </div>";
+
+/***/ },
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "<link></link>";
 
 /***/ },
-/* 67 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(68)
-	module.exports = __webpack_require__(70)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(71)
+	__webpack_require__(79)
+	module.exports = __webpack_require__(81)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(82)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -11670,16 +11913,16 @@
 	}
 
 /***/ },
-/* 68 */
+/* 79 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(69);
+	var content = __webpack_require__(80);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -11696,10 +11939,10 @@
 	}
 
 /***/ },
-/* 69 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -11710,21 +11953,21 @@
 
 
 /***/ },
-/* 70 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	//import tools from '../services/tools.js'
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _servicesContainerJs = __webpack_require__(63);
+	var _servicesContainerJs = __webpack_require__(71);
 	
 	var _servicesContainerJs2 = _interopRequireDefault(_servicesContainerJs);
 	
-	var _servicesTsJs = __webpack_require__(37);
+	var _servicesTsJs = __webpack_require__(39);
 	
 	var _servicesTsJs2 = _interopRequireDefault(_servicesTsJs);
 	
@@ -11737,16 +11980,16 @@
 	
 		methods: {
 			touchEnd: function touchEnd(e) {
-				_servicesContainerJs2['default'].touchEnd(this.$route.path, e);
+				//Container.touchEnd(this.$route.path , e);
 			},
 	
 			touchStart: function touchStart(e) {
 				//e.preventDefault();
-				_servicesContainerJs2['default'].touchStart(e);
+				//	Container.touchStart(e);
 			},
 	
 			touchMove: function touchMove(e) {
-				_servicesContainerJs2['default'].touchMove(e);
+				//	Container.touchMove(e);
 			},
 	
 			touchcancel: function touchcancel(e) {
@@ -11762,66 +12005,66 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 71 */
+/* 82 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"mainContainer\" v-on:touchStart=\"touchStart($event)\" v-on:touchMove=\"touchMove($event)\" v-on:touchEnd=\"touchEnd($event)\" v-bind:style=\"{height : mHeight + 'px'}\">\r\n\t\t<router-view :is=\"currentView\" class=\"view\" transition=\"test\" transition-mode=\"out-in\" keep-alive></router-view>\r\n\t</div>";
 
 /***/ },
-/* 72 */
+/* 83 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\r\n  \t<top></top>\r\n  \t<search></search>\r\n  \t<status></status>\r\n    <container></container>\r\n    <login></login>\r\n    <navigation></navigation>\r\n  </div>";
 
 /***/ },
-/* 73 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classCallCheck = __webpack_require__(74)['default'];
+	var _classCallCheck = __webpack_require__(85)['default'];
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _libRouteRecognizer = __webpack_require__(75);
+	var _libRouteRecognizer = __webpack_require__(86);
 	
 	var _libRouteRecognizer2 = _interopRequireDefault(_libRouteRecognizer);
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
 	var _util2 = _interopRequireDefault(_util);
 	
-	var _override = __webpack_require__(81);
+	var _override = __webpack_require__(92);
 	
 	var _override2 = _interopRequireDefault(_override);
 	
-	var _route = __webpack_require__(82);
+	var _route = __webpack_require__(93);
 	
 	var _route2 = _interopRequireDefault(_route);
 	
-	var _transition = __webpack_require__(94);
+	var _transition = __webpack_require__(105);
 	
 	var _transition2 = _interopRequireDefault(_transition);
 	
-	var _directivesView = __webpack_require__(101);
+	var _directivesView = __webpack_require__(112);
 	
 	var _directivesView2 = _interopRequireDefault(_directivesView);
 	
-	var _directivesLink = __webpack_require__(102);
+	var _directivesLink = __webpack_require__(113);
 	
 	var _directivesLink2 = _interopRequireDefault(_directivesLink);
 	
-	var _historyAbstract = __webpack_require__(103);
+	var _historyAbstract = __webpack_require__(114);
 	
 	var _historyAbstract2 = _interopRequireDefault(_historyAbstract);
 	
-	var _historyHash = __webpack_require__(104);
+	var _historyHash = __webpack_require__(115);
 	
 	var _historyHash2 = _interopRequireDefault(_historyHash);
 	
-	var _historyHtml5 = __webpack_require__(105);
+	var _historyHtml5 = __webpack_require__(116);
 	
 	var _historyHtml52 = _interopRequireDefault(_historyHtml5);
 	
@@ -12427,7 +12670,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 74 */
+/* 85 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -12441,18 +12684,18 @@
 	exports.__esModule = true;
 
 /***/ },
-/* 75 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$create = __webpack_require__(76)['default'];
+	var _Object$create = __webpack_require__(87)['default'];
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _dsl = __webpack_require__(79);
+	var _dsl = __webpack_require__(90);
 	
 	var _dsl2 = _interopRequireDefault(_dsl);
 	
@@ -13049,22 +13292,22 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 76 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(77), __esModule: true };
+	module.exports = { "default": __webpack_require__(88), __esModule: true };
 
 /***/ },
-/* 77 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var $ = __webpack_require__(78);
+	var $ = __webpack_require__(89);
 	module.exports = function create(P, D){
 	  return $.create(P, D);
 	};
 
 /***/ },
-/* 78 */
+/* 89 */
 /***/ function(module, exports) {
 
 	var $Object = Object;
@@ -13082,7 +13325,7 @@
 	};
 
 /***/ },
-/* 79 */
+/* 90 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -13196,12 +13439,12 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 80 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	exports.warn = warn;
@@ -13211,7 +13454,7 @@
 	exports.resolveAsyncComponent = resolveAsyncComponent;
 	exports.mapParams = mapParams;
 	
-	var _libRouteRecognizer = __webpack_require__(75);
+	var _libRouteRecognizer = __webpack_require__(86);
 	
 	var _libRouteRecognizer2 = _interopRequireDefault(_libRouteRecognizer);
 	
@@ -13363,7 +13606,7 @@
 	}
 
 /***/ },
-/* 81 */
+/* 92 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13436,14 +13679,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 82 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _classCallCheck = __webpack_require__(74)["default"];
+	var _classCallCheck = __webpack_require__(85)["default"];
 	
-	var _Object$freeze = __webpack_require__(83)["default"];
+	var _Object$freeze = __webpack_require__(94)["default"];
 	
 	exports.__esModule = true;
 	var internalKeysRE = /^(component|subRoutes)$/;
@@ -13494,33 +13737,33 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 83 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(84), __esModule: true };
+	module.exports = { "default": __webpack_require__(95), __esModule: true };
 
 /***/ },
-/* 84 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(85);
-	module.exports = __webpack_require__(90).Object.freeze;
+	__webpack_require__(96);
+	module.exports = __webpack_require__(101).Object.freeze;
 
 /***/ },
-/* 85 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.5 Object.freeze(O)
-	var isObject = __webpack_require__(86);
+	var isObject = __webpack_require__(97);
 	
-	__webpack_require__(87)('freeze', function($freeze){
+	__webpack_require__(98)('freeze', function($freeze){
 	  return function freeze(it){
 	    return $freeze && isObject(it) ? $freeze(it) : it;
 	  };
 	});
 
 /***/ },
-/* 86 */
+/* 97 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -13528,13 +13771,13 @@
 	};
 
 /***/ },
-/* 87 */
+/* 98 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// most Object methods by ES6 should accept primitives
-	var $export = __webpack_require__(88)
-	  , core    = __webpack_require__(90)
-	  , fails   = __webpack_require__(93);
+	var $export = __webpack_require__(99)
+	  , core    = __webpack_require__(101)
+	  , fails   = __webpack_require__(104);
 	module.exports = function(KEY, exec){
 	  var fn  = (core.Object || {})[KEY] || Object[KEY]
 	    , exp = {};
@@ -13543,12 +13786,12 @@
 	};
 
 /***/ },
-/* 88 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var global    = __webpack_require__(89)
-	  , core      = __webpack_require__(90)
-	  , ctx       = __webpack_require__(91)
+	var global    = __webpack_require__(100)
+	  , core      = __webpack_require__(101)
+	  , ctx       = __webpack_require__(102)
 	  , PROTOTYPE = 'prototype';
 	
 	var $export = function(type, name, source){
@@ -13594,7 +13837,7 @@
 	module.exports = $export;
 
 /***/ },
-/* 89 */
+/* 100 */
 /***/ function(module, exports) {
 
 	// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
@@ -13603,18 +13846,18 @@
 	if(typeof __g == 'number')__g = global; // eslint-disable-line no-undef
 
 /***/ },
-/* 90 */
+/* 101 */
 /***/ function(module, exports) {
 
 	var core = module.exports = {version: '1.2.6'};
 	if(typeof __e == 'number')__e = core; // eslint-disable-line no-undef
 
 /***/ },
-/* 91 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// optional / simple context binding
-	var aFunction = __webpack_require__(92);
+	var aFunction = __webpack_require__(103);
 	module.exports = function(fn, that, length){
 	  aFunction(fn);
 	  if(that === undefined)return fn;
@@ -13635,7 +13878,7 @@
 	};
 
 /***/ },
-/* 92 */
+/* 103 */
 /***/ function(module, exports) {
 
 	module.exports = function(it){
@@ -13644,7 +13887,7 @@
 	};
 
 /***/ },
-/* 93 */
+/* 104 */
 /***/ function(module, exports) {
 
 	module.exports = function(exec){
@@ -13656,18 +13899,18 @@
 	};
 
 /***/ },
-/* 94 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classCallCheck = __webpack_require__(74)['default'];
+	var _classCallCheck = __webpack_require__(85)['default'];
 	
 	exports.__esModule = true;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
-	var _pipeline = __webpack_require__(95);
+	var _pipeline = __webpack_require__(106);
 	
 	/**
 	 * A RouteTransition object manages the pipeline of a
@@ -13989,14 +14232,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 95 */
+/* 106 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _Object$keys = __webpack_require__(96)['default'];
+	var _Object$keys = __webpack_require__(107)['default'];
 	
-	var _Object$create = __webpack_require__(76)['default'];
+	var _Object$create = __webpack_require__(87)['default'];
 	
 	exports.__esModule = true;
 	exports.canReuse = canReuse;
@@ -14006,7 +14249,7 @@
 	exports.activate = activate;
 	exports.reuse = reuse;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
 	/**
 	 * Determine the reusability of an existing router view.
@@ -14314,43 +14557,43 @@
 	}
 
 /***/ },
-/* 96 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = { "default": __webpack_require__(97), __esModule: true };
+	module.exports = { "default": __webpack_require__(108), __esModule: true };
 
 /***/ },
-/* 97 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(98);
-	module.exports = __webpack_require__(90).Object.keys;
+	__webpack_require__(109);
+	module.exports = __webpack_require__(101).Object.keys;
 
 /***/ },
-/* 98 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 19.1.2.14 Object.keys(O)
-	var toObject = __webpack_require__(99);
+	var toObject = __webpack_require__(110);
 	
-	__webpack_require__(87)('keys', function($keys){
+	__webpack_require__(98)('keys', function($keys){
 	  return function keys(it){
 	    return $keys(toObject(it));
 	  };
 	});
 
 /***/ },
-/* 99 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// 7.1.13 ToObject(argument)
-	var defined = __webpack_require__(100);
+	var defined = __webpack_require__(111);
 	module.exports = function(it){
 	  return Object(defined(it));
 	};
 
 /***/ },
-/* 100 */
+/* 111 */
 /***/ function(module, exports) {
 
 	// 7.2.1 RequireObjectCoercible(argument)
@@ -14360,16 +14603,16 @@
 	};
 
 /***/ },
-/* 101 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
-	var _pipeline = __webpack_require__(95);
+	var _pipeline = __webpack_require__(106);
 	
 	exports['default'] = function (Vue) {
 	
@@ -14441,14 +14684,14 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 102 */
+/* 113 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
 	var trailingSlashRE = /\/$/;
 	var regexEscapeRE = /[-.*+?^${}()|[\]\/\\]/g;
@@ -14604,16 +14847,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 103 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classCallCheck = __webpack_require__(74)['default'];
+	var _classCallCheck = __webpack_require__(85)['default'];
 	
 	exports.__esModule = true;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
 	var AbstractHistory = (function () {
 	  function AbstractHistory(_ref) {
@@ -14649,16 +14892,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 104 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classCallCheck = __webpack_require__(74)['default'];
+	var _classCallCheck = __webpack_require__(85)['default'];
 	
 	exports.__esModule = true;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
 	var HashHistory = (function () {
 	  function HashHistory(_ref) {
@@ -14721,16 +14964,16 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 105 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _classCallCheck = __webpack_require__(74)['default'];
+	var _classCallCheck = __webpack_require__(85)['default'];
 	
 	exports.__esModule = true;
 	
-	var _util = __webpack_require__(80);
+	var _util = __webpack_require__(91);
 	
 	var hashRE = /#.*$/;
 	
@@ -14814,7 +15057,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 106 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14830,23 +15073,23 @@
 	  router.map({
 	
 	    '/machineRoom': {
-	      component: __webpack_require__(107)
+	      component: __webpack_require__(118)
 	    },
 	
 	    '/InstabusEIB': {
-	      component: __webpack_require__(113)
+	      component: __webpack_require__(124)
 	    },
 	
 	    '/verify': {
-	      component: __webpack_require__(119)
-	    },
-	
-	    '/setting': {
 	      component: __webpack_require__(130)
 	    },
 	
+	    '/setting': {
+	      component: __webpack_require__(141)
+	    },
+	
 	    '*': {
-	      component: __webpack_require__(135)
+	      component: __webpack_require__(146)
 	    }
 	
 	  });
@@ -14875,12 +15118,12 @@
 	}
 
 /***/ },
-/* 107 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(108)
-	module.exports = __webpack_require__(110)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(112)
+	__webpack_require__(119)
+	module.exports = __webpack_require__(121)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(123)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -14897,16 +15140,16 @@
 	}
 
 /***/ },
-/* 108 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(109);
+	var content = __webpack_require__(120);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -14923,10 +15166,10 @@
 	}
 
 /***/ },
-/* 109 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -14937,16 +15180,16 @@
 
 
 /***/ },
-/* 110 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _servicesMachineRoomMachineRoom = __webpack_require__(111);
+	var _servicesMachineRoomMachineRoom = __webpack_require__(122);
 	
 	var _servicesMachineRoomMachineRoom2 = _interopRequireDefault(_servicesMachineRoomMachineRoom);
 	
@@ -15008,7 +15251,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 111 */
+/* 122 */
 /***/ function(module, exports) {
 
 	/**
@@ -15072,18 +15315,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 112 */
+/* 123 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"machineRome\">\r\n\t\t<div class=\"romContainer\">\r\n\t\t\t<div class=\"romLine\" v-for = \"rom in romList\" v-on:click=\"selectRoom(rom)\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.name}} . {{rom.serial}}</li>\r\n\t\t\t\t</ul>\r\n\r\n\t\t\t\t<span class=\"rightImage\">\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#8e8e8e\" d=\"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
-/* 113 */
+/* 124 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(114)
-	module.exports = __webpack_require__(116)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(118)
+	__webpack_require__(125)
+	module.exports = __webpack_require__(127)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(129)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15100,16 +15343,16 @@
 	}
 
 /***/ },
-/* 114 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(115);
+	var content = __webpack_require__(126);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15126,10 +15369,10 @@
 	}
 
 /***/ },
-/* 115 */
+/* 126 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15140,16 +15383,16 @@
 
 
 /***/ },
-/* 116 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _servicesInstabusEIBInstabusEIB = __webpack_require__(117);
+	var _servicesInstabusEIBInstabusEIB = __webpack_require__(128);
 	
 	var _servicesInstabusEIBInstabusEIB2 = _interopRequireDefault(_servicesInstabusEIBInstabusEIB);
 	
@@ -15172,7 +15415,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 117 */
+/* 128 */
 /***/ function(module, exports) {
 
 	/**
@@ -15201,18 +15444,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 118 */
+/* 129 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"InstabusEIB\">\r\n\t\t<div class=\"elbcontainer\">\r\n\t\t\t<ul class=\"ulList\" v-for=\"elb in elbList\">\r\n\t\t\t\t<li class=\"leftLi\">日期\r\n\t\t\t\t</li>\r\n\r\n\t\t\t\t<li class=\"rightLi\">\r\n                 启动\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
-/* 119 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(120)
-	module.exports = __webpack_require__(122)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(129)
+	__webpack_require__(131)
+	module.exports = __webpack_require__(133)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(140)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15229,16 +15472,16 @@
 	}
 
 /***/ },
-/* 120 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(121);
+	var content = __webpack_require__(132);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15255,10 +15498,10 @@
 	}
 
 /***/ },
-/* 121 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15269,20 +15512,20 @@
 
 
 /***/ },
-/* 122 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _servicesVerifyVerifyJs = __webpack_require__(123);
+	var _servicesVerifyVerifyJs = __webpack_require__(134);
 	
 	var _servicesVerifyVerifyJs2 = _interopRequireDefault(_servicesVerifyVerifyJs);
 	
-	var _operationVue = __webpack_require__(124);
+	var _operationVue = __webpack_require__(135);
 	
 	var _operationVue2 = _interopRequireDefault(_operationVue);
 	
@@ -15334,7 +15577,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 123 */
+/* 134 */
 /***/ function(module, exports) {
 
 	/**
@@ -15366,12 +15609,12 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 124 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(125)
-	module.exports = __webpack_require__(127)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(128)
+	__webpack_require__(136)
+	module.exports = __webpack_require__(138)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(139)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15388,16 +15631,16 @@
 	}
 
 /***/ },
-/* 125 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(126);
+	var content = __webpack_require__(137);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15414,10 +15657,10 @@
 	}
 
 /***/ },
-/* 126 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15428,7 +15671,7 @@
 
 
 /***/ },
-/* 127 */
+/* 138 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -15454,24 +15697,24 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 128 */
+/* 139 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"operation\">\r\n\t\t<div class=\"content\">\r\n\t\t\t<div class=\"left\" v-on:click=\"del()\">\r\n\t\t\t\t<p>\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t    <path fill=\"#929292\" d=\"M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>删除</p>\r\n\t\t\t</div>\r\n\t\t\t<div class=\"right\" v-on:click=\"remark()\">\r\n\t\t\t\t<p>\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n\t\t\t\t\t    <path fill=\"#929292\" d=\"M19,19V5H5V19H19M19,3A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M16.7,9.35L15.7,10.35L13.65,8.3L14.65,7.3C14.86,7.08 15.21,7.08 15.42,7.3L16.7,8.58C16.92,8.79 16.92,9.14 16.7,9.35M7,14.94L13.06,8.88L15.12,10.94L9.06,17H7V14.94Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</p>\r\n\t\t\t\t<p>备注</p>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
-/* 129 */
+/* 140 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"machineVerify\">\r\n\t\t<div class=\"verifyContainer\">\r\n\t\t\t<div class=\"verifyLine\" v-for = \"rom in romList\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{rom.room}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{rom.room_serial}} . {{rom.cabinet}} . {{rom.serial}} . {{rom.serial}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>\r\n\t<operation></operation>";
 
 /***/ },
-/* 130 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(131)
-	module.exports = __webpack_require__(133)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(134)
+	__webpack_require__(142)
+	module.exports = __webpack_require__(144)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(145)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15488,16 +15731,16 @@
 	}
 
 /***/ },
-/* 131 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(132);
+	var content = __webpack_require__(143);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15514,10 +15757,10 @@
 	}
 
 /***/ },
-/* 132 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15528,7 +15771,7 @@
 
 
 /***/ },
-/* 133 */
+/* 144 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -15538,18 +15781,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 134 */
+/* 145 */
 /***/ function(module, exports) {
 
 	module.exports = "<div>\r\n\t\tsetting\r\n\t</div>";
 
 /***/ },
-/* 135 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(136)
-	module.exports = __webpack_require__(138)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(169)
+	__webpack_require__(147)
+	module.exports = __webpack_require__(149)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(180)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15566,16 +15809,16 @@
 	}
 
 /***/ },
-/* 136 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(137);
+	var content = __webpack_require__(148);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15592,10 +15835,10 @@
 	}
 
 /***/ },
-/* 137 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15606,24 +15849,24 @@
 
 
 /***/ },
-/* 138 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _cDiagramVue = __webpack_require__(139);
+	var _cDiagramVue = __webpack_require__(150);
 	
 	var _cDiagramVue2 = _interopRequireDefault(_cDiagramVue);
 	
-	var _servicesEquipmentCabinetCabinet = __webpack_require__(145);
+	var _servicesEquipmentCabinetCabinet = __webpack_require__(156);
 	
 	var _servicesEquipmentCabinetCabinet2 = _interopRequireDefault(_servicesEquipmentCabinetCabinet);
 	
-	var _portfigureVue = __webpack_require__(146);
+	var _portfigureVue = __webpack_require__(157);
 	
 	var _portfigureVue2 = _interopRequireDefault(_portfigureVue);
 	
@@ -15665,12 +15908,12 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 139 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(140)
-	module.exports = __webpack_require__(142)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(144)
+	__webpack_require__(151)
+	module.exports = __webpack_require__(153)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(155)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15687,16 +15930,16 @@
 	}
 
 /***/ },
-/* 140 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(141);
+	var content = __webpack_require__(152);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15713,10 +15956,10 @@
 	}
 
 /***/ },
-/* 141 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15727,16 +15970,16 @@
 
 
 /***/ },
-/* 142 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _servicesEquipmentCabinetCabinetDiagram = __webpack_require__(143);
+	var _servicesEquipmentCabinetCabinetDiagram = __webpack_require__(154);
 	
 	var _servicesEquipmentCabinetCabinetDiagram2 = _interopRequireDefault(_servicesEquipmentCabinetCabinetDiagram);
 	
@@ -15782,7 +16025,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 143 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/***
@@ -15793,11 +16036,11 @@
 	
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _config = __webpack_require__(36);
+	var _config = __webpack_require__(38);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -15841,13 +16084,13 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 144 */
+/* 155 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-show=\"cabinet\" class=\"cabinet\">\r\n\t\t<div class=\"cabinetKa\">\r\n            <ul class=\"picLine\" v-for=\"pic in picList\">\r\n            \t<li class=\"liList\">\r\n            \t\t<div class=\"left\">{{$index+1}}</div>\r\n            \t\t<div class=\"center\" v-on:click=\"gotoInterface()\">image</div>\r\n            \t\t<div class=\"right\">{{$index+1}}</div>\r\n            \t\t空\r\n            \t</li>\r\n            </ul>\r\n            <div class=\"imagePosition\">\r\n        \r\n            </div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
-/* 145 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/***
@@ -15858,11 +16101,11 @@
 	
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _config = __webpack_require__(36);
+	var _config = __webpack_require__(38);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -15887,12 +16130,12 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 146 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(147)
-	module.exports = __webpack_require__(149)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(168)
+	__webpack_require__(158)
+	module.exports = __webpack_require__(160)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(179)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -15909,16 +16152,16 @@
 	}
 
 /***/ },
-/* 147 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(148);
+	var content = __webpack_require__(159);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -15935,10 +16178,10 @@
 	}
 
 /***/ },
-/* 148 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -15949,35 +16192,35 @@
 
 
 /***/ },
-/* 149 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _servicesEquipmentCabinetPortfigure = __webpack_require__(150);
+	var _servicesEquipmentCabinetPortfigure = __webpack_require__(161);
 	
 	var _servicesEquipmentCabinetPortfigure2 = _interopRequireDefault(_servicesEquipmentCabinetPortfigure);
 	
-	var _navigateVue = __webpack_require__(151);
+	var _navigateVue = __webpack_require__(162);
 	
 	var _navigateVue2 = _interopRequireDefault(_navigateVue);
 	
-	var _positionVue = __webpack_require__(156);
+	var _positionVue = __webpack_require__(167);
 	
 	var _positionVue2 = _interopRequireDefault(_positionVue);
 	
-	var _maincanvasVue = __webpack_require__(161);
+	var _maincanvasVue = __webpack_require__(172);
 	
 	var _maincanvasVue2 = _interopRequireDefault(_maincanvasVue);
 	
 	exports['default'] = {
 		data: function data() {
 			return {
-				flag: true,
+				flag: false,
 				pm: {
 					p: "3-4",
 					c: "A07"
@@ -16000,7 +16243,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 150 */
+/* 161 */
 /***/ function(module, exports) {
 
 	/***
@@ -16050,12 +16293,12 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 151 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(152)
-	module.exports = __webpack_require__(154)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(155)
+	__webpack_require__(163)
+	module.exports = __webpack_require__(165)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(166)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -16072,16 +16315,16 @@
 	}
 
 /***/ },
-/* 152 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(153);
+	var content = __webpack_require__(164);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -16098,10 +16341,10 @@
 	}
 
 /***/ },
-/* 153 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -16112,7 +16355,7 @@
 
 
 /***/ },
-/* 154 */
+/* 165 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -16134,18 +16377,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 155 */
+/* 166 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"linkNav\">\r\n\t\t<ul>\r\n\t\t\t<li v-for=\"el in navList\">\r\n\t\t\t\t{{el.name}}\r\n\t\t\t</li>\r\n\t\t</ul>\r\n\t</div>";
 
 /***/ },
-/* 156 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(157)
-	module.exports = __webpack_require__(159)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(160)
+	__webpack_require__(168)
+	module.exports = __webpack_require__(170)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(171)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -16162,16 +16405,16 @@
 	}
 
 /***/ },
-/* 157 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(158);
+	var content = __webpack_require__(169);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -16188,10 +16431,10 @@
 	}
 
 /***/ },
-/* 158 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -16202,7 +16445,7 @@
 
 
 /***/ },
-/* 159 */
+/* 170 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -16216,18 +16459,18 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 160 */
+/* 171 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"imgPosition\">\r\n\t\t<p class=\"pcontainer\">\r\n\t\t<span>所属机柜:</span> <span>{{data.c}}</span>\r\n\t\t<span>/ 位置:</span> <span>{{data.p}}</span>\r\n\t\t</p>\r\n\t</div>\r\n\t<p class=\"imageTitle\">A面</p>";
 
 /***/ },
-/* 161 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(162)
-	module.exports = __webpack_require__(164)
-	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(167)
+	__webpack_require__(173)
+	module.exports = __webpack_require__(175)
+	;(typeof module.exports === "function" ? module.exports.options : module.exports).template = __webpack_require__(178)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -16244,16 +16487,16 @@
 	}
 
 /***/ },
-/* 162 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(163);
+	var content = __webpack_require__(174);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -16270,37 +16513,43 @@
 	}
 
 /***/ },
-/* 163 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".maincanvas{\r\n\twidth:100%;\r\n\tmargin-top:10px;\r\n\tbackground:green;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain{\r\n\tbackground:red;\r\n\tmargin:0 auto;\r\n\theight:100%;\r\n\tmargin-left:10px;\r\n\tmargin-right:10px;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain .mycanvas{\r\n\tposition:absolute;\r\n\twidth:100px;\r\n\tbackground:yellow;\r\n\theight:50px;\r\n\tleft:0px;\r\n\ttop:0px;\r\n\t\r\n}", ""]);
+	exports.push([module.id, ".maincanvas{\r\n\twidth:100%;\r\n\tmargin-top:10px;\r\n\tbackground:green;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain{\r\n\tbackground:red;\r\n\tmargin:0 auto;\r\n\theight:100%;\r\n\tmargin-left:10px;\r\n\tmargin-right:10px;\r\n\tposition:relative;\r\n}\r\n\r\n.maincanvas .contain .mycanvas{\r\n\tposition:absolute;\r\n\twidth:332px;\r\n\tbackground:yellow;\r\n\theight:100px;\r\n\toverflow:hidden;\r\n\tleft:10px;\r\n\ttop:10px;\r\n\t\r\n}\r\n\r\n.maincanvas .contain .mycanvas .moveFlag{\r\n\tposition:absolute;\r\n\tleft:100px;\r\n\ttop:50px;\r\n\twidth:50px;\r\n\theight:10px;\r\n\tbackground:red;\r\n}", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 164 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _servicesEquipmentCabinetMaincanvas = __webpack_require__(165);
+	var _servicesEquipmentCabinetMaincanvas = __webpack_require__(176);
 	
 	var _servicesEquipmentCabinetMaincanvas2 = _interopRequireDefault(_servicesEquipmentCabinetMaincanvas);
+	
+	var _servicesConfig = __webpack_require__(38);
+	
+	var _servicesConfig2 = _interopRequireDefault(_servicesConfig);
 	
 	exports["default"] = {
 		data: function data() {
 			return {
-				height: 400
+				height: 400,
+				canvasW: 332,
+				canvasH: 100
 			};
 		},
 	
@@ -16310,8 +16559,25 @@
 		},
 	
 		methods: {
-			gesturechange: function gesturechange() {
-				alert("ki");
+			gesturechange: function gesturechange(e) {
+				//	e.stopPropagation()
+				var data = "x=" + e.deltaX + "y=" + e.deltaY;
+				_servicesConfig2["default"].eventBus.emit("firebug", { type: "pan", data: data });
+			},
+	
+			clickFlag: function clickFlag() {
+				alert("ui");
+			},
+	
+			touchStart: function touchStart(e) {
+				var data = "x=" + e.pageX + "y=" + e.pageY;
+				_servicesConfig2["default"].eventBus.emit("firebug", { type: "touch", data: data });
+			},
+	
+			pinchChange: function pinchChange(e) {
+				var data = "x=" + e.deltaX + "y=" + e.deltaY;
+	
+				_servicesConfig2["default"].eventBus.emit("firebug", { type: "pinch", data: data });
 			}
 		}
 	
@@ -16319,7 +16585,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 165 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -16330,11 +16596,11 @@
 	
 	"use strict";
 	
-	var _interopRequireDefault = __webpack_require__(22)["default"];
+	var _interopRequireDefault = __webpack_require__(24)["default"];
 	
 	exports.__esModule = true;
 	
-	var _tools = __webpack_require__(166);
+	var _tools = __webpack_require__(177);
 	
 	var _tools2 = _interopRequireDefault(_tools);
 	
@@ -16353,7 +16619,7 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 166 */
+/* 177 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -16387,25 +16653,25 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 167 */
+/* 178 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"maincanvas\" v-bind:style=\"{height:height + 'px'}\">\r\n\t\t<div class=\"contain\">\r\n\t\t\t<div class=\"mycanvas\" v-on:gesturechange=\"gesturechange()\">hihid</div>\r\n\t\t</div>\r\n\t</div>";
+	module.exports = "<div class=\"maincanvas\" v-bind:style=\"{height:height + 'px'}\">\r\n\t\t<div class=\"contain\">\r\n\t\t\t<div class=\"mycanvas\" v-on:touchStart=\"touchStart($event)\" v-on:style=\"{width:canvasW + 'px' , height:canvasH + 'px'}\" v-touch:pan=\"gesturechange($event)\" v-touch:pinch=\"pinchChange($event)\">\r\n\t\t\t\t<img src=\"http://7xsyx5.com1.z0.glb.clouddn.com/img_f140b0c3-c534a092.png\" width=\"100%\" \r\n\t\t\t\theight:100%/>\r\n\r\n\t\t\t\t<div class=\"moveFlag\" v-on:click = \"clickFlag()\">\r\n\t\t\t\t</div>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\t</div>";
 
 /***/ },
-/* 168 */
+/* 179 */
 /***/ function(module, exports) {
 
 	module.exports = "<div v-show=\"flag\" class=\"interface\">\r\n\t\t<navigate></navigate>\r\n\t\t<position :data=\"pm\"></position>\r\n\t\t<maincanvas></maincanvas>\r\n\t</div>";
 
 /***/ },
-/* 169 */
+/* 180 */
 /***/ function(module, exports) {
 
 	module.exports = "<div class=\"equipmentCabinet\">\r\n\r\n\t\t<div class=\"equContainer\">\r\n\t\t\t<div class=\"equipment\" v-for = \"equipment in equipmentList\" v-on:click=\"gotoCabinet(equipment)\">\r\n\t\t\t\t<ul>\r\n\t\t\t\t\t<li class=\"liname\">{{equipment.name}}</li>\r\n\t\t\t\t\t<li class=\"liMessage\">{{equipment.message}}</li>\r\n\t\t\t\t</ul>\r\n\t\t\t\t<span class=\"rightImage\">\r\n\t\t\t\t\t<svg style=\"width:24px;height:24px\" viewBox=\"0 0 24 24\">\r\n    \t\t\t\t\t<path fill=\"#8e8e8e\" d=\"M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z\" />\r\n\t\t\t\t\t</svg>\r\n\t\t\t\t</span>\r\n\t\t\t</div>\r\n\t\t</div>\r\n\r\n\t</div>\r\n\r\n\t<cabinet></cabinet>\r\n\t<portfigure></portfigure>";
 
 /***/ },
-/* 170 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -16414,30 +16680,30 @@
 	*/
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _eventBus = __webpack_require__(171);
+	var _eventBus = __webpack_require__(182);
 	
 	var _eventBus2 = _interopRequireDefault(_eventBus);
 	
-	var _chRouterSuccJs = __webpack_require__(172);
+	var _chRouterSuccJs = __webpack_require__(183);
 	
 	var _chRouterSuccJs2 = _interopRequireDefault(_chRouterSuccJs);
 	
-	var _allCompJs = __webpack_require__(173);
+	var _allCompJs = __webpack_require__(184);
 	
 	var _allCompJs2 = _interopRequireDefault(_allCompJs);
 	
-	var _configJs = __webpack_require__(36);
+	var _configJs = __webpack_require__(38);
 	
 	var _configJs2 = _interopRequireDefault(_configJs);
 	
 	exports['default'] = {
 	
 	    start: function start(data) {
-	        _configJs2['default'].Runtime.eventBus = new _eventBus2['default']();
+	        _configJs2['default'].eventBus = _configJs2['default'].Runtime.eventBus = new _eventBus2['default']();
 	        _allCompJs2['default'].startInit();
 	        _chRouterSuccJs2['default'].init();
 	    }
@@ -16446,7 +16712,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 171 */
+/* 182 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -16484,16 +16750,16 @@
 	module.exports = exports["default"];
 
 /***/ },
-/* 172 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _configJs = __webpack_require__(36);
+	var _configJs = __webpack_require__(38);
 	
 	var _configJs2 = _interopRequireDefault(_configJs);
 	
@@ -16512,7 +16778,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 173 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -16520,19 +16786,19 @@
 	//import allComp from './allComp'
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _componentsIndexVue = __webpack_require__(174);
+	var _componentsIndexVue = __webpack_require__(185);
 	
 	var _componentsIndexVue2 = _interopRequireDefault(_componentsIndexVue);
 	
-	var _vue = __webpack_require__(23);
+	var _vue = __webpack_require__(25);
 	
 	var _vue2 = _interopRequireDefault(_vue);
 	
-	var _config = __webpack_require__(36);
+	var _config = __webpack_require__(38);
 	
 	var _config2 = _interopRequireDefault(_config);
 	
@@ -16555,10 +16821,10 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 174 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(175)
+	module.exports = __webpack_require__(186)
 	if (false) {
 	(function () {
 	var hotAPI = require("vue-hot-reload-api")
@@ -16575,44 +16841,52 @@
 	}
 
 /***/ },
-/* 175 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var _interopRequireDefault = __webpack_require__(22)['default'];
+	var _interopRequireDefault = __webpack_require__(24)['default'];
 	
 	exports.__esModule = true;
 	
-	var _statusVue = __webpack_require__(49);
+	var _statusVue = __webpack_require__(57);
 	
 	var _statusVue2 = _interopRequireDefault(_statusVue);
 	
-	var _equipmentCabinetCDiagramVue = __webpack_require__(139);
+	var _equipmentCabinetCDiagramVue = __webpack_require__(150);
 	
 	var _equipmentCabinetCDiagramVue2 = _interopRequireDefault(_equipmentCabinetCDiagramVue);
 	
-	var _equipmentCabinetIndexVue = __webpack_require__(135);
+	var _equipmentCabinetIndexVue = __webpack_require__(146);
 	
 	var _equipmentCabinetIndexVue2 = _interopRequireDefault(_equipmentCabinetIndexVue);
 	
-	var _InstabusEIBIndexVue = __webpack_require__(113);
+	var _InstabusEIBIndexVue = __webpack_require__(124);
 	
 	var _InstabusEIBIndexVue2 = _interopRequireDefault(_InstabusEIBIndexVue);
 	
-	var _navigationLinkVue = __webpack_require__(59);
+	var _navigationLinkVue = __webpack_require__(67);
 	
 	var _navigationLinkVue2 = _interopRequireDefault(_navigationLinkVue);
 	
-	var _machineRoomIndexVue = __webpack_require__(107);
+	var _firebugVue = __webpack_require__(45);
+	
+	var _firebugVue2 = _interopRequireDefault(_firebugVue);
+	
+	var _machineRoomIndexVue = __webpack_require__(118);
 	
 	var _machineRoomIndexVue2 = _interopRequireDefault(_machineRoomIndexVue);
 	
 	var _equipmentCabinetCDiagramVue3 = _interopRequireDefault(_equipmentCabinetCDiagramVue);
 	
-	var _equipmentCabinetPortfigureVue = __webpack_require__(146);
+	var _equipmentCabinetPortfigureVue = __webpack_require__(157);
 	
 	var _equipmentCabinetPortfigureVue2 = _interopRequireDefault(_equipmentCabinetPortfigureVue);
+	
+	var _searchVue = __webpack_require__(52);
+	
+	var _searchVue2 = _interopRequireDefault(_searchVue);
 	
 	exports['default'] = {
 		getComp: function getComp() {
@@ -16625,7 +16899,10 @@
 				machineRoom: _machineRoomIndexVue2['default'],
 				equipmentCabinet: _equipmentCabinetCDiagramVue3['default'],
 				portfigure: _equipmentCabinetPortfigureVue2['default'],
-				link: _navigationLinkVue2['default']
+				link: _navigationLinkVue2['default'],
+				search: _searchVue2['default'],
+	
+				firebug: _firebugVue2['default']
 	
 			};
 		}
@@ -16633,7 +16910,7 @@
 	module.exports = exports['default'];
 
 /***/ },
-/* 176 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -26453,16 +26730,2835 @@
 
 
 /***/ },
-/* 177 */
+/* 188 */
+/***/ function(module, exports, __webpack_require__) {
+
+	;(function () {
+	
+	  var vueTouch = {}
+	  var Hammer =  true
+	    ? __webpack_require__(189)
+	    : window.Hammer
+	  var gestures = ['tap', 'pan', 'pinch', 'press', 'rotate', 'swipe']
+	  var directions = ['up', 'down', 'left', 'right', 'horizontal', 'vertical', 'all']
+	  var customEvents = {}
+	
+	  if (!Hammer) {
+	    throw new Error('[vue-touch] cannot locate Hammer.js.')
+	  }
+	
+	  // exposed global options
+	  vueTouch.config = {}
+	
+	  vueTouch.install = function (Vue) {
+	
+	    Vue.directive('touch', {
+	
+	      isFn: true,
+	      acceptStatement: true,
+	      priority: Vue.directive('on').priority,
+	
+	      bind: function () {
+	        if (!this.el.hammer) {
+	          this.el.hammer = new Hammer.Manager(this.el)
+	        }
+	        var mc = this.mc = this.el.hammer
+	        // determine event type
+	        var event = this.arg
+	        if (!event) {
+	          console.warn('[vue-touch] event type argument is required.')
+	        }
+	        var recognizerType, recognizer
+	
+	        if (customEvents[event]) {
+	          // custom event
+	          var custom = customEvents[event]
+	          recognizerType = custom.type
+	          recognizer = new Hammer[capitalize(recognizerType)](custom)
+	          recognizer.recognizeWith(mc.recognizers)
+	          mc.add(recognizer)
+	        } else {
+	          // built-in event
+	          for (var i = 0; i < gestures.length; i++) {
+	            if (event.indexOf(gestures[i]) === 0) {
+	              recognizerType = gestures[i]
+	              break
+	            }
+	          }
+	          if (!recognizerType) {
+	            console.warn('[vue-touch] invalid event type: ' + event)
+	            return
+	          }
+	          recognizer = mc.get(recognizerType)
+	          if (!recognizer) {
+	            // add recognizer
+	            recognizer = new Hammer[capitalize(recognizerType)]()
+	            // make sure multiple recognizers work together...
+	            recognizer.recognizeWith(mc.recognizers)
+	            mc.add(recognizer)
+	          }
+	          // apply global options
+	          var globalOptions = vueTouch.config[recognizerType]
+	          if (globalOptions) {
+	            guardDirections(globalOptions)
+	            recognizer.set(globalOptions)
+	          }
+	          // apply local options
+	          var localOptions =
+	            this.el.hammerOptions &&
+	            this.el.hammerOptions[recognizerType]
+	          if (localOptions) {
+	            guardDirections(localOptions)
+	            recognizer.set(localOptions)
+	          }
+	        }
+	        this.recognizer = recognizer
+	      },
+	
+	      update: function (fn) {
+	        var mc = this.mc
+	        var event = this.arg
+	        // teardown old handler
+	        if (this.handler) {
+	          mc.off(event, this.handler)
+	        }
+	        if (typeof fn !== 'function') {
+	          this.handler = null
+	          console.warn(
+	            '[vue-touch] invalid handler function for v-touch: ' +
+	            this.arg + '="' + this.descriptor.raw
+	          )
+	        } else {
+	          mc.on(event, (this.handler = fn))
+	        }
+	      },
+	
+	      unbind: function () {
+	        if (this.handler) {
+	          this.mc.off(this.arg, this.handler)
+	        }
+	        if (!Object.keys(this.mc.handlers).length) {
+	          this.mc.destroy()
+	          this.el.hammer = null
+	        }
+	      }
+	    })
+	
+	    Vue.directive('touch-options', {
+	      priority: Vue.directive('on').priority + 1,
+	      update: function (options) {
+	        var opts = this.el.hammerOptions || (this.el.hammerOptions = {})
+	        if (!this.arg) {
+	          console.warn('[vue-touch] recognizer type argument for v-touch-options is required.')
+	        } else {
+	          opts[this.arg] = options
+	        }
+	      }
+	    })
+	  }
+	
+	  /**
+	   * Register a custom event.
+	   *
+	   * @param {String} event
+	   * @param {Object} options - a Hammer.js recognizer option object.
+	   *                           required fields:
+	   *                           - type: the base recognizer to use for this event
+	   */
+	
+	  vueTouch.registerCustomEvent = function (event, options) {
+	    options.event = event
+	    customEvents[event] = options
+	  }
+	
+	  function capitalize (str) {
+	    return str.charAt(0).toUpperCase() + str.slice(1)
+	  }
+	
+	  function guardDirections (options) {
+	    var dir = options.direction
+	    if (typeof dir === 'string') {
+	      var hammerDirection = 'DIRECTION_' + dir.toUpperCase()
+	      if (directions.indexOf(dir) > -1 && Hammer.hasOwnProperty(hammerDirection)) {
+	        options.direction = Hammer[hammerDirection]
+	      } else {
+	        console.warn('[vue-touch] invalid direction: ' + dir)
+	      }
+	    }
+	  }
+	
+	  if (true) {
+	    module.exports = vueTouch
+	  } else if (typeof define == "function" && define.amd) {
+	    define([], function(){ return vueTouch })
+	  } else if (window.Vue) {
+	    window.VueTouch = vueTouch
+	    Vue.use(vueTouch)
+	  }
+	
+	})()
+
+
+/***/ },
+/* 189 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_RESULT__;/*! Hammer.JS - v2.0.7 - 2016-04-22
+	 * http://hammerjs.github.io/
+	 *
+	 * Copyright (c) 2016 Jorik Tangelder;
+	 * Licensed under the MIT license */
+	(function(window, document, exportName, undefined) {
+	  'use strict';
+	
+	var VENDOR_PREFIXES = ['', 'webkit', 'Moz', 'MS', 'ms', 'o'];
+	var TEST_ELEMENT = document.createElement('div');
+	
+	var TYPE_FUNCTION = 'function';
+	
+	var round = Math.round;
+	var abs = Math.abs;
+	var now = Date.now;
+	
+	/**
+	 * set a timeout with a given scope
+	 * @param {Function} fn
+	 * @param {Number} timeout
+	 * @param {Object} context
+	 * @returns {number}
+	 */
+	function setTimeoutContext(fn, timeout, context) {
+	    return setTimeout(bindFn(fn, context), timeout);
+	}
+	
+	/**
+	 * if the argument is an array, we want to execute the fn on each entry
+	 * if it aint an array we don't want to do a thing.
+	 * this is used by all the methods that accept a single and array argument.
+	 * @param {*|Array} arg
+	 * @param {String} fn
+	 * @param {Object} [context]
+	 * @returns {Boolean}
+	 */
+	function invokeArrayArg(arg, fn, context) {
+	    if (Array.isArray(arg)) {
+	        each(arg, context[fn], context);
+	        return true;
+	    }
+	    return false;
+	}
+	
+	/**
+	 * walk objects and arrays
+	 * @param {Object} obj
+	 * @param {Function} iterator
+	 * @param {Object} context
+	 */
+	function each(obj, iterator, context) {
+	    var i;
+	
+	    if (!obj) {
+	        return;
+	    }
+	
+	    if (obj.forEach) {
+	        obj.forEach(iterator, context);
+	    } else if (obj.length !== undefined) {
+	        i = 0;
+	        while (i < obj.length) {
+	            iterator.call(context, obj[i], i, obj);
+	            i++;
+	        }
+	    } else {
+	        for (i in obj) {
+	            obj.hasOwnProperty(i) && iterator.call(context, obj[i], i, obj);
+	        }
+	    }
+	}
+	
+	/**
+	 * wrap a method with a deprecation warning and stack trace
+	 * @param {Function} method
+	 * @param {String} name
+	 * @param {String} message
+	 * @returns {Function} A new function wrapping the supplied method.
+	 */
+	function deprecate(method, name, message) {
+	    var deprecationMessage = 'DEPRECATED METHOD: ' + name + '\n' + message + ' AT \n';
+	    return function() {
+	        var e = new Error('get-stack-trace');
+	        var stack = e && e.stack ? e.stack.replace(/^[^\(]+?[\n$]/gm, '')
+	            .replace(/^\s+at\s+/gm, '')
+	            .replace(/^Object.<anonymous>\s*\(/gm, '{anonymous}()@') : 'Unknown Stack Trace';
+	
+	        var log = window.console && (window.console.warn || window.console.log);
+	        if (log) {
+	            log.call(window.console, deprecationMessage, stack);
+	        }
+	        return method.apply(this, arguments);
+	    };
+	}
+	
+	/**
+	 * extend object.
+	 * means that properties in dest will be overwritten by the ones in src.
+	 * @param {Object} target
+	 * @param {...Object} objects_to_assign
+	 * @returns {Object} target
+	 */
+	var assign;
+	if (typeof Object.assign !== 'function') {
+	    assign = function assign(target) {
+	        if (target === undefined || target === null) {
+	            throw new TypeError('Cannot convert undefined or null to object');
+	        }
+	
+	        var output = Object(target);
+	        for (var index = 1; index < arguments.length; index++) {
+	            var source = arguments[index];
+	            if (source !== undefined && source !== null) {
+	                for (var nextKey in source) {
+	                    if (source.hasOwnProperty(nextKey)) {
+	                        output[nextKey] = source[nextKey];
+	                    }
+	                }
+	            }
+	        }
+	        return output;
+	    };
+	} else {
+	    assign = Object.assign;
+	}
+	
+	/**
+	 * extend object.
+	 * means that properties in dest will be overwritten by the ones in src.
+	 * @param {Object} dest
+	 * @param {Object} src
+	 * @param {Boolean} [merge=false]
+	 * @returns {Object} dest
+	 */
+	var extend = deprecate(function extend(dest, src, merge) {
+	    var keys = Object.keys(src);
+	    var i = 0;
+	    while (i < keys.length) {
+	        if (!merge || (merge && dest[keys[i]] === undefined)) {
+	            dest[keys[i]] = src[keys[i]];
+	        }
+	        i++;
+	    }
+	    return dest;
+	}, 'extend', 'Use `assign`.');
+	
+	/**
+	 * merge the values from src in the dest.
+	 * means that properties that exist in dest will not be overwritten by src
+	 * @param {Object} dest
+	 * @param {Object} src
+	 * @returns {Object} dest
+	 */
+	var merge = deprecate(function merge(dest, src) {
+	    return extend(dest, src, true);
+	}, 'merge', 'Use `assign`.');
+	
+	/**
+	 * simple class inheritance
+	 * @param {Function} child
+	 * @param {Function} base
+	 * @param {Object} [properties]
+	 */
+	function inherit(child, base, properties) {
+	    var baseP = base.prototype,
+	        childP;
+	
+	    childP = child.prototype = Object.create(baseP);
+	    childP.constructor = child;
+	    childP._super = baseP;
+	
+	    if (properties) {
+	        assign(childP, properties);
+	    }
+	}
+	
+	/**
+	 * simple function bind
+	 * @param {Function} fn
+	 * @param {Object} context
+	 * @returns {Function}
+	 */
+	function bindFn(fn, context) {
+	    return function boundFn() {
+	        return fn.apply(context, arguments);
+	    };
+	}
+	
+	/**
+	 * let a boolean value also be a function that must return a boolean
+	 * this first item in args will be used as the context
+	 * @param {Boolean|Function} val
+	 * @param {Array} [args]
+	 * @returns {Boolean}
+	 */
+	function boolOrFn(val, args) {
+	    if (typeof val == TYPE_FUNCTION) {
+	        return val.apply(args ? args[0] || undefined : undefined, args);
+	    }
+	    return val;
+	}
+	
+	/**
+	 * use the val2 when val1 is undefined
+	 * @param {*} val1
+	 * @param {*} val2
+	 * @returns {*}
+	 */
+	function ifUndefined(val1, val2) {
+	    return (val1 === undefined) ? val2 : val1;
+	}
+	
+	/**
+	 * addEventListener with multiple events at once
+	 * @param {EventTarget} target
+	 * @param {String} types
+	 * @param {Function} handler
+	 */
+	function addEventListeners(target, types, handler) {
+	    each(splitStr(types), function(type) {
+	        target.addEventListener(type, handler, false);
+	    });
+	}
+	
+	/**
+	 * removeEventListener with multiple events at once
+	 * @param {EventTarget} target
+	 * @param {String} types
+	 * @param {Function} handler
+	 */
+	function removeEventListeners(target, types, handler) {
+	    each(splitStr(types), function(type) {
+	        target.removeEventListener(type, handler, false);
+	    });
+	}
+	
+	/**
+	 * find if a node is in the given parent
+	 * @method hasParent
+	 * @param {HTMLElement} node
+	 * @param {HTMLElement} parent
+	 * @return {Boolean} found
+	 */
+	function hasParent(node, parent) {
+	    while (node) {
+	        if (node == parent) {
+	            return true;
+	        }
+	        node = node.parentNode;
+	    }
+	    return false;
+	}
+	
+	/**
+	 * small indexOf wrapper
+	 * @param {String} str
+	 * @param {String} find
+	 * @returns {Boolean} found
+	 */
+	function inStr(str, find) {
+	    return str.indexOf(find) > -1;
+	}
+	
+	/**
+	 * split string on whitespace
+	 * @param {String} str
+	 * @returns {Array} words
+	 */
+	function splitStr(str) {
+	    return str.trim().split(/\s+/g);
+	}
+	
+	/**
+	 * find if a array contains the object using indexOf or a simple polyFill
+	 * @param {Array} src
+	 * @param {String} find
+	 * @param {String} [findByKey]
+	 * @return {Boolean|Number} false when not found, or the index
+	 */
+	function inArray(src, find, findByKey) {
+	    if (src.indexOf && !findByKey) {
+	        return src.indexOf(find);
+	    } else {
+	        var i = 0;
+	        while (i < src.length) {
+	            if ((findByKey && src[i][findByKey] == find) || (!findByKey && src[i] === find)) {
+	                return i;
+	            }
+	            i++;
+	        }
+	        return -1;
+	    }
+	}
+	
+	/**
+	 * convert array-like objects to real arrays
+	 * @param {Object} obj
+	 * @returns {Array}
+	 */
+	function toArray(obj) {
+	    return Array.prototype.slice.call(obj, 0);
+	}
+	
+	/**
+	 * unique array with objects based on a key (like 'id') or just by the array's value
+	 * @param {Array} src [{id:1},{id:2},{id:1}]
+	 * @param {String} [key]
+	 * @param {Boolean} [sort=False]
+	 * @returns {Array} [{id:1},{id:2}]
+	 */
+	function uniqueArray(src, key, sort) {
+	    var results = [];
+	    var values = [];
+	    var i = 0;
+	
+	    while (i < src.length) {
+	        var val = key ? src[i][key] : src[i];
+	        if (inArray(values, val) < 0) {
+	            results.push(src[i]);
+	        }
+	        values[i] = val;
+	        i++;
+	    }
+	
+	    if (sort) {
+	        if (!key) {
+	            results = results.sort();
+	        } else {
+	            results = results.sort(function sortUniqueArray(a, b) {
+	                return a[key] > b[key];
+	            });
+	        }
+	    }
+	
+	    return results;
+	}
+	
+	/**
+	 * get the prefixed property
+	 * @param {Object} obj
+	 * @param {String} property
+	 * @returns {String|Undefined} prefixed
+	 */
+	function prefixed(obj, property) {
+	    var prefix, prop;
+	    var camelProp = property[0].toUpperCase() + property.slice(1);
+	
+	    var i = 0;
+	    while (i < VENDOR_PREFIXES.length) {
+	        prefix = VENDOR_PREFIXES[i];
+	        prop = (prefix) ? prefix + camelProp : property;
+	
+	        if (prop in obj) {
+	            return prop;
+	        }
+	        i++;
+	    }
+	    return undefined;
+	}
+	
+	/**
+	 * get a unique id
+	 * @returns {number} uniqueId
+	 */
+	var _uniqueId = 1;
+	function uniqueId() {
+	    return _uniqueId++;
+	}
+	
+	/**
+	 * get the window object of an element
+	 * @param {HTMLElement} element
+	 * @returns {DocumentView|Window}
+	 */
+	function getWindowForElement(element) {
+	    var doc = element.ownerDocument || element;
+	    return (doc.defaultView || doc.parentWindow || window);
+	}
+	
+	var MOBILE_REGEX = /mobile|tablet|ip(ad|hone|od)|android/i;
+	
+	var SUPPORT_TOUCH = ('ontouchstart' in window);
+	var SUPPORT_POINTER_EVENTS = prefixed(window, 'PointerEvent') !== undefined;
+	var SUPPORT_ONLY_TOUCH = SUPPORT_TOUCH && MOBILE_REGEX.test(navigator.userAgent);
+	
+	var INPUT_TYPE_TOUCH = 'touch';
+	var INPUT_TYPE_PEN = 'pen';
+	var INPUT_TYPE_MOUSE = 'mouse';
+	var INPUT_TYPE_KINECT = 'kinect';
+	
+	var COMPUTE_INTERVAL = 25;
+	
+	var INPUT_START = 1;
+	var INPUT_MOVE = 2;
+	var INPUT_END = 4;
+	var INPUT_CANCEL = 8;
+	
+	var DIRECTION_NONE = 1;
+	var DIRECTION_LEFT = 2;
+	var DIRECTION_RIGHT = 4;
+	var DIRECTION_UP = 8;
+	var DIRECTION_DOWN = 16;
+	
+	var DIRECTION_HORIZONTAL = DIRECTION_LEFT | DIRECTION_RIGHT;
+	var DIRECTION_VERTICAL = DIRECTION_UP | DIRECTION_DOWN;
+	var DIRECTION_ALL = DIRECTION_HORIZONTAL | DIRECTION_VERTICAL;
+	
+	var PROPS_XY = ['x', 'y'];
+	var PROPS_CLIENT_XY = ['clientX', 'clientY'];
+	
+	/**
+	 * create new input type manager
+	 * @param {Manager} manager
+	 * @param {Function} callback
+	 * @returns {Input}
+	 * @constructor
+	 */
+	function Input(manager, callback) {
+	    var self = this;
+	    this.manager = manager;
+	    this.callback = callback;
+	    this.element = manager.element;
+	    this.target = manager.options.inputTarget;
+	
+	    // smaller wrapper around the handler, for the scope and the enabled state of the manager,
+	    // so when disabled the input events are completely bypassed.
+	    this.domHandler = function(ev) {
+	        if (boolOrFn(manager.options.enable, [manager])) {
+	            self.handler(ev);
+	        }
+	    };
+	
+	    this.init();
+	
+	}
+	
+	Input.prototype = {
+	    /**
+	     * should handle the inputEvent data and trigger the callback
+	     * @virtual
+	     */
+	    handler: function() { },
+	
+	    /**
+	     * bind the events
+	     */
+	    init: function() {
+	        this.evEl && addEventListeners(this.element, this.evEl, this.domHandler);
+	        this.evTarget && addEventListeners(this.target, this.evTarget, this.domHandler);
+	        this.evWin && addEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+	    },
+	
+	    /**
+	     * unbind the events
+	     */
+	    destroy: function() {
+	        this.evEl && removeEventListeners(this.element, this.evEl, this.domHandler);
+	        this.evTarget && removeEventListeners(this.target, this.evTarget, this.domHandler);
+	        this.evWin && removeEventListeners(getWindowForElement(this.element), this.evWin, this.domHandler);
+	    }
+	};
+	
+	/**
+	 * create new input type manager
+	 * called by the Manager constructor
+	 * @param {Hammer} manager
+	 * @returns {Input}
+	 */
+	function createInputInstance(manager) {
+	    var Type;
+	    var inputClass = manager.options.inputClass;
+	
+	    if (inputClass) {
+	        Type = inputClass;
+	    } else if (SUPPORT_POINTER_EVENTS) {
+	        Type = PointerEventInput;
+	    } else if (SUPPORT_ONLY_TOUCH) {
+	        Type = TouchInput;
+	    } else if (!SUPPORT_TOUCH) {
+	        Type = MouseInput;
+	    } else {
+	        Type = TouchMouseInput;
+	    }
+	    return new (Type)(manager, inputHandler);
+	}
+	
+	/**
+	 * handle input events
+	 * @param {Manager} manager
+	 * @param {String} eventType
+	 * @param {Object} input
+	 */
+	function inputHandler(manager, eventType, input) {
+	    var pointersLen = input.pointers.length;
+	    var changedPointersLen = input.changedPointers.length;
+	    var isFirst = (eventType & INPUT_START && (pointersLen - changedPointersLen === 0));
+	    var isFinal = (eventType & (INPUT_END | INPUT_CANCEL) && (pointersLen - changedPointersLen === 0));
+	
+	    input.isFirst = !!isFirst;
+	    input.isFinal = !!isFinal;
+	
+	    if (isFirst) {
+	        manager.session = {};
+	    }
+	
+	    // source event is the normalized value of the domEvents
+	    // like 'touchstart, mouseup, pointerdown'
+	    input.eventType = eventType;
+	
+	    // compute scale, rotation etc
+	    computeInputData(manager, input);
+	
+	    // emit secret event
+	    manager.emit('hammer.input', input);
+	
+	    manager.recognize(input);
+	    manager.session.prevInput = input;
+	}
+	
+	/**
+	 * extend the data with some usable properties like scale, rotate, velocity etc
+	 * @param {Object} manager
+	 * @param {Object} input
+	 */
+	function computeInputData(manager, input) {
+	    var session = manager.session;
+	    var pointers = input.pointers;
+	    var pointersLength = pointers.length;
+	
+	    // store the first input to calculate the distance and direction
+	    if (!session.firstInput) {
+	        session.firstInput = simpleCloneInputData(input);
+	    }
+	
+	    // to compute scale and rotation we need to store the multiple touches
+	    if (pointersLength > 1 && !session.firstMultiple) {
+	        session.firstMultiple = simpleCloneInputData(input);
+	    } else if (pointersLength === 1) {
+	        session.firstMultiple = false;
+	    }
+	
+	    var firstInput = session.firstInput;
+	    var firstMultiple = session.firstMultiple;
+	    var offsetCenter = firstMultiple ? firstMultiple.center : firstInput.center;
+	
+	    var center = input.center = getCenter(pointers);
+	    input.timeStamp = now();
+	    input.deltaTime = input.timeStamp - firstInput.timeStamp;
+	
+	    input.angle = getAngle(offsetCenter, center);
+	    input.distance = getDistance(offsetCenter, center);
+	
+	    computeDeltaXY(session, input);
+	    input.offsetDirection = getDirection(input.deltaX, input.deltaY);
+	
+	    var overallVelocity = getVelocity(input.deltaTime, input.deltaX, input.deltaY);
+	    input.overallVelocityX = overallVelocity.x;
+	    input.overallVelocityY = overallVelocity.y;
+	    input.overallVelocity = (abs(overallVelocity.x) > abs(overallVelocity.y)) ? overallVelocity.x : overallVelocity.y;
+	
+	    input.scale = firstMultiple ? getScale(firstMultiple.pointers, pointers) : 1;
+	    input.rotation = firstMultiple ? getRotation(firstMultiple.pointers, pointers) : 0;
+	
+	    input.maxPointers = !session.prevInput ? input.pointers.length : ((input.pointers.length >
+	        session.prevInput.maxPointers) ? input.pointers.length : session.prevInput.maxPointers);
+	
+	    computeIntervalInputData(session, input);
+	
+	    // find the correct target
+	    var target = manager.element;
+	    if (hasParent(input.srcEvent.target, target)) {
+	        target = input.srcEvent.target;
+	    }
+	    input.target = target;
+	}
+	
+	function computeDeltaXY(session, input) {
+	    var center = input.center;
+	    var offset = session.offsetDelta || {};
+	    var prevDelta = session.prevDelta || {};
+	    var prevInput = session.prevInput || {};
+	
+	    if (input.eventType === INPUT_START || prevInput.eventType === INPUT_END) {
+	        prevDelta = session.prevDelta = {
+	            x: prevInput.deltaX || 0,
+	            y: prevInput.deltaY || 0
+	        };
+	
+	        offset = session.offsetDelta = {
+	            x: center.x,
+	            y: center.y
+	        };
+	    }
+	
+	    input.deltaX = prevDelta.x + (center.x - offset.x);
+	    input.deltaY = prevDelta.y + (center.y - offset.y);
+	}
+	
+	/**
+	 * velocity is calculated every x ms
+	 * @param {Object} session
+	 * @param {Object} input
+	 */
+	function computeIntervalInputData(session, input) {
+	    var last = session.lastInterval || input,
+	        deltaTime = input.timeStamp - last.timeStamp,
+	        velocity, velocityX, velocityY, direction;
+	
+	    if (input.eventType != INPUT_CANCEL && (deltaTime > COMPUTE_INTERVAL || last.velocity === undefined)) {
+	        var deltaX = input.deltaX - last.deltaX;
+	        var deltaY = input.deltaY - last.deltaY;
+	
+	        var v = getVelocity(deltaTime, deltaX, deltaY);
+	        velocityX = v.x;
+	        velocityY = v.y;
+	        velocity = (abs(v.x) > abs(v.y)) ? v.x : v.y;
+	        direction = getDirection(deltaX, deltaY);
+	
+	        session.lastInterval = input;
+	    } else {
+	        // use latest velocity info if it doesn't overtake a minimum period
+	        velocity = last.velocity;
+	        velocityX = last.velocityX;
+	        velocityY = last.velocityY;
+	        direction = last.direction;
+	    }
+	
+	    input.velocity = velocity;
+	    input.velocityX = velocityX;
+	    input.velocityY = velocityY;
+	    input.direction = direction;
+	}
+	
+	/**
+	 * create a simple clone from the input used for storage of firstInput and firstMultiple
+	 * @param {Object} input
+	 * @returns {Object} clonedInputData
+	 */
+	function simpleCloneInputData(input) {
+	    // make a simple copy of the pointers because we will get a reference if we don't
+	    // we only need clientXY for the calculations
+	    var pointers = [];
+	    var i = 0;
+	    while (i < input.pointers.length) {
+	        pointers[i] = {
+	            clientX: round(input.pointers[i].clientX),
+	            clientY: round(input.pointers[i].clientY)
+	        };
+	        i++;
+	    }
+	
+	    return {
+	        timeStamp: now(),
+	        pointers: pointers,
+	        center: getCenter(pointers),
+	        deltaX: input.deltaX,
+	        deltaY: input.deltaY
+	    };
+	}
+	
+	/**
+	 * get the center of all the pointers
+	 * @param {Array} pointers
+	 * @return {Object} center contains `x` and `y` properties
+	 */
+	function getCenter(pointers) {
+	    var pointersLength = pointers.length;
+	
+	    // no need to loop when only one touch
+	    if (pointersLength === 1) {
+	        return {
+	            x: round(pointers[0].clientX),
+	            y: round(pointers[0].clientY)
+	        };
+	    }
+	
+	    var x = 0, y = 0, i = 0;
+	    while (i < pointersLength) {
+	        x += pointers[i].clientX;
+	        y += pointers[i].clientY;
+	        i++;
+	    }
+	
+	    return {
+	        x: round(x / pointersLength),
+	        y: round(y / pointersLength)
+	    };
+	}
+	
+	/**
+	 * calculate the velocity between two points. unit is in px per ms.
+	 * @param {Number} deltaTime
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @return {Object} velocity `x` and `y`
+	 */
+	function getVelocity(deltaTime, x, y) {
+	    return {
+	        x: x / deltaTime || 0,
+	        y: y / deltaTime || 0
+	    };
+	}
+	
+	/**
+	 * get the direction between two points
+	 * @param {Number} x
+	 * @param {Number} y
+	 * @return {Number} direction
+	 */
+	function getDirection(x, y) {
+	    if (x === y) {
+	        return DIRECTION_NONE;
+	    }
+	
+	    if (abs(x) >= abs(y)) {
+	        return x < 0 ? DIRECTION_LEFT : DIRECTION_RIGHT;
+	    }
+	    return y < 0 ? DIRECTION_UP : DIRECTION_DOWN;
+	}
+	
+	/**
+	 * calculate the absolute distance between two points
+	 * @param {Object} p1 {x, y}
+	 * @param {Object} p2 {x, y}
+	 * @param {Array} [props] containing x and y keys
+	 * @return {Number} distance
+	 */
+	function getDistance(p1, p2, props) {
+	    if (!props) {
+	        props = PROPS_XY;
+	    }
+	    var x = p2[props[0]] - p1[props[0]],
+	        y = p2[props[1]] - p1[props[1]];
+	
+	    return Math.sqrt((x * x) + (y * y));
+	}
+	
+	/**
+	 * calculate the angle between two coordinates
+	 * @param {Object} p1
+	 * @param {Object} p2
+	 * @param {Array} [props] containing x and y keys
+	 * @return {Number} angle
+	 */
+	function getAngle(p1, p2, props) {
+	    if (!props) {
+	        props = PROPS_XY;
+	    }
+	    var x = p2[props[0]] - p1[props[0]],
+	        y = p2[props[1]] - p1[props[1]];
+	    return Math.atan2(y, x) * 180 / Math.PI;
+	}
+	
+	/**
+	 * calculate the rotation degrees between two pointersets
+	 * @param {Array} start array of pointers
+	 * @param {Array} end array of pointers
+	 * @return {Number} rotation
+	 */
+	function getRotation(start, end) {
+	    return getAngle(end[1], end[0], PROPS_CLIENT_XY) + getAngle(start[1], start[0], PROPS_CLIENT_XY);
+	}
+	
+	/**
+	 * calculate the scale factor between two pointersets
+	 * no scale is 1, and goes down to 0 when pinched together, and bigger when pinched out
+	 * @param {Array} start array of pointers
+	 * @param {Array} end array of pointers
+	 * @return {Number} scale
+	 */
+	function getScale(start, end) {
+	    return getDistance(end[0], end[1], PROPS_CLIENT_XY) / getDistance(start[0], start[1], PROPS_CLIENT_XY);
+	}
+	
+	var MOUSE_INPUT_MAP = {
+	    mousedown: INPUT_START,
+	    mousemove: INPUT_MOVE,
+	    mouseup: INPUT_END
+	};
+	
+	var MOUSE_ELEMENT_EVENTS = 'mousedown';
+	var MOUSE_WINDOW_EVENTS = 'mousemove mouseup';
+	
+	/**
+	 * Mouse events input
+	 * @constructor
+	 * @extends Input
+	 */
+	function MouseInput() {
+	    this.evEl = MOUSE_ELEMENT_EVENTS;
+	    this.evWin = MOUSE_WINDOW_EVENTS;
+	
+	    this.pressed = false; // mousedown state
+	
+	    Input.apply(this, arguments);
+	}
+	
+	inherit(MouseInput, Input, {
+	    /**
+	     * handle mouse events
+	     * @param {Object} ev
+	     */
+	    handler: function MEhandler(ev) {
+	        var eventType = MOUSE_INPUT_MAP[ev.type];
+	
+	        // on start we want to have the left mouse button down
+	        if (eventType & INPUT_START && ev.button === 0) {
+	            this.pressed = true;
+	        }
+	
+	        if (eventType & INPUT_MOVE && ev.which !== 1) {
+	            eventType = INPUT_END;
+	        }
+	
+	        // mouse must be down
+	        if (!this.pressed) {
+	            return;
+	        }
+	
+	        if (eventType & INPUT_END) {
+	            this.pressed = false;
+	        }
+	
+	        this.callback(this.manager, eventType, {
+	            pointers: [ev],
+	            changedPointers: [ev],
+	            pointerType: INPUT_TYPE_MOUSE,
+	            srcEvent: ev
+	        });
+	    }
+	});
+	
+	var POINTER_INPUT_MAP = {
+	    pointerdown: INPUT_START,
+	    pointermove: INPUT_MOVE,
+	    pointerup: INPUT_END,
+	    pointercancel: INPUT_CANCEL,
+	    pointerout: INPUT_CANCEL
+	};
+	
+	// in IE10 the pointer types is defined as an enum
+	var IE10_POINTER_TYPE_ENUM = {
+	    2: INPUT_TYPE_TOUCH,
+	    3: INPUT_TYPE_PEN,
+	    4: INPUT_TYPE_MOUSE,
+	    5: INPUT_TYPE_KINECT // see https://twitter.com/jacobrossi/status/480596438489890816
+	};
+	
+	var POINTER_ELEMENT_EVENTS = 'pointerdown';
+	var POINTER_WINDOW_EVENTS = 'pointermove pointerup pointercancel';
+	
+	// IE10 has prefixed support, and case-sensitive
+	if (window.MSPointerEvent && !window.PointerEvent) {
+	    POINTER_ELEMENT_EVENTS = 'MSPointerDown';
+	    POINTER_WINDOW_EVENTS = 'MSPointerMove MSPointerUp MSPointerCancel';
+	}
+	
+	/**
+	 * Pointer events input
+	 * @constructor
+	 * @extends Input
+	 */
+	function PointerEventInput() {
+	    this.evEl = POINTER_ELEMENT_EVENTS;
+	    this.evWin = POINTER_WINDOW_EVENTS;
+	
+	    Input.apply(this, arguments);
+	
+	    this.store = (this.manager.session.pointerEvents = []);
+	}
+	
+	inherit(PointerEventInput, Input, {
+	    /**
+	     * handle mouse events
+	     * @param {Object} ev
+	     */
+	    handler: function PEhandler(ev) {
+	        var store = this.store;
+	        var removePointer = false;
+	
+	        var eventTypeNormalized = ev.type.toLowerCase().replace('ms', '');
+	        var eventType = POINTER_INPUT_MAP[eventTypeNormalized];
+	        var pointerType = IE10_POINTER_TYPE_ENUM[ev.pointerType] || ev.pointerType;
+	
+	        var isTouch = (pointerType == INPUT_TYPE_TOUCH);
+	
+	        // get index of the event in the store
+	        var storeIndex = inArray(store, ev.pointerId, 'pointerId');
+	
+	        // start and mouse must be down
+	        if (eventType & INPUT_START && (ev.button === 0 || isTouch)) {
+	            if (storeIndex < 0) {
+	                store.push(ev);
+	                storeIndex = store.length - 1;
+	            }
+	        } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+	            removePointer = true;
+	        }
+	
+	        // it not found, so the pointer hasn't been down (so it's probably a hover)
+	        if (storeIndex < 0) {
+	            return;
+	        }
+	
+	        // update the event in the store
+	        store[storeIndex] = ev;
+	
+	        this.callback(this.manager, eventType, {
+	            pointers: store,
+	            changedPointers: [ev],
+	            pointerType: pointerType,
+	            srcEvent: ev
+	        });
+	
+	        if (removePointer) {
+	            // remove from the store
+	            store.splice(storeIndex, 1);
+	        }
+	    }
+	});
+	
+	var SINGLE_TOUCH_INPUT_MAP = {
+	    touchstart: INPUT_START,
+	    touchmove: INPUT_MOVE,
+	    touchend: INPUT_END,
+	    touchcancel: INPUT_CANCEL
+	};
+	
+	var SINGLE_TOUCH_TARGET_EVENTS = 'touchstart';
+	var SINGLE_TOUCH_WINDOW_EVENTS = 'touchstart touchmove touchend touchcancel';
+	
+	/**
+	 * Touch events input
+	 * @constructor
+	 * @extends Input
+	 */
+	function SingleTouchInput() {
+	    this.evTarget = SINGLE_TOUCH_TARGET_EVENTS;
+	    this.evWin = SINGLE_TOUCH_WINDOW_EVENTS;
+	    this.started = false;
+	
+	    Input.apply(this, arguments);
+	}
+	
+	inherit(SingleTouchInput, Input, {
+	    handler: function TEhandler(ev) {
+	        var type = SINGLE_TOUCH_INPUT_MAP[ev.type];
+	
+	        // should we handle the touch events?
+	        if (type === INPUT_START) {
+	            this.started = true;
+	        }
+	
+	        if (!this.started) {
+	            return;
+	        }
+	
+	        var touches = normalizeSingleTouches.call(this, ev, type);
+	
+	        // when done, reset the started state
+	        if (type & (INPUT_END | INPUT_CANCEL) && touches[0].length - touches[1].length === 0) {
+	            this.started = false;
+	        }
+	
+	        this.callback(this.manager, type, {
+	            pointers: touches[0],
+	            changedPointers: touches[1],
+	            pointerType: INPUT_TYPE_TOUCH,
+	            srcEvent: ev
+	        });
+	    }
+	});
+	
+	/**
+	 * @this {TouchInput}
+	 * @param {Object} ev
+	 * @param {Number} type flag
+	 * @returns {undefined|Array} [all, changed]
+	 */
+	function normalizeSingleTouches(ev, type) {
+	    var all = toArray(ev.touches);
+	    var changed = toArray(ev.changedTouches);
+	
+	    if (type & (INPUT_END | INPUT_CANCEL)) {
+	        all = uniqueArray(all.concat(changed), 'identifier', true);
+	    }
+	
+	    return [all, changed];
+	}
+	
+	var TOUCH_INPUT_MAP = {
+	    touchstart: INPUT_START,
+	    touchmove: INPUT_MOVE,
+	    touchend: INPUT_END,
+	    touchcancel: INPUT_CANCEL
+	};
+	
+	var TOUCH_TARGET_EVENTS = 'touchstart touchmove touchend touchcancel';
+	
+	/**
+	 * Multi-user touch events input
+	 * @constructor
+	 * @extends Input
+	 */
+	function TouchInput() {
+	    this.evTarget = TOUCH_TARGET_EVENTS;
+	    this.targetIds = {};
+	
+	    Input.apply(this, arguments);
+	}
+	
+	inherit(TouchInput, Input, {
+	    handler: function MTEhandler(ev) {
+	        var type = TOUCH_INPUT_MAP[ev.type];
+	        var touches = getTouches.call(this, ev, type);
+	        if (!touches) {
+	            return;
+	        }
+	
+	        this.callback(this.manager, type, {
+	            pointers: touches[0],
+	            changedPointers: touches[1],
+	            pointerType: INPUT_TYPE_TOUCH,
+	            srcEvent: ev
+	        });
+	    }
+	});
+	
+	/**
+	 * @this {TouchInput}
+	 * @param {Object} ev
+	 * @param {Number} type flag
+	 * @returns {undefined|Array} [all, changed]
+	 */
+	function getTouches(ev, type) {
+	    var allTouches = toArray(ev.touches);
+	    var targetIds = this.targetIds;
+	
+	    // when there is only one touch, the process can be simplified
+	    if (type & (INPUT_START | INPUT_MOVE) && allTouches.length === 1) {
+	        targetIds[allTouches[0].identifier] = true;
+	        return [allTouches, allTouches];
+	    }
+	
+	    var i,
+	        targetTouches,
+	        changedTouches = toArray(ev.changedTouches),
+	        changedTargetTouches = [],
+	        target = this.target;
+	
+	    // get target touches from touches
+	    targetTouches = allTouches.filter(function(touch) {
+	        return hasParent(touch.target, target);
+	    });
+	
+	    // collect touches
+	    if (type === INPUT_START) {
+	        i = 0;
+	        while (i < targetTouches.length) {
+	            targetIds[targetTouches[i].identifier] = true;
+	            i++;
+	        }
+	    }
+	
+	    // filter changed touches to only contain touches that exist in the collected target ids
+	    i = 0;
+	    while (i < changedTouches.length) {
+	        if (targetIds[changedTouches[i].identifier]) {
+	            changedTargetTouches.push(changedTouches[i]);
+	        }
+	
+	        // cleanup removed touches
+	        if (type & (INPUT_END | INPUT_CANCEL)) {
+	            delete targetIds[changedTouches[i].identifier];
+	        }
+	        i++;
+	    }
+	
+	    if (!changedTargetTouches.length) {
+	        return;
+	    }
+	
+	    return [
+	        // merge targetTouches with changedTargetTouches so it contains ALL touches, including 'end' and 'cancel'
+	        uniqueArray(targetTouches.concat(changedTargetTouches), 'identifier', true),
+	        changedTargetTouches
+	    ];
+	}
+	
+	/**
+	 * Combined touch and mouse input
+	 *
+	 * Touch has a higher priority then mouse, and while touching no mouse events are allowed.
+	 * This because touch devices also emit mouse events while doing a touch.
+	 *
+	 * @constructor
+	 * @extends Input
+	 */
+	
+	var DEDUP_TIMEOUT = 2500;
+	var DEDUP_DISTANCE = 25;
+	
+	function TouchMouseInput() {
+	    Input.apply(this, arguments);
+	
+	    var handler = bindFn(this.handler, this);
+	    this.touch = new TouchInput(this.manager, handler);
+	    this.mouse = new MouseInput(this.manager, handler);
+	
+	    this.primaryTouch = null;
+	    this.lastTouches = [];
+	}
+	
+	inherit(TouchMouseInput, Input, {
+	    /**
+	     * handle mouse and touch events
+	     * @param {Hammer} manager
+	     * @param {String} inputEvent
+	     * @param {Object} inputData
+	     */
+	    handler: function TMEhandler(manager, inputEvent, inputData) {
+	        var isTouch = (inputData.pointerType == INPUT_TYPE_TOUCH),
+	            isMouse = (inputData.pointerType == INPUT_TYPE_MOUSE);
+	
+	        if (isMouse && inputData.sourceCapabilities && inputData.sourceCapabilities.firesTouchEvents) {
+	            return;
+	        }
+	
+	        // when we're in a touch event, record touches to  de-dupe synthetic mouse event
+	        if (isTouch) {
+	            recordTouches.call(this, inputEvent, inputData);
+	        } else if (isMouse && isSyntheticEvent.call(this, inputData)) {
+	            return;
+	        }
+	
+	        this.callback(manager, inputEvent, inputData);
+	    },
+	
+	    /**
+	     * remove the event listeners
+	     */
+	    destroy: function destroy() {
+	        this.touch.destroy();
+	        this.mouse.destroy();
+	    }
+	});
+	
+	function recordTouches(eventType, eventData) {
+	    if (eventType & INPUT_START) {
+	        this.primaryTouch = eventData.changedPointers[0].identifier;
+	        setLastTouch.call(this, eventData);
+	    } else if (eventType & (INPUT_END | INPUT_CANCEL)) {
+	        setLastTouch.call(this, eventData);
+	    }
+	}
+	
+	function setLastTouch(eventData) {
+	    var touch = eventData.changedPointers[0];
+	
+	    if (touch.identifier === this.primaryTouch) {
+	        var lastTouch = {x: touch.clientX, y: touch.clientY};
+	        this.lastTouches.push(lastTouch);
+	        var lts = this.lastTouches;
+	        var removeLastTouch = function() {
+	            var i = lts.indexOf(lastTouch);
+	            if (i > -1) {
+	                lts.splice(i, 1);
+	            }
+	        };
+	        setTimeout(removeLastTouch, DEDUP_TIMEOUT);
+	    }
+	}
+	
+	function isSyntheticEvent(eventData) {
+	    var x = eventData.srcEvent.clientX, y = eventData.srcEvent.clientY;
+	    for (var i = 0; i < this.lastTouches.length; i++) {
+	        var t = this.lastTouches[i];
+	        var dx = Math.abs(x - t.x), dy = Math.abs(y - t.y);
+	        if (dx <= DEDUP_DISTANCE && dy <= DEDUP_DISTANCE) {
+	            return true;
+	        }
+	    }
+	    return false;
+	}
+	
+	var PREFIXED_TOUCH_ACTION = prefixed(TEST_ELEMENT.style, 'touchAction');
+	var NATIVE_TOUCH_ACTION = PREFIXED_TOUCH_ACTION !== undefined;
+	
+	// magical touchAction value
+	var TOUCH_ACTION_COMPUTE = 'compute';
+	var TOUCH_ACTION_AUTO = 'auto';
+	var TOUCH_ACTION_MANIPULATION = 'manipulation'; // not implemented
+	var TOUCH_ACTION_NONE = 'none';
+	var TOUCH_ACTION_PAN_X = 'pan-x';
+	var TOUCH_ACTION_PAN_Y = 'pan-y';
+	var TOUCH_ACTION_MAP = getTouchActionProps();
+	
+	/**
+	 * Touch Action
+	 * sets the touchAction property or uses the js alternative
+	 * @param {Manager} manager
+	 * @param {String} value
+	 * @constructor
+	 */
+	function TouchAction(manager, value) {
+	    this.manager = manager;
+	    this.set(value);
+	}
+	
+	TouchAction.prototype = {
+	    /**
+	     * set the touchAction value on the element or enable the polyfill
+	     * @param {String} value
+	     */
+	    set: function(value) {
+	        // find out the touch-action by the event handlers
+	        if (value == TOUCH_ACTION_COMPUTE) {
+	            value = this.compute();
+	        }
+	
+	        if (NATIVE_TOUCH_ACTION && this.manager.element.style && TOUCH_ACTION_MAP[value]) {
+	            this.manager.element.style[PREFIXED_TOUCH_ACTION] = value;
+	        }
+	        this.actions = value.toLowerCase().trim();
+	    },
+	
+	    /**
+	     * just re-set the touchAction value
+	     */
+	    update: function() {
+	        this.set(this.manager.options.touchAction);
+	    },
+	
+	    /**
+	     * compute the value for the touchAction property based on the recognizer's settings
+	     * @returns {String} value
+	     */
+	    compute: function() {
+	        var actions = [];
+	        each(this.manager.recognizers, function(recognizer) {
+	            if (boolOrFn(recognizer.options.enable, [recognizer])) {
+	                actions = actions.concat(recognizer.getTouchAction());
+	            }
+	        });
+	        return cleanTouchActions(actions.join(' '));
+	    },
+	
+	    /**
+	     * this method is called on each input cycle and provides the preventing of the browser behavior
+	     * @param {Object} input
+	     */
+	    preventDefaults: function(input) {
+	        var srcEvent = input.srcEvent;
+	        var direction = input.offsetDirection;
+	
+	        // if the touch action did prevented once this session
+	        if (this.manager.session.prevented) {
+	            srcEvent.preventDefault();
+	            return;
+	        }
+	
+	        var actions = this.actions;
+	        var hasNone = inStr(actions, TOUCH_ACTION_NONE) && !TOUCH_ACTION_MAP[TOUCH_ACTION_NONE];
+	        var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_Y];
+	        var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X) && !TOUCH_ACTION_MAP[TOUCH_ACTION_PAN_X];
+	
+	        if (hasNone) {
+	            //do not prevent defaults if this is a tap gesture
+	
+	            var isTapPointer = input.pointers.length === 1;
+	            var isTapMovement = input.distance < 2;
+	            var isTapTouchTime = input.deltaTime < 250;
+	
+	            if (isTapPointer && isTapMovement && isTapTouchTime) {
+	                return;
+	            }
+	        }
+	
+	        if (hasPanX && hasPanY) {
+	            // `pan-x pan-y` means browser handles all scrolling/panning, do not prevent
+	            return;
+	        }
+	
+	        if (hasNone ||
+	            (hasPanY && direction & DIRECTION_HORIZONTAL) ||
+	            (hasPanX && direction & DIRECTION_VERTICAL)) {
+	            return this.preventSrc(srcEvent);
+	        }
+	    },
+	
+	    /**
+	     * call preventDefault to prevent the browser's default behavior (scrolling in most cases)
+	     * @param {Object} srcEvent
+	     */
+	    preventSrc: function(srcEvent) {
+	        this.manager.session.prevented = true;
+	        srcEvent.preventDefault();
+	    }
+	};
+	
+	/**
+	 * when the touchActions are collected they are not a valid value, so we need to clean things up. *
+	 * @param {String} actions
+	 * @returns {*}
+	 */
+	function cleanTouchActions(actions) {
+	    // none
+	    if (inStr(actions, TOUCH_ACTION_NONE)) {
+	        return TOUCH_ACTION_NONE;
+	    }
+	
+	    var hasPanX = inStr(actions, TOUCH_ACTION_PAN_X);
+	    var hasPanY = inStr(actions, TOUCH_ACTION_PAN_Y);
+	
+	    // if both pan-x and pan-y are set (different recognizers
+	    // for different directions, e.g. horizontal pan but vertical swipe?)
+	    // we need none (as otherwise with pan-x pan-y combined none of these
+	    // recognizers will work, since the browser would handle all panning
+	    if (hasPanX && hasPanY) {
+	        return TOUCH_ACTION_NONE;
+	    }
+	
+	    // pan-x OR pan-y
+	    if (hasPanX || hasPanY) {
+	        return hasPanX ? TOUCH_ACTION_PAN_X : TOUCH_ACTION_PAN_Y;
+	    }
+	
+	    // manipulation
+	    if (inStr(actions, TOUCH_ACTION_MANIPULATION)) {
+	        return TOUCH_ACTION_MANIPULATION;
+	    }
+	
+	    return TOUCH_ACTION_AUTO;
+	}
+	
+	function getTouchActionProps() {
+	    if (!NATIVE_TOUCH_ACTION) {
+	        return false;
+	    }
+	    var touchMap = {};
+	    var cssSupports = window.CSS && window.CSS.supports;
+	    ['auto', 'manipulation', 'pan-y', 'pan-x', 'pan-x pan-y', 'none'].forEach(function(val) {
+	
+	        // If css.supports is not supported but there is native touch-action assume it supports
+	        // all values. This is the case for IE 10 and 11.
+	        touchMap[val] = cssSupports ? window.CSS.supports('touch-action', val) : true;
+	    });
+	    return touchMap;
+	}
+	
+	/**
+	 * Recognizer flow explained; *
+	 * All recognizers have the initial state of POSSIBLE when a input session starts.
+	 * The definition of a input session is from the first input until the last input, with all it's movement in it. *
+	 * Example session for mouse-input: mousedown -> mousemove -> mouseup
+	 *
+	 * On each recognizing cycle (see Manager.recognize) the .recognize() method is executed
+	 * which determines with state it should be.
+	 *
+	 * If the recognizer has the state FAILED, CANCELLED or RECOGNIZED (equals ENDED), it is reset to
+	 * POSSIBLE to give it another change on the next cycle.
+	 *
+	 *               Possible
+	 *                  |
+	 *            +-----+---------------+
+	 *            |                     |
+	 *      +-----+-----+               |
+	 *      |           |               |
+	 *   Failed      Cancelled          |
+	 *                          +-------+------+
+	 *                          |              |
+	 *                      Recognized       Began
+	 *                                         |
+	 *                                      Changed
+	 *                                         |
+	 *                                  Ended/Recognized
+	 */
+	var STATE_POSSIBLE = 1;
+	var STATE_BEGAN = 2;
+	var STATE_CHANGED = 4;
+	var STATE_ENDED = 8;
+	var STATE_RECOGNIZED = STATE_ENDED;
+	var STATE_CANCELLED = 16;
+	var STATE_FAILED = 32;
+	
+	/**
+	 * Recognizer
+	 * Every recognizer needs to extend from this class.
+	 * @constructor
+	 * @param {Object} options
+	 */
+	function Recognizer(options) {
+	    this.options = assign({}, this.defaults, options || {});
+	
+	    this.id = uniqueId();
+	
+	    this.manager = null;
+	
+	    // default is enable true
+	    this.options.enable = ifUndefined(this.options.enable, true);
+	
+	    this.state = STATE_POSSIBLE;
+	
+	    this.simultaneous = {};
+	    this.requireFail = [];
+	}
+	
+	Recognizer.prototype = {
+	    /**
+	     * @virtual
+	     * @type {Object}
+	     */
+	    defaults: {},
+	
+	    /**
+	     * set options
+	     * @param {Object} options
+	     * @return {Recognizer}
+	     */
+	    set: function(options) {
+	        assign(this.options, options);
+	
+	        // also update the touchAction, in case something changed about the directions/enabled state
+	        this.manager && this.manager.touchAction.update();
+	        return this;
+	    },
+	
+	    /**
+	     * recognize simultaneous with an other recognizer.
+	     * @param {Recognizer} otherRecognizer
+	     * @returns {Recognizer} this
+	     */
+	    recognizeWith: function(otherRecognizer) {
+	        if (invokeArrayArg(otherRecognizer, 'recognizeWith', this)) {
+	            return this;
+	        }
+	
+	        var simultaneous = this.simultaneous;
+	        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+	        if (!simultaneous[otherRecognizer.id]) {
+	            simultaneous[otherRecognizer.id] = otherRecognizer;
+	            otherRecognizer.recognizeWith(this);
+	        }
+	        return this;
+	    },
+	
+	    /**
+	     * drop the simultaneous link. it doesnt remove the link on the other recognizer.
+	     * @param {Recognizer} otherRecognizer
+	     * @returns {Recognizer} this
+	     */
+	    dropRecognizeWith: function(otherRecognizer) {
+	        if (invokeArrayArg(otherRecognizer, 'dropRecognizeWith', this)) {
+	            return this;
+	        }
+	
+	        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+	        delete this.simultaneous[otherRecognizer.id];
+	        return this;
+	    },
+	
+	    /**
+	     * recognizer can only run when an other is failing
+	     * @param {Recognizer} otherRecognizer
+	     * @returns {Recognizer} this
+	     */
+	    requireFailure: function(otherRecognizer) {
+	        if (invokeArrayArg(otherRecognizer, 'requireFailure', this)) {
+	            return this;
+	        }
+	
+	        var requireFail = this.requireFail;
+	        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+	        if (inArray(requireFail, otherRecognizer) === -1) {
+	            requireFail.push(otherRecognizer);
+	            otherRecognizer.requireFailure(this);
+	        }
+	        return this;
+	    },
+	
+	    /**
+	     * drop the requireFailure link. it does not remove the link on the other recognizer.
+	     * @param {Recognizer} otherRecognizer
+	     * @returns {Recognizer} this
+	     */
+	    dropRequireFailure: function(otherRecognizer) {
+	        if (invokeArrayArg(otherRecognizer, 'dropRequireFailure', this)) {
+	            return this;
+	        }
+	
+	        otherRecognizer = getRecognizerByNameIfManager(otherRecognizer, this);
+	        var index = inArray(this.requireFail, otherRecognizer);
+	        if (index > -1) {
+	            this.requireFail.splice(index, 1);
+	        }
+	        return this;
+	    },
+	
+	    /**
+	     * has require failures boolean
+	     * @returns {boolean}
+	     */
+	    hasRequireFailures: function() {
+	        return this.requireFail.length > 0;
+	    },
+	
+	    /**
+	     * if the recognizer can recognize simultaneous with an other recognizer
+	     * @param {Recognizer} otherRecognizer
+	     * @returns {Boolean}
+	     */
+	    canRecognizeWith: function(otherRecognizer) {
+	        return !!this.simultaneous[otherRecognizer.id];
+	    },
+	
+	    /**
+	     * You should use `tryEmit` instead of `emit` directly to check
+	     * that all the needed recognizers has failed before emitting.
+	     * @param {Object} input
+	     */
+	    emit: function(input) {
+	        var self = this;
+	        var state = this.state;
+	
+	        function emit(event) {
+	            self.manager.emit(event, input);
+	        }
+	
+	        // 'panstart' and 'panmove'
+	        if (state < STATE_ENDED) {
+	            emit(self.options.event + stateStr(state));
+	        }
+	
+	        emit(self.options.event); // simple 'eventName' events
+	
+	        if (input.additionalEvent) { // additional event(panleft, panright, pinchin, pinchout...)
+	            emit(input.additionalEvent);
+	        }
+	
+	        // panend and pancancel
+	        if (state >= STATE_ENDED) {
+	            emit(self.options.event + stateStr(state));
+	        }
+	    },
+	
+	    /**
+	     * Check that all the require failure recognizers has failed,
+	     * if true, it emits a gesture event,
+	     * otherwise, setup the state to FAILED.
+	     * @param {Object} input
+	     */
+	    tryEmit: function(input) {
+	        if (this.canEmit()) {
+	            return this.emit(input);
+	        }
+	        // it's failing anyway
+	        this.state = STATE_FAILED;
+	    },
+	
+	    /**
+	     * can we emit?
+	     * @returns {boolean}
+	     */
+	    canEmit: function() {
+	        var i = 0;
+	        while (i < this.requireFail.length) {
+	            if (!(this.requireFail[i].state & (STATE_FAILED | STATE_POSSIBLE))) {
+	                return false;
+	            }
+	            i++;
+	        }
+	        return true;
+	    },
+	
+	    /**
+	     * update the recognizer
+	     * @param {Object} inputData
+	     */
+	    recognize: function(inputData) {
+	        // make a new copy of the inputData
+	        // so we can change the inputData without messing up the other recognizers
+	        var inputDataClone = assign({}, inputData);
+	
+	        // is is enabled and allow recognizing?
+	        if (!boolOrFn(this.options.enable, [this, inputDataClone])) {
+	            this.reset();
+	            this.state = STATE_FAILED;
+	            return;
+	        }
+	
+	        // reset when we've reached the end
+	        if (this.state & (STATE_RECOGNIZED | STATE_CANCELLED | STATE_FAILED)) {
+	            this.state = STATE_POSSIBLE;
+	        }
+	
+	        this.state = this.process(inputDataClone);
+	
+	        // the recognizer has recognized a gesture
+	        // so trigger an event
+	        if (this.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED | STATE_CANCELLED)) {
+	            this.tryEmit(inputDataClone);
+	        }
+	    },
+	
+	    /**
+	     * return the state of the recognizer
+	     * the actual recognizing happens in this method
+	     * @virtual
+	     * @param {Object} inputData
+	     * @returns {Const} STATE
+	     */
+	    process: function(inputData) { }, // jshint ignore:line
+	
+	    /**
+	     * return the preferred touch-action
+	     * @virtual
+	     * @returns {Array}
+	     */
+	    getTouchAction: function() { },
+	
+	    /**
+	     * called when the gesture isn't allowed to recognize
+	     * like when another is being recognized or it is disabled
+	     * @virtual
+	     */
+	    reset: function() { }
+	};
+	
+	/**
+	 * get a usable string, used as event postfix
+	 * @param {Const} state
+	 * @returns {String} state
+	 */
+	function stateStr(state) {
+	    if (state & STATE_CANCELLED) {
+	        return 'cancel';
+	    } else if (state & STATE_ENDED) {
+	        return 'end';
+	    } else if (state & STATE_CHANGED) {
+	        return 'move';
+	    } else if (state & STATE_BEGAN) {
+	        return 'start';
+	    }
+	    return '';
+	}
+	
+	/**
+	 * direction cons to string
+	 * @param {Const} direction
+	 * @returns {String}
+	 */
+	function directionStr(direction) {
+	    if (direction == DIRECTION_DOWN) {
+	        return 'down';
+	    } else if (direction == DIRECTION_UP) {
+	        return 'up';
+	    } else if (direction == DIRECTION_LEFT) {
+	        return 'left';
+	    } else if (direction == DIRECTION_RIGHT) {
+	        return 'right';
+	    }
+	    return '';
+	}
+	
+	/**
+	 * get a recognizer by name if it is bound to a manager
+	 * @param {Recognizer|String} otherRecognizer
+	 * @param {Recognizer} recognizer
+	 * @returns {Recognizer}
+	 */
+	function getRecognizerByNameIfManager(otherRecognizer, recognizer) {
+	    var manager = recognizer.manager;
+	    if (manager) {
+	        return manager.get(otherRecognizer);
+	    }
+	    return otherRecognizer;
+	}
+	
+	/**
+	 * This recognizer is just used as a base for the simple attribute recognizers.
+	 * @constructor
+	 * @extends Recognizer
+	 */
+	function AttrRecognizer() {
+	    Recognizer.apply(this, arguments);
+	}
+	
+	inherit(AttrRecognizer, Recognizer, {
+	    /**
+	     * @namespace
+	     * @memberof AttrRecognizer
+	     */
+	    defaults: {
+	        /**
+	         * @type {Number}
+	         * @default 1
+	         */
+	        pointers: 1
+	    },
+	
+	    /**
+	     * Used to check if it the recognizer receives valid input, like input.distance > 10.
+	     * @memberof AttrRecognizer
+	     * @param {Object} input
+	     * @returns {Boolean} recognized
+	     */
+	    attrTest: function(input) {
+	        var optionPointers = this.options.pointers;
+	        return optionPointers === 0 || input.pointers.length === optionPointers;
+	    },
+	
+	    /**
+	     * Process the input and return the state for the recognizer
+	     * @memberof AttrRecognizer
+	     * @param {Object} input
+	     * @returns {*} State
+	     */
+	    process: function(input) {
+	        var state = this.state;
+	        var eventType = input.eventType;
+	
+	        var isRecognized = state & (STATE_BEGAN | STATE_CHANGED);
+	        var isValid = this.attrTest(input);
+	
+	        // on cancel input and we've recognized before, return STATE_CANCELLED
+	        if (isRecognized && (eventType & INPUT_CANCEL || !isValid)) {
+	            return state | STATE_CANCELLED;
+	        } else if (isRecognized || isValid) {
+	            if (eventType & INPUT_END) {
+	                return state | STATE_ENDED;
+	            } else if (!(state & STATE_BEGAN)) {
+	                return STATE_BEGAN;
+	            }
+	            return state | STATE_CHANGED;
+	        }
+	        return STATE_FAILED;
+	    }
+	});
+	
+	/**
+	 * Pan
+	 * Recognized when the pointer is down and moved in the allowed direction.
+	 * @constructor
+	 * @extends AttrRecognizer
+	 */
+	function PanRecognizer() {
+	    AttrRecognizer.apply(this, arguments);
+	
+	    this.pX = null;
+	    this.pY = null;
+	}
+	
+	inherit(PanRecognizer, AttrRecognizer, {
+	    /**
+	     * @namespace
+	     * @memberof PanRecognizer
+	     */
+	    defaults: {
+	        event: 'pan',
+	        threshold: 10,
+	        pointers: 1,
+	        direction: DIRECTION_ALL
+	    },
+	
+	    getTouchAction: function() {
+	        var direction = this.options.direction;
+	        var actions = [];
+	        if (direction & DIRECTION_HORIZONTAL) {
+	            actions.push(TOUCH_ACTION_PAN_Y);
+	        }
+	        if (direction & DIRECTION_VERTICAL) {
+	            actions.push(TOUCH_ACTION_PAN_X);
+	        }
+	        return actions;
+	    },
+	
+	    directionTest: function(input) {
+	        var options = this.options;
+	        var hasMoved = true;
+	        var distance = input.distance;
+	        var direction = input.direction;
+	        var x = input.deltaX;
+	        var y = input.deltaY;
+	
+	        // lock to axis?
+	        if (!(direction & options.direction)) {
+	            if (options.direction & DIRECTION_HORIZONTAL) {
+	                direction = (x === 0) ? DIRECTION_NONE : (x < 0) ? DIRECTION_LEFT : DIRECTION_RIGHT;
+	                hasMoved = x != this.pX;
+	                distance = Math.abs(input.deltaX);
+	            } else {
+	                direction = (y === 0) ? DIRECTION_NONE : (y < 0) ? DIRECTION_UP : DIRECTION_DOWN;
+	                hasMoved = y != this.pY;
+	                distance = Math.abs(input.deltaY);
+	            }
+	        }
+	        input.direction = direction;
+	        return hasMoved && distance > options.threshold && direction & options.direction;
+	    },
+	
+	    attrTest: function(input) {
+	        return AttrRecognizer.prototype.attrTest.call(this, input) &&
+	            (this.state & STATE_BEGAN || (!(this.state & STATE_BEGAN) && this.directionTest(input)));
+	    },
+	
+	    emit: function(input) {
+	
+	        this.pX = input.deltaX;
+	        this.pY = input.deltaY;
+	
+	        var direction = directionStr(input.direction);
+	
+	        if (direction) {
+	            input.additionalEvent = this.options.event + direction;
+	        }
+	        this._super.emit.call(this, input);
+	    }
+	});
+	
+	/**
+	 * Pinch
+	 * Recognized when two or more pointers are moving toward (zoom-in) or away from each other (zoom-out).
+	 * @constructor
+	 * @extends AttrRecognizer
+	 */
+	function PinchRecognizer() {
+	    AttrRecognizer.apply(this, arguments);
+	}
+	
+	inherit(PinchRecognizer, AttrRecognizer, {
+	    /**
+	     * @namespace
+	     * @memberof PinchRecognizer
+	     */
+	    defaults: {
+	        event: 'pinch',
+	        threshold: 0,
+	        pointers: 2
+	    },
+	
+	    getTouchAction: function() {
+	        return [TOUCH_ACTION_NONE];
+	    },
+	
+	    attrTest: function(input) {
+	        return this._super.attrTest.call(this, input) &&
+	            (Math.abs(input.scale - 1) > this.options.threshold || this.state & STATE_BEGAN);
+	    },
+	
+	    emit: function(input) {
+	        if (input.scale !== 1) {
+	            var inOut = input.scale < 1 ? 'in' : 'out';
+	            input.additionalEvent = this.options.event + inOut;
+	        }
+	        this._super.emit.call(this, input);
+	    }
+	});
+	
+	/**
+	 * Press
+	 * Recognized when the pointer is down for x ms without any movement.
+	 * @constructor
+	 * @extends Recognizer
+	 */
+	function PressRecognizer() {
+	    Recognizer.apply(this, arguments);
+	
+	    this._timer = null;
+	    this._input = null;
+	}
+	
+	inherit(PressRecognizer, Recognizer, {
+	    /**
+	     * @namespace
+	     * @memberof PressRecognizer
+	     */
+	    defaults: {
+	        event: 'press',
+	        pointers: 1,
+	        time: 251, // minimal time of the pointer to be pressed
+	        threshold: 9 // a minimal movement is ok, but keep it low
+	    },
+	
+	    getTouchAction: function() {
+	        return [TOUCH_ACTION_AUTO];
+	    },
+	
+	    process: function(input) {
+	        var options = this.options;
+	        var validPointers = input.pointers.length === options.pointers;
+	        var validMovement = input.distance < options.threshold;
+	        var validTime = input.deltaTime > options.time;
+	
+	        this._input = input;
+	
+	        // we only allow little movement
+	        // and we've reached an end event, so a tap is possible
+	        if (!validMovement || !validPointers || (input.eventType & (INPUT_END | INPUT_CANCEL) && !validTime)) {
+	            this.reset();
+	        } else if (input.eventType & INPUT_START) {
+	            this.reset();
+	            this._timer = setTimeoutContext(function() {
+	                this.state = STATE_RECOGNIZED;
+	                this.tryEmit();
+	            }, options.time, this);
+	        } else if (input.eventType & INPUT_END) {
+	            return STATE_RECOGNIZED;
+	        }
+	        return STATE_FAILED;
+	    },
+	
+	    reset: function() {
+	        clearTimeout(this._timer);
+	    },
+	
+	    emit: function(input) {
+	        if (this.state !== STATE_RECOGNIZED) {
+	            return;
+	        }
+	
+	        if (input && (input.eventType & INPUT_END)) {
+	            this.manager.emit(this.options.event + 'up', input);
+	        } else {
+	            this._input.timeStamp = now();
+	            this.manager.emit(this.options.event, this._input);
+	        }
+	    }
+	});
+	
+	/**
+	 * Rotate
+	 * Recognized when two or more pointer are moving in a circular motion.
+	 * @constructor
+	 * @extends AttrRecognizer
+	 */
+	function RotateRecognizer() {
+	    AttrRecognizer.apply(this, arguments);
+	}
+	
+	inherit(RotateRecognizer, AttrRecognizer, {
+	    /**
+	     * @namespace
+	     * @memberof RotateRecognizer
+	     */
+	    defaults: {
+	        event: 'rotate',
+	        threshold: 0,
+	        pointers: 2
+	    },
+	
+	    getTouchAction: function() {
+	        return [TOUCH_ACTION_NONE];
+	    },
+	
+	    attrTest: function(input) {
+	        return this._super.attrTest.call(this, input) &&
+	            (Math.abs(input.rotation) > this.options.threshold || this.state & STATE_BEGAN);
+	    }
+	});
+	
+	/**
+	 * Swipe
+	 * Recognized when the pointer is moving fast (velocity), with enough distance in the allowed direction.
+	 * @constructor
+	 * @extends AttrRecognizer
+	 */
+	function SwipeRecognizer() {
+	    AttrRecognizer.apply(this, arguments);
+	}
+	
+	inherit(SwipeRecognizer, AttrRecognizer, {
+	    /**
+	     * @namespace
+	     * @memberof SwipeRecognizer
+	     */
+	    defaults: {
+	        event: 'swipe',
+	        threshold: 10,
+	        velocity: 0.3,
+	        direction: DIRECTION_HORIZONTAL | DIRECTION_VERTICAL,
+	        pointers: 1
+	    },
+	
+	    getTouchAction: function() {
+	        return PanRecognizer.prototype.getTouchAction.call(this);
+	    },
+	
+	    attrTest: function(input) {
+	        var direction = this.options.direction;
+	        var velocity;
+	
+	        if (direction & (DIRECTION_HORIZONTAL | DIRECTION_VERTICAL)) {
+	            velocity = input.overallVelocity;
+	        } else if (direction & DIRECTION_HORIZONTAL) {
+	            velocity = input.overallVelocityX;
+	        } else if (direction & DIRECTION_VERTICAL) {
+	            velocity = input.overallVelocityY;
+	        }
+	
+	        return this._super.attrTest.call(this, input) &&
+	            direction & input.offsetDirection &&
+	            input.distance > this.options.threshold &&
+	            input.maxPointers == this.options.pointers &&
+	            abs(velocity) > this.options.velocity && input.eventType & INPUT_END;
+	    },
+	
+	    emit: function(input) {
+	        var direction = directionStr(input.offsetDirection);
+	        if (direction) {
+	            this.manager.emit(this.options.event + direction, input);
+	        }
+	
+	        this.manager.emit(this.options.event, input);
+	    }
+	});
+	
+	/**
+	 * A tap is ecognized when the pointer is doing a small tap/click. Multiple taps are recognized if they occur
+	 * between the given interval and position. The delay option can be used to recognize multi-taps without firing
+	 * a single tap.
+	 *
+	 * The eventData from the emitted event contains the property `tapCount`, which contains the amount of
+	 * multi-taps being recognized.
+	 * @constructor
+	 * @extends Recognizer
+	 */
+	function TapRecognizer() {
+	    Recognizer.apply(this, arguments);
+	
+	    // previous time and center,
+	    // used for tap counting
+	    this.pTime = false;
+	    this.pCenter = false;
+	
+	    this._timer = null;
+	    this._input = null;
+	    this.count = 0;
+	}
+	
+	inherit(TapRecognizer, Recognizer, {
+	    /**
+	     * @namespace
+	     * @memberof PinchRecognizer
+	     */
+	    defaults: {
+	        event: 'tap',
+	        pointers: 1,
+	        taps: 1,
+	        interval: 300, // max time between the multi-tap taps
+	        time: 250, // max time of the pointer to be down (like finger on the screen)
+	        threshold: 9, // a minimal movement is ok, but keep it low
+	        posThreshold: 10 // a multi-tap can be a bit off the initial position
+	    },
+	
+	    getTouchAction: function() {
+	        return [TOUCH_ACTION_MANIPULATION];
+	    },
+	
+	    process: function(input) {
+	        var options = this.options;
+	
+	        var validPointers = input.pointers.length === options.pointers;
+	        var validMovement = input.distance < options.threshold;
+	        var validTouchTime = input.deltaTime < options.time;
+	
+	        this.reset();
+	
+	        if ((input.eventType & INPUT_START) && (this.count === 0)) {
+	            return this.failTimeout();
+	        }
+	
+	        // we only allow little movement
+	        // and we've reached an end event, so a tap is possible
+	        if (validMovement && validTouchTime && validPointers) {
+	            if (input.eventType != INPUT_END) {
+	                return this.failTimeout();
+	            }
+	
+	            var validInterval = this.pTime ? (input.timeStamp - this.pTime < options.interval) : true;
+	            var validMultiTap = !this.pCenter || getDistance(this.pCenter, input.center) < options.posThreshold;
+	
+	            this.pTime = input.timeStamp;
+	            this.pCenter = input.center;
+	
+	            if (!validMultiTap || !validInterval) {
+	                this.count = 1;
+	            } else {
+	                this.count += 1;
+	            }
+	
+	            this._input = input;
+	
+	            // if tap count matches we have recognized it,
+	            // else it has began recognizing...
+	            var tapCount = this.count % options.taps;
+	            if (tapCount === 0) {
+	                // no failing requirements, immediately trigger the tap event
+	                // or wait as long as the multitap interval to trigger
+	                if (!this.hasRequireFailures()) {
+	                    return STATE_RECOGNIZED;
+	                } else {
+	                    this._timer = setTimeoutContext(function() {
+	                        this.state = STATE_RECOGNIZED;
+	                        this.tryEmit();
+	                    }, options.interval, this);
+	                    return STATE_BEGAN;
+	                }
+	            }
+	        }
+	        return STATE_FAILED;
+	    },
+	
+	    failTimeout: function() {
+	        this._timer = setTimeoutContext(function() {
+	            this.state = STATE_FAILED;
+	        }, this.options.interval, this);
+	        return STATE_FAILED;
+	    },
+	
+	    reset: function() {
+	        clearTimeout(this._timer);
+	    },
+	
+	    emit: function() {
+	        if (this.state == STATE_RECOGNIZED) {
+	            this._input.tapCount = this.count;
+	            this.manager.emit(this.options.event, this._input);
+	        }
+	    }
+	});
+	
+	/**
+	 * Simple way to create a manager with a default set of recognizers.
+	 * @param {HTMLElement} element
+	 * @param {Object} [options]
+	 * @constructor
+	 */
+	function Hammer(element, options) {
+	    options = options || {};
+	    options.recognizers = ifUndefined(options.recognizers, Hammer.defaults.preset);
+	    return new Manager(element, options);
+	}
+	
+	/**
+	 * @const {string}
+	 */
+	Hammer.VERSION = '2.0.7';
+	
+	/**
+	 * default settings
+	 * @namespace
+	 */
+	Hammer.defaults = {
+	    /**
+	     * set if DOM events are being triggered.
+	     * But this is slower and unused by simple implementations, so disabled by default.
+	     * @type {Boolean}
+	     * @default false
+	     */
+	    domEvents: false,
+	
+	    /**
+	     * The value for the touchAction property/fallback.
+	     * When set to `compute` it will magically set the correct value based on the added recognizers.
+	     * @type {String}
+	     * @default compute
+	     */
+	    touchAction: TOUCH_ACTION_COMPUTE,
+	
+	    /**
+	     * @type {Boolean}
+	     * @default true
+	     */
+	    enable: true,
+	
+	    /**
+	     * EXPERIMENTAL FEATURE -- can be removed/changed
+	     * Change the parent input target element.
+	     * If Null, then it is being set the to main element.
+	     * @type {Null|EventTarget}
+	     * @default null
+	     */
+	    inputTarget: null,
+	
+	    /**
+	     * force an input class
+	     * @type {Null|Function}
+	     * @default null
+	     */
+	    inputClass: null,
+	
+	    /**
+	     * Default recognizer setup when calling `Hammer()`
+	     * When creating a new Manager these will be skipped.
+	     * @type {Array}
+	     */
+	    preset: [
+	        // RecognizerClass, options, [recognizeWith, ...], [requireFailure, ...]
+	        [RotateRecognizer, {enable: false}],
+	        [PinchRecognizer, {enable: false}, ['rotate']],
+	        [SwipeRecognizer, {direction: DIRECTION_HORIZONTAL}],
+	        [PanRecognizer, {direction: DIRECTION_HORIZONTAL}, ['swipe']],
+	        [TapRecognizer],
+	        [TapRecognizer, {event: 'doubletap', taps: 2}, ['tap']],
+	        [PressRecognizer]
+	    ],
+	
+	    /**
+	     * Some CSS properties can be used to improve the working of Hammer.
+	     * Add them to this method and they will be set when creating a new Manager.
+	     * @namespace
+	     */
+	    cssProps: {
+	        /**
+	         * Disables text selection to improve the dragging gesture. Mainly for desktop browsers.
+	         * @type {String}
+	         * @default 'none'
+	         */
+	        userSelect: 'none',
+	
+	        /**
+	         * Disable the Windows Phone grippers when pressing an element.
+	         * @type {String}
+	         * @default 'none'
+	         */
+	        touchSelect: 'none',
+	
+	        /**
+	         * Disables the default callout shown when you touch and hold a touch target.
+	         * On iOS, when you touch and hold a touch target such as a link, Safari displays
+	         * a callout containing information about the link. This property allows you to disable that callout.
+	         * @type {String}
+	         * @default 'none'
+	         */
+	        touchCallout: 'none',
+	
+	        /**
+	         * Specifies whether zooming is enabled. Used by IE10>
+	         * @type {String}
+	         * @default 'none'
+	         */
+	        contentZooming: 'none',
+	
+	        /**
+	         * Specifies that an entire element should be draggable instead of its contents. Mainly for desktop browsers.
+	         * @type {String}
+	         * @default 'none'
+	         */
+	        userDrag: 'none',
+	
+	        /**
+	         * Overrides the highlight color shown when the user taps a link or a JavaScript
+	         * clickable element in iOS. This property obeys the alpha value, if specified.
+	         * @type {String}
+	         * @default 'rgba(0,0,0,0)'
+	         */
+	        tapHighlightColor: 'rgba(0,0,0,0)'
+	    }
+	};
+	
+	var STOP = 1;
+	var FORCED_STOP = 2;
+	
+	/**
+	 * Manager
+	 * @param {HTMLElement} element
+	 * @param {Object} [options]
+	 * @constructor
+	 */
+	function Manager(element, options) {
+	    this.options = assign({}, Hammer.defaults, options || {});
+	
+	    this.options.inputTarget = this.options.inputTarget || element;
+	
+	    this.handlers = {};
+	    this.session = {};
+	    this.recognizers = [];
+	    this.oldCssProps = {};
+	
+	    this.element = element;
+	    this.input = createInputInstance(this);
+	    this.touchAction = new TouchAction(this, this.options.touchAction);
+	
+	    toggleCssProps(this, true);
+	
+	    each(this.options.recognizers, function(item) {
+	        var recognizer = this.add(new (item[0])(item[1]));
+	        item[2] && recognizer.recognizeWith(item[2]);
+	        item[3] && recognizer.requireFailure(item[3]);
+	    }, this);
+	}
+	
+	Manager.prototype = {
+	    /**
+	     * set options
+	     * @param {Object} options
+	     * @returns {Manager}
+	     */
+	    set: function(options) {
+	        assign(this.options, options);
+	
+	        // Options that need a little more setup
+	        if (options.touchAction) {
+	            this.touchAction.update();
+	        }
+	        if (options.inputTarget) {
+	            // Clean up existing event listeners and reinitialize
+	            this.input.destroy();
+	            this.input.target = options.inputTarget;
+	            this.input.init();
+	        }
+	        return this;
+	    },
+	
+	    /**
+	     * stop recognizing for this session.
+	     * This session will be discarded, when a new [input]start event is fired.
+	     * When forced, the recognizer cycle is stopped immediately.
+	     * @param {Boolean} [force]
+	     */
+	    stop: function(force) {
+	        this.session.stopped = force ? FORCED_STOP : STOP;
+	    },
+	
+	    /**
+	     * run the recognizers!
+	     * called by the inputHandler function on every movement of the pointers (touches)
+	     * it walks through all the recognizers and tries to detect the gesture that is being made
+	     * @param {Object} inputData
+	     */
+	    recognize: function(inputData) {
+	        var session = this.session;
+	        if (session.stopped) {
+	            return;
+	        }
+	
+	        // run the touch-action polyfill
+	        this.touchAction.preventDefaults(inputData);
+	
+	        var recognizer;
+	        var recognizers = this.recognizers;
+	
+	        // this holds the recognizer that is being recognized.
+	        // so the recognizer's state needs to be BEGAN, CHANGED, ENDED or RECOGNIZED
+	        // if no recognizer is detecting a thing, it is set to `null`
+	        var curRecognizer = session.curRecognizer;
+	
+	        // reset when the last recognizer is recognized
+	        // or when we're in a new session
+	        if (!curRecognizer || (curRecognizer && curRecognizer.state & STATE_RECOGNIZED)) {
+	            curRecognizer = session.curRecognizer = null;
+	        }
+	
+	        var i = 0;
+	        while (i < recognizers.length) {
+	            recognizer = recognizers[i];
+	
+	            // find out if we are allowed try to recognize the input for this one.
+	            // 1.   allow if the session is NOT forced stopped (see the .stop() method)
+	            // 2.   allow if we still haven't recognized a gesture in this session, or the this recognizer is the one
+	            //      that is being recognized.
+	            // 3.   allow if the recognizer is allowed to run simultaneous with the current recognized recognizer.
+	            //      this can be setup with the `recognizeWith()` method on the recognizer.
+	            if (session.stopped !== FORCED_STOP && ( // 1
+	                    !curRecognizer || recognizer == curRecognizer || // 2
+	                    recognizer.canRecognizeWith(curRecognizer))) { // 3
+	                recognizer.recognize(inputData);
+	            } else {
+	                recognizer.reset();
+	            }
+	
+	            // if the recognizer has been recognizing the input as a valid gesture, we want to store this one as the
+	            // current active recognizer. but only if we don't already have an active recognizer
+	            if (!curRecognizer && recognizer.state & (STATE_BEGAN | STATE_CHANGED | STATE_ENDED)) {
+	                curRecognizer = session.curRecognizer = recognizer;
+	            }
+	            i++;
+	        }
+	    },
+	
+	    /**
+	     * get a recognizer by its event name.
+	     * @param {Recognizer|String} recognizer
+	     * @returns {Recognizer|Null}
+	     */
+	    get: function(recognizer) {
+	        if (recognizer instanceof Recognizer) {
+	            return recognizer;
+	        }
+	
+	        var recognizers = this.recognizers;
+	        for (var i = 0; i < recognizers.length; i++) {
+	            if (recognizers[i].options.event == recognizer) {
+	                return recognizers[i];
+	            }
+	        }
+	        return null;
+	    },
+	
+	    /**
+	     * add a recognizer to the manager
+	     * existing recognizers with the same event name will be removed
+	     * @param {Recognizer} recognizer
+	     * @returns {Recognizer|Manager}
+	     */
+	    add: function(recognizer) {
+	        if (invokeArrayArg(recognizer, 'add', this)) {
+	            return this;
+	        }
+	
+	        // remove existing
+	        var existing = this.get(recognizer.options.event);
+	        if (existing) {
+	            this.remove(existing);
+	        }
+	
+	        this.recognizers.push(recognizer);
+	        recognizer.manager = this;
+	
+	        this.touchAction.update();
+	        return recognizer;
+	    },
+	
+	    /**
+	     * remove a recognizer by name or instance
+	     * @param {Recognizer|String} recognizer
+	     * @returns {Manager}
+	     */
+	    remove: function(recognizer) {
+	        if (invokeArrayArg(recognizer, 'remove', this)) {
+	            return this;
+	        }
+	
+	        recognizer = this.get(recognizer);
+	
+	        // let's make sure this recognizer exists
+	        if (recognizer) {
+	            var recognizers = this.recognizers;
+	            var index = inArray(recognizers, recognizer);
+	
+	            if (index !== -1) {
+	                recognizers.splice(index, 1);
+	                this.touchAction.update();
+	            }
+	        }
+	
+	        return this;
+	    },
+	
+	    /**
+	     * bind event
+	     * @param {String} events
+	     * @param {Function} handler
+	     * @returns {EventEmitter} this
+	     */
+	    on: function(events, handler) {
+	        if (events === undefined) {
+	            return;
+	        }
+	        if (handler === undefined) {
+	            return;
+	        }
+	
+	        var handlers = this.handlers;
+	        each(splitStr(events), function(event) {
+	            handlers[event] = handlers[event] || [];
+	            handlers[event].push(handler);
+	        });
+	        return this;
+	    },
+	
+	    /**
+	     * unbind event, leave emit blank to remove all handlers
+	     * @param {String} events
+	     * @param {Function} [handler]
+	     * @returns {EventEmitter} this
+	     */
+	    off: function(events, handler) {
+	        if (events === undefined) {
+	            return;
+	        }
+	
+	        var handlers = this.handlers;
+	        each(splitStr(events), function(event) {
+	            if (!handler) {
+	                delete handlers[event];
+	            } else {
+	                handlers[event] && handlers[event].splice(inArray(handlers[event], handler), 1);
+	            }
+	        });
+	        return this;
+	    },
+	
+	    /**
+	     * emit event to the listeners
+	     * @param {String} event
+	     * @param {Object} data
+	     */
+	    emit: function(event, data) {
+	        // we also want to trigger dom events
+	        if (this.options.domEvents) {
+	            triggerDomEvent(event, data);
+	        }
+	
+	        // no handlers, so skip it all
+	        var handlers = this.handlers[event] && this.handlers[event].slice();
+	        if (!handlers || !handlers.length) {
+	            return;
+	        }
+	
+	        data.type = event;
+	        data.preventDefault = function() {
+	            data.srcEvent.preventDefault();
+	        };
+	
+	        var i = 0;
+	        while (i < handlers.length) {
+	            handlers[i](data);
+	            i++;
+	        }
+	    },
+	
+	    /**
+	     * destroy the manager and unbinds all events
+	     * it doesn't unbind dom events, that is the user own responsibility
+	     */
+	    destroy: function() {
+	        this.element && toggleCssProps(this, false);
+	
+	        this.handlers = {};
+	        this.session = {};
+	        this.input.destroy();
+	        this.element = null;
+	    }
+	};
+	
+	/**
+	 * add/remove the css properties as defined in manager.options.cssProps
+	 * @param {Manager} manager
+	 * @param {Boolean} add
+	 */
+	function toggleCssProps(manager, add) {
+	    var element = manager.element;
+	    if (!element.style) {
+	        return;
+	    }
+	    var prop;
+	    each(manager.options.cssProps, function(value, name) {
+	        prop = prefixed(element.style, name);
+	        if (add) {
+	            manager.oldCssProps[prop] = element.style[prop];
+	            element.style[prop] = value;
+	        } else {
+	            element.style[prop] = manager.oldCssProps[prop] || '';
+	        }
+	    });
+	    if (!add) {
+	        manager.oldCssProps = {};
+	    }
+	}
+	
+	/**
+	 * trigger dom event
+	 * @param {String} event
+	 * @param {Object} data
+	 */
+	function triggerDomEvent(event, data) {
+	    var gestureEvent = document.createEvent('Event');
+	    gestureEvent.initEvent(event, true, true);
+	    gestureEvent.gesture = data;
+	    data.target.dispatchEvent(gestureEvent);
+	}
+	
+	assign(Hammer, {
+	    INPUT_START: INPUT_START,
+	    INPUT_MOVE: INPUT_MOVE,
+	    INPUT_END: INPUT_END,
+	    INPUT_CANCEL: INPUT_CANCEL,
+	
+	    STATE_POSSIBLE: STATE_POSSIBLE,
+	    STATE_BEGAN: STATE_BEGAN,
+	    STATE_CHANGED: STATE_CHANGED,
+	    STATE_ENDED: STATE_ENDED,
+	    STATE_RECOGNIZED: STATE_RECOGNIZED,
+	    STATE_CANCELLED: STATE_CANCELLED,
+	    STATE_FAILED: STATE_FAILED,
+	
+	    DIRECTION_NONE: DIRECTION_NONE,
+	    DIRECTION_LEFT: DIRECTION_LEFT,
+	    DIRECTION_RIGHT: DIRECTION_RIGHT,
+	    DIRECTION_UP: DIRECTION_UP,
+	    DIRECTION_DOWN: DIRECTION_DOWN,
+	    DIRECTION_HORIZONTAL: DIRECTION_HORIZONTAL,
+	    DIRECTION_VERTICAL: DIRECTION_VERTICAL,
+	    DIRECTION_ALL: DIRECTION_ALL,
+	
+	    Manager: Manager,
+	    Input: Input,
+	    TouchAction: TouchAction,
+	
+	    TouchInput: TouchInput,
+	    MouseInput: MouseInput,
+	    PointerEventInput: PointerEventInput,
+	    TouchMouseInput: TouchMouseInput,
+	    SingleTouchInput: SingleTouchInput,
+	
+	    Recognizer: Recognizer,
+	    AttrRecognizer: AttrRecognizer,
+	    Tap: TapRecognizer,
+	    Pan: PanRecognizer,
+	    Swipe: SwipeRecognizer,
+	    Pinch: PinchRecognizer,
+	    Rotate: RotateRecognizer,
+	    Press: PressRecognizer,
+	
+	    on: addEventListeners,
+	    off: removeEventListeners,
+	    each: each,
+	    merge: merge,
+	    extend: extend,
+	    assign: assign,
+	    inherit: inherit,
+	    bindFn: bindFn,
+	    prefixed: prefixed
+	});
+	
+	// this prevents errors when Hammer is loaded in the presence of an AMD
+	//  style loader but by script tag, not by the loader.
+	var freeGlobal = (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {})); // jshint ignore:line
+	freeGlobal.Hammer = Hammer;
+	
+	if (true) {
+	    !(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
+	        return Hammer;
+	    }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	} else if (typeof module != 'undefined' && module.exports) {
+	    module.exports = Hammer;
+	} else {
+	    window[exportName] = Hammer;
+	}
+	
+	})(window, document, 'Hammer');
+
+
+/***/ },
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(178);
+	var content = __webpack_require__(191);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(29)(content, {});
+	var update = __webpack_require__(31)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -26479,10 +29575,10 @@
 	}
 
 /***/ },
-/* 178 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(28)();
+	exports = module.exports = __webpack_require__(30)();
 	// imports
 	
 	
@@ -26493,7 +29589,7 @@
 
 
 /***/ },
-/* 179 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
@@ -26626,7 +29722,7 @@
 	    function lib$es6$promise$asap$$attemptVertx() {
 	      try {
 	        var r = require;
-	        var vertx = __webpack_require__(181);
+	        var vertx = __webpack_require__(194);
 	        lib$es6$promise$asap$$vertxNext = vertx.runOnLoop || vertx.runOnContext;
 	        return lib$es6$promise$asap$$useVertxTimer();
 	      } catch(e) {
@@ -27444,7 +30540,7 @@
 	    };
 	
 	    /* global define:true module:true window: true */
-	    if ("function" === 'function' && __webpack_require__(182)['amd']) {
+	    if ("function" === 'function' && __webpack_require__(195)['amd']) {
 	      !(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return lib$es6$promise$umd$$ES6Promise; }.call(exports, __webpack_require__, exports, module), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 	    } else if (typeof module !== 'undefined' && module['exports']) {
 	      module['exports'] = lib$es6$promise$umd$$ES6Promise;
@@ -27456,10 +30552,10 @@
 	}).call(this);
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(24), (function() { return this; }()), __webpack_require__(180)(module)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26), (function() { return this; }()), __webpack_require__(193)(module)))
 
 /***/ },
-/* 180 */
+/* 193 */
 /***/ function(module, exports) {
 
 	module.exports = function(module) {
@@ -27475,17 +30571,72 @@
 
 
 /***/ },
-/* 181 */
+/* 194 */
 /***/ function(module, exports) {
 
 	/* (ignored) */
 
 /***/ },
-/* 182 */
+/* 195 */
 /***/ function(module, exports) {
 
 	module.exports = function() { throw new Error("define cannot be used indirect"); };
 
+
+/***/ },
+/* 196 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/**
+		date : 2016-6-5
+		author : sailing
+		fun : 查找
+	**/
+	
+	'use strict';
+	
+	var _interopRequireDefault = __webpack_require__(24)['default'];
+	
+	exports.__esModule = true;
+	
+	var _config = __webpack_require__(38);
+	
+	var _config2 = _interopRequireDefault(_config);
+	
+	exports['default'] = {
+		setThis: function setThis(self) {
+			this.vm = self;
+		},
+	
+		onRouter: function onRouter(r) {
+			var self = this.vm;
+			if (!self) return;
+			if (r.path == '/machineRoom' || r.path == '/equipmentCabinet') {
+				self.showHide = true;
+			} else {
+				self.showHide = false;
+			}
+		},
+	
+		searchStart: function searchStart() {
+			var self = this.vm;
+	
+			if (!self) return;
+	
+			if (!self.searchValue) {
+				alert("请填写查询字段");
+				return;
+			}
+	
+			_config2['default'].eventBus.emit("search", { value: self.searchValue });
+		},
+	
+		regBus: function regBus(bus) {
+	
+			bus.on("router", this.onRouter.bind(this));
+		}
+	};
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ]);

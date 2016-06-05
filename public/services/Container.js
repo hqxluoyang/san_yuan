@@ -3,7 +3,7 @@
 	author : sailing
 	fun : 主页面管理
 **/
-
+import Config from "./config"
 export default {
 	
 	getDirection () {
@@ -38,6 +38,7 @@ export default {
 	
 	touchEnd (path , e) {
 	//	e.preventDefault();
+	//return ;
 		const angle = this.getAngle(this.startPosX , this.startPosY , this.endX , this.endY)
 		
 		

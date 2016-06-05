@@ -6,13 +6,15 @@
 	import Config from './services/config'
 	import main from './services/main'
 	import jquery  from 'jquery'
+	import VueTouch from "vue-touch"
     window.$ = jquery;
 	window.jQuery = jquery;
 
 	import miancss from './main.css'
     
 	require('es6-promise').polyfill()
-	Vue.use(VueRouter)
+	Vue.use(VueRouter);
+	Vue.use(VueTouch)
 	const router = new VueRouter({
 	  history: false,
 	  saveScrollPosition: true
